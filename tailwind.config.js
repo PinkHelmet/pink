@@ -9,7 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      margin: {
+        30: "30%",
+        90: "90%",
+      },
+      colors: {
+        "pink-rose": "#ffd7d7",
+        "pink-rose-200": "e0a2a2",
+      },
+    },
   },
   plugins: [],
 };
