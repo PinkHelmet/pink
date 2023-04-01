@@ -18,6 +18,9 @@ module.exports = {
         "pink-rose": "#ffd7d7",
         "pink-rose-200": "e0a2a2",
       },
+      backgroundImage: {
+        hero_bg: "url('../public/hero-bg.jpg')",
+      },
     },
   },
   plugins: [],
