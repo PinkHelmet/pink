@@ -1,7 +1,10 @@
+import HeadSeo from "../../components/Head";
+
 export default function Contact() {
   return (
-    <div>
+    <>
+      <HeadSeo title={`Pink Helmet - kontakt`} description={`opis opis`} />
       <p>Contact</p>
-    </div>
+    </>
   );
 }

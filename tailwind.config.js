@@ -21,6 +21,9 @@ module.exports = {
       backgroundImage: {
         hero_bg: "url('../public/hero-bg.jpg')",
       },
+      maxHeight: {
+        "50vh": "50vh",
+      },
     },
   },
   plugins: [],
