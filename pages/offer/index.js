@@ -41,6 +41,9 @@ export default function Offer() {
         </div>
         <div className="w-full shadow border-b"></div>
         <div className="w-full md:max-h-[50vh] flex flex-col md:flex-row items-center justify-center overflow-hidden gap-10 my-6">
+          <div className="w-1/2 md:order-2 h-full rounded-lg overflow-hidden ">
+            <Image src={technicalImg} height={"100%"} />
+          </div>
           <div className="w-1/2 h-full">
             <h2 className="p-4 flex justify-center text-xl">
               Odbiory techniczne lokali
@@ -58,9 +61,6 @@ export default function Offer() {
               varius vehicula vel id purus. Etiam commodo molestie purus ut
               pretium.
             </p>
-          </div>
-          <div className="w-1/2 h-full rounded-lg overflow-hidden ">
-            <Image src={technicalImg} height={"100%"} />
           </div>
         </div>
         <div className="w-full shadow border-b"></div>
@@ -87,6 +87,9 @@ export default function Offer() {
         </div>
         <div className="w-full shadow border-b"></div>
         <div className="w-full md:max-h-[50vh] flex flex-col md:flex-row items-center justify-center overflow-hidden gap-10 my-6">
+          <div className="w-1/2 h-full rounded-lg overflow-hidden md:order-2 ">
+            <Image src={renovationImg} height={"100%"} />
+          </div>
           <div className="w-1/2 h-full">
             <h2 className="p-4 flex justify-center text-xl">
               Remonty i wykończenia
@@ -104,9 +107,6 @@ export default function Offer() {
               varius vehicula vel id purus. Etiam commodo molestie purus ut
               pretium.
             </p>
-          </div>
-          <div className="w-1/2 h-full rounded-lg overflow-hidden ">
-            <Image src={renovationImg} height={"100%"} />
           </div>
         </div>
         <div className="w-full shadow border-b"></div>
