@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../public/logo.png";
+
 const Navbar = () => {
   const router = useRouter();
   const navlinks = [
@@ -18,10 +19,10 @@ const Navbar = () => {
   return (
     <Popover
       className={
-        "bg-rose-100 shadow mx-auto justify-between flex items-center px-6 py-2 h-24"
+        "bg-white shadow-lg mx-auto justify-between flex items-center px-6 py-2 h-30"
       }
     >
-      <Image src={logo} alt="Picture of the author" width="100" height="100" />
+      <Image src={logo} alt="Picture of the author" width="150" height="150" />
       {/* <h1 className="display-block font-bold">Pink Helmet</h1> */}
 
       <div className="grow">
@@ -40,7 +41,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex grow items-center justify-end sm:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-rose-100 p-2 text-gray-400 hover:text-gray-500 focus:none">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:text-gray-500 focus:none">
             <span className="sr-only">Open menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -59,22 +60,22 @@ const Navbar = () => {
             focus
             className="absolute z-10 inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
           >
-            <div className="relative z-10 rounded-lg bg-rose-100 shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
+            <div className="relative z-10 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
               <div className="px-5 pt-5 pb-6">
                 <Image
                   src={logo}
                   alt="Picture of the author"
-                  width="100"
-                  height="100"
+                  width="150"
+                  height="150"
                   className="absolute"
                 />{" "}
                 <div className="mr-2">
-                  <Popover.Button className="inline-flex ml-90 items-center justify-center rounded-md bg-rose-100 p-2 text-gray-400 hover:text-gray-500 focus:none">
+                  <Popover.Button className="inline-flex ml-90 items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:text-gray-500 focus:none">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
-                <div className="mt-10">
+                <div className="mt-24">
                   <nav className="grid gap-y-8">
                     {navlinks.map((el) => (
                       <Link

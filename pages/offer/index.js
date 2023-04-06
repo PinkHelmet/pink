@@ -96,7 +96,7 @@ export default function Offer() {
             </h2>
             <p className="p-4 font-extralight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
+              Vestibulum tem pus, velit a ultrices elementum, quam nisl
               ullamcorper nulla, vel fringilla urna dolor ut libero.
               Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
               metus elit, vitae pretium risus malesuada quis. Vestibulum
