@@ -1,13 +1,23 @@
 import Image from "next/image";
 import { Lexend } from "next/font/google";
-import aboutImg from "../../public/hero-about.jpg";
+import { motion } from "framer-motion";
+//components
 import Head from "../../components/Head";
+import HeaderTitle from "../../components/HeaderTitle";
+//img
+import aboutImg from "../../public/hero-about.jpg";
 
 export default function About() {
   return (
     <>
       <Head title={`Pink Helmet - o Firmie`} description={`opis opis`} />
-      <section className="container flex flex-col md:flex-row mx-auto min-h-screen w-full mt-2">
+      <HeaderTitle title="O firmie" />
+      <motion.section
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, delay: 0.4 }}
+        className="container flex flex-col md:flex-row mx-auto min-h-screen w-full mt-2"
+      >
         <div className="md:w-6/12 md:8/12 m-6 h-2/3">
           <Image
             src={aboutImg}
@@ -58,7 +68,7 @@ export default function About() {
             pogłębiać wiedzę na różne tematy 😀
           </p>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

@@ -1,5 +1,7 @@
 import { Image } from "react-datocms";
+import { motion } from "framer-motion";
 import HeadSeo from "../../components/Head";
+import HeaderTitle from "../../components/HeaderTitle";
 
 import { request } from "../../lib/datocms";
 const HOMEPAGE_QUERY = `
@@ -39,10 +41,13 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo title={`Pink Helmet - szkolenia`} description={`opis opis`} />
-      <h1 className="flex items-center justify-center mx-auto my-6 w-full">
-        Szkolenia
-      </h1>
-      <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full">
+      <HeaderTitle title="Szkolenia" />
+      <motion.section
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, delay: 0.4 }}
+        className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full"
+      >
         {posts.map((el) => (
           <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">
             {console.log(el)}
@@ -68,7 +73,7 @@ export default function Home(props) {
             </div>
           </div>
         ))}
-      </section>
+      </motion.section>
     </>
   );
 }
