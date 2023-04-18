@@ -1,7 +1,12 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+
+config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 //components
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
@@ -17,104 +15,48 @@ export default function Offer() {
     {
       title: "Doradztwo inzynieryjne",
       img: adviceImg,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
-              ullamcorper nulla, vel fringilla urna dolor ut libero.
-              Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
-              metus elit, vitae pretium risus malesuada quis. Vestibulum
-              interdum efficitur enim vel vestibulum. Ut sodales vehicula ante,
-              et ultrices nibh vestibulum ut. Nunc feugiat diam non massa
-              volutpat efficitur. Cras ac quam sapien. Sed sed lectus sit amet
-              mi fringilla fringilla non sagittis ante. In eget ipsum ac risus
-              varius vehicula vel id purus. Etiam commodo molestie purus ut
-              pretium. `,
-      order: "order-1",
+      content: `W Twoim domu pojawia się grzyb? A może wychodzi przeciek na ścianach? Świetnie trafiłeś.
+      Przez kilka lat mojej kariery budowlanej widziałam już wiele wad w budynkach mieszkalnych.
+      Sprawdzę źródło problemu oraz zaproponuję rozwiązanie.
+      A może potrzebujesz wsparcia merytorycznego w zakresie kupna domu od Dewelopera?
+      Podpowiem Ci na co zwrócić uwagę, sprawdzę zapisy umowy, podpowiem jak uzyskać od
+      Dewelopera to co Ci się należy. `,
+      order: "md:order-first",
     },
     {
       title: "Odbiory techniczne lokali",
       img: technicalImg,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
-              ullamcorper nulla, vel fringilla urna dolor ut libero.
-              Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
-              metus elit, vitae pretium risus malesuada quis. Vestibulum
-              interdum efficitur enim vel vestibulum. Ut sodales vehicula ante,
-              et ultrices nibh vestibulum ut. Nunc feugiat diam non massa
-              volutpat efficitur. Cras ac quam sapien. Sed sed lectus sit amet
-              mi fringilla fringilla non sagittis ante. In eget ipsum ac risus
-              varius vehicula vel id purus. Etiam commodo molestie purus ut
-              pretium. `,
-      order: "order-2",
+      content: `Nie przejmuj się jeżeli nie wiesz na co zwrócić uwagę podczas odbioru swojego mieszkania od
+      Dewelopera – od tego jestem ja. Sprawdzę geometrię ścian, wylewek, stolarkę okienną i
+      drzwiową, poprawność wykonania instalacji, wykonanie prac w odniesieniu do projektu i nie
+      tylko. Ty w tym czasie będziesz mógł/mogła skupić się na radości odbioru Twojego nowego
+      lokalu `,
+      order: "md:order-last",
     },
     {
       title: "Projektowanie",
       img: projectImg,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
-              ullamcorper nulla, vel fringilla urna dolor ut libero.
-              Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
-              metus elit, vitae pretium risus malesuada quis. Vestibulum
-              interdum efficitur enim vel vestibulum. Ut sodales vehicula ante,
-              et ultrices nibh vestibulum ut. Nunc feugiat diam non massa
-              volutpat efficitur. Cras ac quam sapien. Sed sed lectus sit amet
-              mi fringilla fringilla non sagittis ante. In eget ipsum ac risus
-              varius vehicula vel id purus. Etiam commodo molestie purus ut
-              pretium. `,
-      order: "order-1",
+      content: `Projektowanie aranżacji wnętrz, mebli, systemów drenażowych. Wszystko to czego
+      potrzebujesz w swoim mieszkaniu do tego niepowtarzalne i skrojone na Twoje potrzeby. `,
+      order: "md:order-first",
     },
     {
       title: "Remonty i wykończenia",
       img: renovationImg,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
-              ullamcorper nulla, vel fringilla urna dolor ut libero.
-              Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
-              metus elit, vitae pretium risus malesuada quis. Vestibulum
-              interdum efficitur enim vel vestibulum. Ut sodales vehicula ante,
-              et ultrices nibh vestibulum ut. Nunc feugiat diam non massa
-              volutpat efficitur. Cras ac quam sapien. Sed sed lectus sit amet
-              mi fringilla fringilla non sagittis ante. In eget ipsum ac risus
-              varius vehicula vel id purus. Etiam commodo molestie purus ut
-              pretium. `,
-      order: "order-2",
+      content: `Malowanie, ścianki dekoracyjne, lamele, wymiana sylikonów, listwy przypodłogowe.. aż po
+      remonty i wykończenia całych mieszkań. `,
+      order: "md:order-last",
     },
     {
       title: "Drenaze",
       img: drainageImg,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum tempus, velit a ultrices elementum, quam nisl
-              ullamcorper nulla, vel fringilla urna dolor ut libero.
-              Pellentesque eget placerat ex. Morbi a tellus est. Proin consequat
-              metus elit, vitae pretium risus malesuada quis. Vestibulum
-              interdum efficitur enim vel vestibulum. Ut sodales vehicula ante,
-              et ultrices nibh vestibulum ut. Nunc feugiat diam non massa
-              volutpat efficitur. Cras ac quam sapien. Sed sed lectus sit amet
-              mi fringilla fringilla non sagittis ante. In eget ipsum ac risus
-              varius vehicula vel id purus. Etiam commodo molestie purus ut
-              pretium. `,
-      order: "order-1",
+      content: `Zakupiłeś piękny dom ale na mało przepuszczalnym gruncie w skutek czego po większych
+      opadach Twój ogródek zamienia się w spełnienie marzeń Shreka? A może chcesz
+      magazynować wody opadowe do podlewania roślin w ogrodzie i tym samym zmniejszyć koszty
+      zużycia wody? Świetnie trafiłeś!`,
+      order: "md:order-first",
     },
   ];
-  const { ref, inView } = useInView();
-
-  const animation = useAnimation();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     animation.start({
-  //       x: 0,
-  //       transition: {
-  //         type: "spring",
-  //         duration: 1,
-  //         bounce: 0.3,
-  //       },
-  //     });
-  //   }
-  //   if (!inView) {
-  //     animation.start({ x: "-100vw" });
-  //   }
-  //   console.log("useefect hook", inView);
-  // }, [inView]);
 
   return (
     <>
@@ -123,10 +65,7 @@ export default function Offer() {
       <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full flex-wrap">
         {dataOffer.map((offer) => (
           <>
-            <div
-              ref={ref}
-              className="w-full md:max-h-[50vh] flex flex-col md:flex-row items-center justify-center  gap-10 my-6"
-            >
+            <div className="w-full flex flex-col md:flex-row items-center justify-center  gap-10 my-6">
               <motion.div
                 // animate={animation}
                 initial={{ x: "-100vw" }}
@@ -134,23 +73,23 @@ export default function Offer() {
                 transition={{
                   type: "spring",
                   duration: 1,
-                  bounce: 0.3,
+                  bounce: 0.1,
                   delay: 0.6,
                 }}
-                className={`w-full md:w-1/2 md:${offer.order} h-auto md:rounded-lg overflow-hidden`}
+                className={`w-full md:w-1/2 ${offer.order} h-auto md:rounded-lg overflow-hidden`}
               >
                 <Image src={offer.img} height={"100%"} className="" />
               </motion.div>
               <motion.div
-                initial={{ x: "100vw" }}
+                initial={{ x: "-100vw" }}
                 animate={{ x: 0 }}
                 transition={{
                   type: "spring",
                   duration: 1,
                   bounce: 0.3,
-                  delay: 0.6,
+                  delay: 0.8,
                 }}
-                className="w-full md:w-1/2 h-auto"
+                className={`w-full md:w-1/2 h-auto `}
               >
                 <h2 className="p-4 flex justify-center text-xl">
                   {offer.title}

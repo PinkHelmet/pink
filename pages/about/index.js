@@ -26,22 +26,21 @@ export default function About() {
             className="mx-auto"
           />
         </div>
-        <div className={`md:w-6/12 m-6`}>
+        <div className={`md:w-6/12 m-6 font-medium`}>
           <h1 className="text-2xl m-6">Pink Helmet - Karolina Szuba</h1>
-          <p className="font-thin mb-2">
+          <p className="mb-2">
             Od dawna moim marzeniem było prowadzić własną działalność
             gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
             satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak
             najpierw chce się nauczyć jak najwięcej i znaleźć w życiu to co mnie
             dodatkowo fascynuje i co może mi zapewnić przysłowiowy chleb.
           </p>
-          <p className="font-thin mb-2">
-            Ukończyłam Politechnikę Warszawską na kierunku{" "}
-            <strong>Inżynieria Środowiska</strong>, a następnie studia
-            podyplomowe w <strong>Szkole Głównej Handlowej</strong> w Warszawie
-            z zarządzania.
+          <p className="mb-2">
+            Ukończyłam <strong>Politechnikę Warszawską</strong> na kierunku{" "}
+            Inżynieria Środowiska, a następnie studia podyplomowe w{" "}
+            <strong>Szkole Głównej Handlowej</strong> w Warszawie z zarządzania.
           </p>
-          <p className="font-thin mb-2">
+          <p className="mb-2">
             W życiu robiłam wiele rzeczy... udzielałam korepetycji, sprzedawałam
             bieliznę, kosmetyki, pozyskiwałam darczyńców dla organizacji
             pozarządowych, zarządzałam projektami w call center, byłam
@@ -55,14 +54,14 @@ export default function About() {
             się wielu rzeczy praktycznie od zera, ale znowu ta wiedza
             przychodziła mi nad wyraz łatwo.
           </p>
-          <p className="font-thin mb-2">
+          <p className="mb-2">
             Któregoś dnia stwierdziłam, że chyba już wewnętrzny głos, który do
             tej pory zawsze mówił „nie dasz sobie rady!”, „gdzie kobieta w
             budownictwie?” zaczyna zmieniać retorykę na tekst niczym z polskiego
             filmu „dlaczego nie?”. I tak o to powstał „
             <strong>Pink Helmet</strong>” 😊
           </p>
-          <p className="font-thin mb-2">
+          <p className="fmb-2">
             A kim jestem prywatnie? Żoną, córką, wnuczką... i pancią gromady
             królików. Uwielbiam czytać, malować, pisać wiersze, jeść oraz
             pogłębiać wiedzę na różne tematy 😀

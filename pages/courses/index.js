@@ -1,4 +1,5 @@
 import { Image } from "react-datocms";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
@@ -7,18 +8,32 @@ import { request } from "../../lib/datocms";
 const HOMEPAGE_QUERY = `
 query MyQuery {
   allArticles {
+    title
+    coverImage {
+      url
+      responsiveImage {
+        width
+        webpSrcSet
+        title
+        srcSet
+        src
+        sizes
+        height
+        bgColor
+        base64
+        aspectRatio
+        alt
+      }
+    }
+    excerpt
+    publishedDate
+    slug
     author {
       name
     }
     content {
       value
     }
-    coverimage {
-      url
-    }
-    title
-    sUg
-    publishDate
     id
   }
 }
@@ -52,23 +67,19 @@ export default function Home(props) {
           <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">
             {console.log(el)}
             <div className="rounded-lg">
-              <img src={el.coverimage.url} className="rounded-lg " />
+              <Image
+                data={el.coverImage.responsiveImage}
+                className="rounded-lg"
+              />
             </div>
             <div className="p-6">
-              <h2 className="my-4 text-2xl">{el.title}</h2>
-              <p className="font-thin">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ipsum dolor sit amet consectetur adipiscing elit. Faucibus vitae
-                aliquet nec ullamcorper sit. Dapibus ultrices in iaculis nunc.
-                Vitae justo eget magna fermentum. In dictum non consectetur a
-                erat nam at. Ultrices dui sapien eget mi proin sed libero enim
-                sed. Arcu non sodales neque sodales ut. Vestibulum lorem sed
-                risus ultricies tristique.
-              </p>
+              <h2 className="my-4 text-2xl">
+                <Link href={`/courses/${el.slug}`}>{el.title}</Link>
+              </h2>
+              <p className="font-thin">{el.excerpt}</p>
               <div className="flex justify-between py-6 font-thin text-xs">
                 <span>Autor: {el.author.name}</span>
-                <span>Publikowany: {el.publishDate}</span>
+                <span>Publikowany: {el.publishedDate}</span>
               </div>
             </div>
           </div>
