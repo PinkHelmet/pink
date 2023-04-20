@@ -88,20 +88,3 @@ export default function Home(props) {
     </>
   );
 }
-
-// const BlogPostPreview = (props) => {
-//   const { data } = props;
-//   return (
-//     <div style={{ maxWidth: "400px", marginBottom: "50px" }}>
-//       <Image data={data.coverimage.url} />
-//       <h2>
-//         {/* <Link href={`/blog/${data.sUg}`}>
-//           <a>{data.title}</a>
-//         </Link> */}
-//       </h2>
-//       <div>{data.publishDate}</div>
-//       <p>{data.excerpt}</p>
-//       <div style={{ fontWeight: "bold" }}>{data.author.name}</div>
-//     </div>
-//   );
-// };

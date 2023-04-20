@@ -17,9 +17,11 @@ module.exports = {
       colors: {
         "pink-rose": "#ffd7d7",
         "pink-rose-200": "e0a2a2",
+        facebook: "#3B5998",
       },
       backgroundImage: {
-        hero_bg: "url('../public/hero-bg.jpg')",
+        hero_bg: "url(../public/hero-bg.jpg)",
+        footer_bg: "url(../public/footer-bg.jpg)",
       },
       maxHeight: {
         "50vh": "50vh",

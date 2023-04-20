@@ -9,10 +9,10 @@ export default function BlogPost(props) {
   const postData = data.article;
 
   return (
-    <div>
+    <div className="container mx-auto">
       <Image
         data={postData.coverImage.responsiveImage}
-        className="w-full cover h-1/2"
+        className="w-full cover max-h-1/2 "
       />
       <div className="container mx-auto">
         <h1>{postData.title}</h1>
