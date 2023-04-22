@@ -1,62 +1,91 @@
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 //components
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
-//img
-import adviceImg from "../../public/advice.jpg";
-import technicalImg from "../../public/technial.jpg";
-import projectImg from "../../public/project.jpg";
-import renovationImg from "../../public/renovation.jpg";
-import drainageImg from "../../public/drainage.jpg";
 
-export default function Offer() {
-  const dataOffer = [
-    {
-      title: "Doradztwo inzynieryjne",
-      img: adviceImg,
-      content: `W Twoim domu pojawia się grzyb? A może wychodzi przeciek na ścianach? Świetnie trafiłeś.
-      Przez kilka lat mojej kariery budowlanej widziałam już wiele wad w budynkach mieszkalnych.
-      Sprawdzę źródło problemu oraz zaproponuję rozwiązanie.
-      A może potrzebujesz wsparcia merytorycznego w zakresie kupna domu od Dewelopera?
-      Podpowiem Ci na co zwrócić uwagę, sprawdzę zapisy umowy, podpowiem jak uzyskać od
-      Dewelopera to co Ci się należy. `,
-      order: "md:order-first",
-    },
-    {
-      title: "Odbiory techniczne lokali",
-      img: technicalImg,
-      content: `Nie przejmuj się jeżeli nie wiesz na co zwrócić uwagę podczas odbioru swojego mieszkania od
-      Dewelopera – od tego jestem ja. Sprawdzę geometrię ścian, wylewek, stolarkę okienną i
-      drzwiową, poprawność wykonania instalacji, wykonanie prac w odniesieniu do projektu i nie
-      tylko. Ty w tym czasie będziesz mógł/mogła skupić się na radości odbioru Twojego nowego
-      lokalu `,
-      order: "md:order-last",
-    },
-    {
-      title: "Projektowanie",
-      img: projectImg,
-      content: `Projektowanie aranżacji wnętrz, mebli, systemów drenażowych. Wszystko to czego
-      potrzebujesz w swoim mieszkaniu do tego niepowtarzalne i skrojone na Twoje potrzeby. `,
-      order: "md:order-first",
-    },
-    {
-      title: "Remonty i wykończenia",
-      img: renovationImg,
-      content: `Malowanie, ścianki dekoracyjne, lamele, wymiana sylikonów, listwy przypodłogowe.. aż po
-      remonty i wykończenia całych mieszkań. `,
-      order: "md:order-last",
-    },
-    {
-      title: "Drenaze",
-      img: drainageImg,
-      content: `Zakupiłeś piękny dom ale na mało przepuszczalnym gruncie w skutek czego po większych
-      opadach Twój ogródek zamienia się w spełnienie marzeń Shreka? A może chcesz
-      magazynować wody opadowe do podlewania roślin w ogrodzie i tym samym zmniejszyć koszty
-      zużycia wody? Świetnie trafiłeś!`,
-      order: "md:order-first",
-    },
-  ];
+import { request } from "../../lib/datocms";
+const HOMEPAGE_QUERY = `
+query MyQuery {
+  allOffers {
+    title
+    order
+    id
+    excerpt
+    contentFirst {
+      value
+    }
+    contentSecond {
+      value
+    }
+    contentThird {
+      value
+    }
+    coverImage {
+      responsiveImage {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
+    }
+    secondImage {
+      responsiveImage {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
+    }
+    slug
+    thirdImage {
+      responsiveImage {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        sizes
+        height
+        src
+        srcSet
+        title
+        width
+        webpSrcSet
+      }
+    }
+  }
+}
+`;
+
+export async function getStaticProps() {
+  const data = await request({
+    query: HOMEPAGE_QUERY,
+  });
+  return {
+    props: { data },
+  };
+}
+
+export default function Offer(props) {
+  const { data } = props;
+
+  const dataOffer = data.allOffers;
 
   return (
     <>
@@ -65,7 +94,8 @@ export default function Offer() {
       <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full flex-wrap">
         {dataOffer.map((offer) => (
           <>
-            <div className="w-full flex flex-col md:flex-row items-center justify-center  gap-10 my-6">
+            {console.log(offer.title, offer.order)}
+            <div className="w-full flex flex-col md:flex-row md:relative items-center justify-center  gap-10 my-6">
               <motion.div
                 // animate={animation}
                 initial={{ x: "-100vw" }}
@@ -76,9 +106,14 @@ export default function Offer() {
                   bounce: 0.1,
                   delay: 0.6,
                 }}
-                className={`w-full md:w-1/2 ${offer.order} h-auto md:rounded-lg overflow-hidden`}
+                className={`w-full md:w-1/2 ${offer?.order} h-auto md:rounded-lg overflow-hidden`}
               >
-                <Image src={offer.img} height={"100%"} className="" />
+                <Image
+                  src={offer.coverImage.responsiveImage}
+                  height={"100%"}
+                  alt={offer.coverImage.responsiveImage.alt}
+                  className=""
+                />
               </motion.div>
               <motion.div
                 initial={{ x: "-100vw" }}
@@ -94,8 +129,14 @@ export default function Offer() {
                 <h2 className="p-4 flex justify-center text-xl">
                   {offer.title}
                 </h2>
-                <p className="px-4 font-extralight">{offer.content}</p>
+                <p className="px-4 font-regular md:mb-8">{offer.excerpt}</p>
               </motion.div>
+              <div className="w-full flex justify-end md:absolute bottom-0 right-0">
+                <Link href={`/offer/${offer.slug}`} className={`mx-2`}>
+                  Dowiedz się więcej
+                  <ArrowRightAltOutlinedIcon />
+                </Link>
+              </div>
             </div>
             <motion.div
               initial={{ opacity: 0 }}

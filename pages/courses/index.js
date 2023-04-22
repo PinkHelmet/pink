@@ -65,7 +65,6 @@ export default function Home(props) {
       >
         {posts.map((el) => (
           <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">
-            {console.log(el)}
             <div className="rounded-lg">
               <Image
                 data={el.coverImage.responsiveImage}
