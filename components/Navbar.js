@@ -18,13 +18,13 @@ const Navbar = () => {
   ];
 
   return (
-    <Popover>
+    <Popover className={"sticky top-0 z-50"}>
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75 }}
         className={
-          "bg-white shadow-lg mx-auto justify-between flex items-center px-6 py-2 h-30"
+          " bg-white shadow-lg mx-auto justify-between flex items-center px-6 py-2 h-30"
         }
       >
         <Link href="/">

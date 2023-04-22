@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence mode="wait">
       <motion.div
+        className="relative"
         key={router.route}
         initial="initialState"
         animate="animateState"

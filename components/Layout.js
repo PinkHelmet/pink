@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="relative min-h-screen">
+    <div className="min-h-screen">
       <Header />
       <Navbar />
       <main>{children}</main>
