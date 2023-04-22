@@ -15,10 +15,8 @@ export default function BlogPost(props) {
         className="w-full cover max-h-1/2 "
       />
       <div className="container mx-auto">
-        <h1>{postData.title}</h1>
-        <p>
-          {postData.author.name} / {postData.publishedDate}
-        </p>
+        <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
+
         <StructuredText
           data={postData.content}
           renderBlock={({ record }) => {
@@ -30,6 +28,11 @@ export default function BlogPost(props) {
             }
           }}
         />
+        <div className="flex justify-end font-extralight my-6">
+          <p>
+            {postData.author.name} / {postData.publishedDate}
+          </p>
+        </div>
         <div style={{ marginTop: "50px" }}>
           <Link href="/">Back to the frontpage</Link>
         </div>

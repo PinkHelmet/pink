@@ -14,55 +14,63 @@ export default function BlogPost(props) {
         data={postData.coverImage.responsiveImage}
         className="w-full cover max-h-1/2 "
       />
-      <div className="">
-        <h1>{postData.title}</h1>
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
 
-        <StructuredText
-          data={postData.contentFirst}
-          renderBlock={({ record }) => {
-            switch (record.__typename) {
-              case "ImageRecord":
-                return <Image data={record.image.responsiveImage} />;
-              default:
-                return null;
-            }
-          }}
-        />
+        <div className="mx-6">
+          <StructuredText
+            data={postData.contentFirst}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
+        </div>
+
         {postData?.secondImage?.responsiveImage && (
           <Image
             data={postData?.secondImage?.responsiveImage}
-            className="w-full cover max-h-1/2 "
+            className="w-full cover max-h-1/2 my-6 "
           />
         )}
-        <StructuredText
-          data={postData.contentSecond}
-          renderBlock={({ record }) => {
-            switch (record.__typename) {
-              case "ImageRecord":
-                return <Image data={record.image.responsiveImage} />;
-              default:
-                return null;
-            }
-          }}
-        />
+        <div className="mx-6">
+          <StructuredText
+            data={postData.contentSecond}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
+        </div>
+
         {postData?.thirdImage?.responsiveImage && (
           <Image
             data={postData?.thirdImage?.responsiveImage}
-            className="w-full cover max-h-1/2 "
+            className="w-full cover max-h-1/2 my-6"
           />
         )}
-        <StructuredText
-          data={postData.contentThird}
-          renderBlock={({ record }) => {
-            console.log("..", record);
-            switch (record.__typename) {
-              case "ImageRecord":
-                return <Image data={record.image.responsiveImage} />;
-              default:
-                return null;
-            }
-          }}
-        />
+        <div className="mx-6">
+          <StructuredText
+            data={postData.contentThird}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
+        </div>
+
         <div style={{ marginTop: "50px" }}>
           <Link href="/">Back to the frontpage</Link>
         </div>

@@ -106,13 +106,12 @@ export default function Offer(props) {
                   bounce: 0.1,
                   delay: 0.6,
                 }}
-                className={`w-full md:w-1/2 ${offer?.order} h-auto md:rounded-lg overflow-hidden`}
+                className={`w-full md:w-1/2  h-auto md:rounded-lg overflow-hidden`}
               >
                 <Image
                   src={offer.coverImage.responsiveImage}
                   height={"100%"}
                   alt={offer.coverImage.responsiveImage.alt}
-                  className=""
                 />
               </motion.div>
               <motion.div
@@ -124,7 +123,7 @@ export default function Offer(props) {
                   bounce: 0.3,
                   delay: 0.8,
                 }}
-                className={`w-full md:w-1/2 h-auto `}
+                className={`w-full md:w-1/2 h-auto  ${offer.order}`}
               >
                 <h2 className="p-4 flex justify-center text-xl">
                   {offer.title}

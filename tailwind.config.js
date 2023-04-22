@@ -15,7 +15,7 @@ module.exports = {
         90: "90%",
       },
       colors: {
-        "pink-rose": "#ffd7d7",
+        "pink-rose": "#f1adc6",
         "pink-rose-200": "e0a2a2",
         facebook: "#3B5998",
       },
