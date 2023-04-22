@@ -20,8 +20,8 @@ module.exports = {
         facebook: "#3B5998",
       },
       backgroundImage: {
-        hero_bg: "url(../public/hero-bg.jpg)",
-        footer_bg: "url(../public/footer-bg.jpg)",
+        hero_bg: "url('/hero-bg.jpg')",
+        footer_bg: "url('/footer-bg.jpg')",
       },
       maxHeight: {
         "50vh": "50vh",
