@@ -38,7 +38,7 @@ export default function Home(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.2 }}
-        className="bg-fixed bg-blend-overlay bg-no-repeat bg-hero_bg bg-cover bg-center h-[90vh] shadow-lg"
+        className="bg-fixed bg-blend-overlay bg-no-repeat bg-[url('../public/hero-bg.jpg')] bg-cover bg-center h-[90vh] shadow-lg"
       >
         <div class="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
           {" "}
