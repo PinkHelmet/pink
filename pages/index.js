@@ -8,6 +8,7 @@ import {
   Key,
   FormatPaintOutlined,
   WaterDamageOutlined,
+  PowerOutlined,
 } from "@mui/icons-material";
 import HeadSeo from "../components/Head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,11 +24,11 @@ export default function Home(props) {
   let ref = useRef(null);
   let { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0, 0.5", "1"],
+    offset: ["0 0.5", "end end"],
   });
 
-  let x = useTransform(scrollYProgress, [0, 0.8], ["-100%", "0%"]);
-  let opacity = useTransform(scrollYProgress, [0.5, 1], [1, 1]);
+  let y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
+  let opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
   return (
     <>
@@ -37,7 +38,6 @@ export default function Home(props) {
       />
 
       <motion.div
-        ref={ref}
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.2 }}
@@ -64,38 +64,37 @@ export default function Home(props) {
           </motion.div>
         </div>
       </motion.div>
-      <section>
-        <motion.div
-          style={{ opacity }}
-          className="container mx-auto w-full mt-24"
-        >
-          <div className="border-2 border-pink-rose rounded mx-4 bg-gray-100 relative shadow-lg">
+      <section ref={ref}>
+        <div className="container mx-auto w-full mt-24">
+          <motion.div
+            style={{ opacity }}
+            className="border-2 border-pink-rose rounded mx-4 bg-gray-100 relative shadow-lg"
+          >
             <Image
               src={face}
               width={120}
               height={120}
               className="absolute -top-12 left-1/2 transform -translate-x-1/2 origin-center rounded-full border-2 border-pink-rose"
             />
-            <p className="my-24 mx-4">
-              Od dawna moim marzeniem było prowadzić własną działalność
-              gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
-              satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak
-              najpierw chce się nauczyć jak najwięcej i znaleźć w życiu to co
-              mnie dodatkowo fascynuje i co może mi zapewnić przysłowiowy chleb.
+            <p className="my-24 mx-4 text-center leading-7">
+              <span className="font-bold text-pink-rose">"Pink Helmet" </span>to
+              nie tylko działalność gospodarcza. To droga od kompleksowej
+              mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
+              gospodarczych w Polsce.
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
-      <section>
-        <motion.div className="flex w-100 container mx-auto flex-col items-center w-full py-10">
-          <motion.h2
-            style={{ opacity, x }}
-            className="text-3xl text-center drop-shadow-lg"
-          >
+      <section ref={ref}>
+        <motion.div
+          style={{ opacity, y }}
+          className="flex w-100 container mx-auto flex-col items-center w-full py-10"
+        >
+          <motion.h2 className="text-3xl text-center drop-shadow-lg">
             Dlaczego Pink Helmet ?
           </motion.h2>
-          <motion.p style={{ opacity, x }} className="font-normal p-6">
-            <span className="font-bold text-rose-600">„Pink Helmet”</span>{" "}
+          <motion.p className="font-normal p-6">
+            <span className="font-bold text-pink-rose">„Pink Helmet”</span>{" "}
             zajmuje się przede wszystkim kompleksową obsługą inżynieryjną od
             momentu zakupu lokalu (sprawdzenie zapisów umowy deweloperskiej,
             sprawdzenie kompletności dokumentów, pomoc doradcza w zakresie zmian
@@ -106,7 +105,7 @@ export default function Home(props) {
             systemu odprowadzania wód opadowych w ogrodzie. Wykonuje również
             świadectwa charakterystyki energetycznej domów oraz mieszkań.
           </motion.p>
-          <motion.p style={{ opacity, x }} className="font-normal p-6">
+          <motion.p className="font-normal p-6">
             Drugim filarem działalności są szkolenia dedykowane Deweloperom z
             zakresu rękojmi nieruchomości i obsługi posprzedażowej oraz
             szkolenia dedykowane przedsiębiorstwom z zakresu zarządzania
@@ -114,60 +113,66 @@ export default function Home(props) {
           </motion.p>
 
           <div className="flex flex-row w-full flex-wrap justify-between my-6 items-center">
-            <motion.div
-              style={{ opacity, x }}
-              className="flex flex-col justify-center w-1/2 md:w-1/3 p-6"
-            >
-              <FontAwesomeIcon
-                icon={faHandshake}
-                style={{ fontSize: 100, color: "#000" }}
-                className="mb-4 drop-shadow-lg"
-              />
-              <p className="text-center">Doradztwo inżynieryjne</p>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer/doradztwo-inzynieryjne" className="text-center">
+                <FontAwesomeIcon
+                  icon={faHandshake}
+                  style={{ fontSize: 100 }}
+                  className="mb-4 drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Doradztwo inżynieryjne</p>
+              </Link>
             </motion.div>
-            <motion.div
-              style={{ opacity, x }}
-              className="flex flex-col justify-center w-1/2 md:w-1/3 p-6"
-            >
-              <Key
-                style={{ fontSize: 100, color: "#f1adc6" }}
-                className="w-full mb-4 mx-auto drop-shadow-lg"
-              />
-              <p className="text-center">Odbiory techniczne lokali</p>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link
+                href="offer/odbiory-techniczne-lokali"
+                className="text-center"
+              >
+                <Key
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Odbiory techniczne lokali</p>
+              </Link>
             </motion.div>
-            <motion.div
-              style={{ opacity, x }}
-              className="flex flex-col justify-center w-1/2 md:w-1/3 p-6"
-            >
-              <FontAwesomeIcon
-                icon={faPenToSquare}
-                style={{ fontSize: 100, color: "#FFD700" }}
-                className="mb-4 drop-shadow-lg"
-              />
-              <p className="text-center">Projektowanie</p>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer/projektowanie" className="text-center">
+                <FontAwesomeIcon
+                  icon={faPenToSquare}
+                  style={{ fontSize: 100 }}
+                  className="mb-4 drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Projektowanie</p>
+              </Link>
             </motion.div>
-            <motion.div
-              style={{ opacity, x }}
-              className="flex flex-col justify-center w-1/2 md:w-1/3 p-6"
-            >
-              <FormatPaintOutlined
-                style={{ fontSize: 100, color: "#E11D48" }}
-                className="w-full mx-auto mb-4 drop-shadow-lg"
-              />
-              <p className="text-center">Remonty i wykończenia</p>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer/remonty-i-wykonczenia" className="text-center">
+                <FormatPaintOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mx-auto mb-4 drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Remonty i wykończenia</p>
+              </Link>
             </motion.div>
-            <motion.div
-              style={{ opacity, x }}
-              className="flex flex-col justify-center w-1/2 md:w-1/3 p-6"
-            >
-              <WaterDamageOutlined
-                style={{ fontSize: 100, color: "#E11D48" }}
-                className="w-full mb-4 mx-auto drop-shadow-lg"
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer/drenaze" className="text-center">
+                <WaterDamageOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Drenaze</p>
+              </Link>
+            </motion.div>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <PowerOutlined
+                style={{ fontSize: 100 }}
+                className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
               />
-              <p className="text-center">Drenaze</p>
+              <p className="text-center">
+                Świadectwo charakterystyki energetycznej
+              </p>
             </motion.div>
           </div>
-          <p>sasa</p>
         </motion.div>
       </section>
     </>

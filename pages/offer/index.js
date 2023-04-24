@@ -11,7 +11,8 @@ const HOMEPAGE_QUERY = `
 query MyQuery {
   allOffers {
     title
-    order
+    orderText
+    orderImage
     id
     excerpt
     contentFirst {
@@ -94,7 +95,6 @@ export default function Offer(props) {
       <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full flex-wrap">
         {dataOffer.map((offer) => (
           <>
-            {console.log(offer.title, offer.order)}
             <div className="w-full flex flex-col md:flex-row md:relative items-center justify-center  gap-10 my-6">
               <motion.div
                 // animate={animation}
@@ -106,7 +106,7 @@ export default function Offer(props) {
                   bounce: 0.1,
                   delay: 0.6,
                 }}
-                className={`w-full md:w-1/2  h-auto md:rounded-lg overflow-hidden`}
+                className={`w-full md:w-1/2 flex ${offer.orderImage} h-auto md:rounded-lg overflow-hidden`}
               >
                 <Image
                   src={offer.coverImage.responsiveImage}
@@ -123,19 +123,29 @@ export default function Offer(props) {
                   bounce: 0.3,
                   delay: 0.8,
                 }}
-                className={`w-full md:w-1/2 h-auto  ${offer.order}`}
+                className={`w-full md:w-1/2 h-auto flex flex-col  ${offer.orderText}`}
               >
                 <h2 className="p-4 flex justify-center text-xl">
                   {offer.title}
                 </h2>
                 <p className="px-4 font-regular md:mb-8">{offer.excerpt}</p>
               </motion.div>
-              <div className="w-full flex justify-end md:absolute bottom-0 right-0">
+              <motion.div
+                initial={{ x: "-100vw" }}
+                animate={{ x: 0 }}
+                transition={{
+                  type: "spring",
+                  duration: 1,
+                  bounce: 0.3,
+                  delay: 0.8,
+                }}
+                className="w-full flex justify-end md:absolute bottom-0 right-0"
+              >
                 <Link href={`/offer/${offer.slug}`} className={`mx-2`}>
                   Dowiedz się więcej
                   <ArrowRightAltOutlinedIcon />
                 </Link>
-              </div>
+              </motion.div>
             </div>
             <motion.div
               initial={{ opacity: 0 }}

@@ -45,14 +45,14 @@ export default function About() {
             bieliznę, kosmetyki, pozyskiwałam darczyńców dla organizacji
             pozarządowych, zarządzałam projektami w call center, byłam
             koordynatorem biura i oferentem w agencji reklamowej, projektowałam
-            instalacje przeciwpożarowe... Aż w 2020 r. trafiłam do firmy
-            Deweloperskiej. O budownictwie wiedziałam mniej więcej tyle co o
-            balecie - niewiele. Jednak okazało się, że wiedza którą dostawałam
-            każdego dnia sama wchłaniała się w mój mózg niczym woda w gąbkę.
-            Kupiłam mieszkanie. Niespodziewane wydarzenia zmusiły mnie do
-            wykonania części prac wykończeniowych samodzielnie. Znowu uczyłam
-            się wielu rzeczy praktycznie od zera, ale znowu ta wiedza
-            przychodziła mi nad wyraz łatwo.
+            instalacje przeciwpożarowe... Aż trafiłam do firmy Deweloperskiej. O
+            budownictwie wiedziałam mniej więcej tyle co o balecie - niewiele.
+            Jednak okazało się, że wiedza którą dostawałam każdego dnia sama
+            wchłaniała się w mój mózg niczym woda w gąbkę. Kupiłam mieszkanie.
+            Niespodziewane wydarzenia zmusiły mnie do wykonania części prac
+            wykończeniowych samodzielnie. Znowu uczyłam się wielu rzeczy
+            praktycznie od zera, ale znowu ta wiedza przychodziła mi nad wyraz
+            łatwo.
           </p>
           <p className="mb-2">
             Któregoś dnia stwierdziłam, że chyba już wewnętrzny głos, który do

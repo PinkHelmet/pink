@@ -71,8 +71,10 @@ export default function BlogPost(props) {
           />
         </div>
 
-        <div style={{ marginTop: "50px" }}>
-          <Link href="/">Back to the frontpage</Link>
+        <div className="border px-10 py-6 m-6 rounded bg-pink-rose text-black hover:bg-pink-600 hover:text-white transition transition-duration-300">
+          <Link href="/offer" className="px-10 py-6">
+            Cofnij do ofert
+          </Link>
         </div>
       </div>
     </div>

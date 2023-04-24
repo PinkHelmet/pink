@@ -44,7 +44,7 @@ const Navbar = () => {
                 href={el.path}
                 className={
                   router.pathname == el.path
-                    ? "transition ease-in-out delay-100 text-rose-600"
+                    ? "transition ease-in-out delay-100 text-pink-rose"
                     : "font-sans"
                 }
               >
