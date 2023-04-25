@@ -3,7 +3,7 @@ import HeadSeo from "../../../components/Head";
 import HeaderTitle from "../../../components/HeaderTitle";
 
 import { Image } from "react-datocms";
-import Link from "next/Link";
+import Link from "next/link";
 
 import { request } from "../../../lib/datocms";
 const HOMEPAGE_QUERY = `
