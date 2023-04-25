@@ -22,9 +22,14 @@ module.exports = {
       backgroundImage: {
         hero_bg: "url('/hero-bg.jpg')",
         footer_bg: "url('/footer-bg.jpg')",
+        boats: "url('/boats.jpg')",
+        houses: "url('/houses.jpg')",
       },
       maxHeight: {
         "50vh": "50vh",
+      },
+      brightness: {
+        25: ".25",
       },
     },
   },

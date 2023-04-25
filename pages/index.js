@@ -64,7 +64,7 @@ export default function Home(props) {
           </motion.div>
         </div>
       </motion.div>
-      <section ref={ref}>
+      <section ref={ref} className="overflow-hidden">
         <div className="container mx-auto w-full mt-24">
           <motion.div
             style={{ opacity }}
@@ -85,7 +85,7 @@ export default function Home(props) {
           </motion.div>
         </div>
       </section>
-      <section ref={ref}>
+      <section ref={ref} className="overflow-hidden">
         <motion.div
           style={{ opacity, y }}
           className="flex w-100 container mx-auto flex-col items-center w-full py-10"
@@ -154,6 +154,16 @@ export default function Home(props) {
                 <p className="text-center">Remonty i wykończenia</p>
               </Link>
             </motion.div>
+
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <PowerOutlined
+                style={{ fontSize: 100 }}
+                className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+              />
+              <p className="text-center">
+                Świadectwa charakterystyki energetycznej
+              </p>
+            </motion.div>
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
               <Link href="offer/drenaze" className="text-center">
                 <WaterDamageOutlined
@@ -162,15 +172,6 @@ export default function Home(props) {
                 />
                 <p className="text-center">Drenaze</p>
               </Link>
-            </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <PowerOutlined
-                style={{ fontSize: 100 }}
-                className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-              />
-              <p className="text-center">
-                Świadectwo charakterystyki energetycznej
-              </p>
             </motion.div>
           </div>
         </motion.div>
