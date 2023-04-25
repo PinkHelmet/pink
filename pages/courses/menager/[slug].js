@@ -2,6 +2,7 @@ import { Image, StructuredText, useQuerySubscription } from "react-datocms";
 import Link from "next/link";
 // import styles from "../../styles/BlogPost.module.css";
 import { request } from "../../../lib/datocms";
+import HeadSeo from "../../../components/Head";
 
 export default function BlogPost(props) {
   // const { postData } = props;
@@ -9,35 +10,41 @@ export default function BlogPost(props) {
   const postData = data.article;
 
   return (
-    <div className="container mx-auto">
-      <Image
-        data={postData.coverImage.responsiveImage}
-        className="w-full cover max-h-1/2 "
+    <>
+      <HeadSeo
+        title={`Pink Helmet - ${postData.title}`}
+        description={`opis opis`}
       />
       <div className="container mx-auto">
-        <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
-
-        <StructuredText
-          data={postData.content}
-          renderBlock={({ record }) => {
-            switch (record.__typename) {
-              case "ImageRecord":
-                return <Image data={record.image.responsiveImage} />;
-              default:
-                return null;
-            }
-          }}
+        <Image
+          data={postData.coverImage.responsiveImage}
+          className="w-full cover max-h-1/2 "
         />
-        <div className="flex justify-end font-extralight my-6">
-          <p>
-            {postData.author.name} / {postData.publishedDate}
-          </p>
-        </div>
-        <div style={{ marginTop: "50px" }}>
-          <Link href="/">Back to the frontpage</Link>
+        <div className="container mx-auto">
+          <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
+
+          <StructuredText
+            data={postData.content}
+            renderBlock={({ record }) => {
+              switch (record.__typename) {
+                case "ImageRecord":
+                  return <Image data={record.image.responsiveImage} />;
+                default:
+                  return null;
+              }
+            }}
+          />
+          <div className="flex justify-end font-extralight my-6">
+            <p>
+              {postData.author.name} / {postData.publishedDate}
+            </p>
+          </div>
+          <div style={{ marginTop: "50px" }}>
+            <Link href="/">Back to the frontpage</Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
