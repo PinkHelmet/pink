@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FacebookOutlined } from "@mui/icons-material";
 const Footer = () => {
   return (
-    <div className="bg-no-repeat bg-footer_bg bg-cover bg-center bg-fixed shadow-lg h-60">
+    <div className="bg-no-repeat bg-footer_bg bg-cover bg-center bg-fixed shadow-lg">
       <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
-        <div className="container mx-auto h-full flex text-white">
+        <div className="container mx-auto h-full flex flex-col md:flex-row justify-center items-center text-white">
           <div className="w-1/2 text-center m-6">
             <p className="p-4">Social media </p>
             <a
@@ -16,17 +16,23 @@ const Footer = () => {
               <FacebookOutlined fontSize="large" />
             </a>
           </div>
-          <div className="w-1/2 text-center mt-6 mb-4">
+          <div className="w-1/2 text-center order-first mt-6 mb-4">
             <p className="p-4">Dane Kontaktowe</p>
             <p className="p-2">
-              <span className="font-thin">tel:</span> 516 289 995
+              <span className="font-regular">tel:</span>{" "}
+              <span className="text-xl font-bold">516 289 995</span>
             </p>
             <p className="p-2">
-              <span className="font-thin">email:</span> biuro@pinkhelmet.pl
+              <span className="font-regular">email: </span>
+              <span className="text-xl font-bold">
+                biuro@pinkhelmet.pl
+              </span>{" "}
             </p>
             <p className="p-2 max-w-screen-sm">
-              <span className="font-thin">lokalizacja działania:</span>{" "}
-              Piaseczno, Warszawa i okolice
+              <span className="font-regular">lokalizacja działania:</span>{" "}
+              <span className="text-xl font-bold">
+                Piaseczno, Warszawa i okolice
+              </span>
             </p>
           </div>
         </div>

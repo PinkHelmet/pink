@@ -55,10 +55,13 @@ export default function Home(props) {
   const { data } = props;
 
   const posts = data.allArticles;
-  // console.log(posts);
+
   return (
     <>
-      <HeadSeo title={`Pink Helmet - szkolenia`} description={`opis opis`} />
+      <HeadSeo
+        title={`Pink Helmet - szkolenia`}
+        description={`Strona z wyborem szkolen menadzerski lub szkolenia z zakresu rękojmi nieruchomości`}
+      />
       <HeaderTitle title="Szkolenia" />
       <motion.section
         initial={{ y: 25, opacity: 0 }}

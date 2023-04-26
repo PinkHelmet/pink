@@ -17,14 +17,18 @@ export default function BlogPost(props) {
         description={`opis opis`}
       />{" "}
       <div className="container mx-auto">
-        <Image
-          data={postData.coverImage.responsiveImage}
-          className="w-full cover max-h-1/2 "
-        />
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
+        {postData?.coverImage?.responsiveImage && (
+          <Image
+            data={postData?.coverImage?.responsiveImage}
+            className="w-full cover max-h-1/2 mb-6 "
+          />
+        )}
 
-          <StructuredText data={postData.contentFirst} />
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
+          <div className="text-xl my-4">
+            <StructuredText data={postData.contentFirst} />
+          </div>
 
           {postData?.secondImage?.responsiveImage && (
             <Image
@@ -32,8 +36,9 @@ export default function BlogPost(props) {
               className="w-full cover max-h-1/2 my-6 "
             />
           )}
-
-          <StructuredText data={postData.contentSecond} />
+          <div className="text-xl list-disc my-4">
+            <StructuredText data={postData.contentSecond} />
+          </div>
 
           {postData?.thirdImage?.responsiveImage && (
             <Image
@@ -42,7 +47,9 @@ export default function BlogPost(props) {
             />
           )}
 
-          <StructuredText data={postData.contentThird} />
+          <div className="text-xl list-disc my-4">
+            <StructuredText data={postData.contentThird} />
+          </div>
 
           <RedirectButton href="offer" redirectTo="Cofnij do ofert" />
         </div>
