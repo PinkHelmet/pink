@@ -7,35 +7,30 @@ import Link from "next/link";
 
 import { request } from "../../../lib/datocms";
 const HOMEPAGE_QUERY = `
-query MyQuery {
-  allArticles {
-    title
-    coverImage {
-      url
-      responsiveImage {
-        width
-        webpSrcSet
-        title
-        srcSet
-        src
-        sizes
-        height
-        bgColor
-        base64
-        aspectRatio
-        alt
-      }
-    }
+{
+  allArticleMenagers {
     excerpt
-    publishedDate
+    id
     slug
+    title
     author {
       name
     }
-    content {
-      value
+    coverImage {
+      responsiveImage {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
     }
-    id
   }
 }
 `;
@@ -52,7 +47,7 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { data } = props;
 
-  const posts = data.allArticles;
+  const posts = data.allArticleMenagers;
   // console.log(posts);
   return (
     <>

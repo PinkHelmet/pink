@@ -1,6 +1,14 @@
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useRef, useEffect } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useAnimation,
+  useInView,
+} from "framer-motion";
+//custom hooks
+import useAnimateOnInView from "../hooks/useAnimateOnInView";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -21,14 +29,24 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home(props) {
+  //ref
   let ref = useRef(null);
+  let refSecond = useRef(null);
+  let refThird = useRef(null);
+  //inView
+  const isInView = useInView(ref, { once: true });
+  const isInViewSecond = useInView(refSecond, { once: true });
+  const isInViewThird = useInView(refThird, { once: true });
+
   let { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 0.5", "end end"],
   });
 
-  let y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
-  let opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
+  // let y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
+  // let opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
+  let y;
+  let opacity;
 
   return (
     <>
@@ -64,12 +82,17 @@ export default function Home(props) {
           </motion.div>
         </div>
       </motion.div>
-      <section ref={ref} className="overflow-hidden">
-        <div className="container mx-auto w-full mt-24">
-          <motion.div
-            style={{ opacity }}
-            className="border-2 border-pink-rose rounded mx-4 bg-gray-100 relative shadow-lg"
-          >
+      <section className={"overflow-hidden"}>
+        <div
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+          className="container mx-auto w-full mt-24"
+        >
+          <div className="border-2 border-pink-rose rounded mx-4 bg-gray-100 relative shadow-lg">
             <Image
               src={face}
               width={120}
@@ -82,10 +105,18 @@ export default function Home(props) {
               mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
               gospodarczych w Polsce.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
-      <section ref={ref} className="overflow-hidden">
+      <section
+        ref={refSecond}
+        style={{
+          transform: isInViewSecond ? "none" : "translateX(-200px)",
+          opacity: isInViewSecond ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className="overflow-hidden"
+      >
         <motion.div
           style={{ opacity, y }}
           className="flex w-100 container mx-auto flex-col items-center w-full py-10"
@@ -112,7 +143,15 @@ export default function Home(props) {
             przeznaczone dla kadry menedżerskiej.
           </motion.p>
 
-          <div className="flex flex-row w-full flex-wrap justify-between my-6 items-center">
+          <div
+            ref={refThird}
+            style={{
+              transform: isInViewThird ? "none" : "translateX(-200px)",
+              opacity: isInViewThird ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+            className="flex flex-row w-full flex-wrap justify-between my-6 items-center"
+          >
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
               <Link href="offer/doradztwo-inzynieryjne" className="text-center">
                 <FontAwesomeIcon

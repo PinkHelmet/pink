@@ -1,83 +1,53 @@
 import { Image, StructuredText, useQuerySubscription } from "react-datocms";
 import Link from "next/link";
 import { request } from "../../lib/datocms";
+//components
+import HeadSeo from "../../components/Head";
+import RedirectButton from "../../components/RedirectButton";
 
 export default function BlogPost(props) {
   const { data, error, status } = useQuerySubscription(props.subscription);
 
-  console.log(data);
   const postData = data.offer;
 
   return (
-    <div className="container mx-auto">
-      <Image
-        data={postData.coverImage.responsiveImage}
-        className="w-full cover max-h-1/2 "
-      />
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
+    <>
+      <HeadSeo
+        title={`Pink Helmet - ${postData.title}`}
+        description={`opis opis`}
+      />{" "}
+      <div className="container mx-auto">
+        <Image
+          data={postData.coverImage.responsiveImage}
+          className="w-full cover max-h-1/2 "
+        />
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
 
-        <div className="mx-6">
-          <StructuredText
-            data={postData.contentFirst}
-            renderBlock={({ record }) => {
-              switch (record.__typename) {
-                case "ImageRecord":
-                  return <Image data={record.image.responsiveImage} />;
-                default:
-                  return null;
-              }
-            }}
-          />
-        </div>
+          <StructuredText data={postData.contentFirst} />
 
-        {postData?.secondImage?.responsiveImage && (
-          <Image
-            data={postData?.secondImage?.responsiveImage}
-            className="w-full cover max-h-1/2 my-6 "
-          />
-        )}
-        <div className="mx-6">
-          <StructuredText
-            data={postData.contentSecond}
-            renderBlock={({ record }) => {
-              switch (record.__typename) {
-                case "ImageRecord":
-                  return <Image data={record.image.responsiveImage} />;
-                default:
-                  return null;
-              }
-            }}
-          />
-        </div>
+          {postData?.secondImage?.responsiveImage && (
+            <Image
+              data={postData?.secondImage?.responsiveImage}
+              className="w-full cover max-h-1/2 my-6 "
+            />
+          )}
 
-        {postData?.thirdImage?.responsiveImage && (
-          <Image
-            data={postData?.thirdImage?.responsiveImage}
-            className="w-full cover max-h-1/2 my-6"
-          />
-        )}
-        <div className="mx-6">
-          <StructuredText
-            data={postData.contentThird}
-            renderBlock={({ record }) => {
-              switch (record.__typename) {
-                case "ImageRecord":
-                  return <Image data={record.image.responsiveImage} />;
-                default:
-                  return null;
-              }
-            }}
-          />
-        </div>
+          <StructuredText data={postData.contentSecond} />
 
-        <div className="border px-10 py-6 m-6 rounded bg-pink-rose text-black hover:bg-pink-600 hover:text-white transition transition-duration-300">
-          <Link href="/offer" className="px-10 py-6">
-            Cofnij do ofert
-          </Link>
+          {postData?.thirdImage?.responsiveImage && (
+            <Image
+              data={postData?.thirdImage?.responsiveImage}
+              className="w-full cover max-h-1/2 my-6"
+            />
+          )}
+
+          <StructuredText data={postData.contentThird} />
+
+          <RedirectButton href="offer" redirectTo="Cofnij do ofert" />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 // import styles from "../../styles/BlogPost.module.css";
 import { request } from "../../../lib/datocms";
 import HeadSeo from "../../../components/Head";
+import RedirectButton from "../../../components/RedirectButton";
 
 export default function BlogPost(props) {
   // const { postData } = props;
@@ -39,8 +40,8 @@ export default function BlogPost(props) {
               {postData.author.name} / {postData.publishedDate}
             </p>
           </div>
-          <div style={{ marginTop: "50px" }}>
-            <Link href="/">Back to the frontpage</Link>
+          <div className="flex flex-col justify-center items-center">
+            <RedirectButton href="courses/local" redirectTo="Cofnij" />
           </div>
         </div>
       </div>

@@ -3,11 +3,12 @@ import Link from "next/link";
 // import styles from "../../styles/BlogPost.module.css";
 import { request } from "../../../lib/datocms";
 import HeadSeo from "../../../components/Head";
+import RedirectButton from "../../../components/RedirectButton";
 
 export default function BlogPost(props) {
   // const { postData } = props;
   const { data, error, status } = useQuerySubscription(props.subscription);
-  const postData = data.article;
+  const postData = data.articleMenager;
 
   return (
     <>
@@ -39,8 +40,8 @@ export default function BlogPost(props) {
               {postData.author.name} / {postData.publishedDate}
             </p>
           </div>
-          <div style={{ marginTop: "50px" }}>
-            <Link href="/">Back to the frontpage</Link>
+          <div className="flex flex-col justify-center items-center">
+            <RedirectButton href="courses/menager" redirectTo="Cofnij" />
           </div>
         </div>
       </div>
@@ -50,7 +51,7 @@ export default function BlogPost(props) {
 
 const PATHS_QUERY = `
 query MyQuery {
-  allArticles {
+  allArticleMenagers {
     slug
   }
 }
@@ -62,7 +63,9 @@ export const getStaticPaths = async (context) => {
   });
 
   let paths = [];
-  slugQuery.allArticles.map((p) => paths.push(`/courses/menager/${p.slug}`));
+  slugQuery.allArticleMenagers.map((p) =>
+    paths.push(`/courses/menager/${p.slug}`)
+  );
 
   return {
     paths,
@@ -72,7 +75,7 @@ export const getStaticPaths = async (context) => {
 
 const ARTICLE_QUERY = `
 query MyQuery($slug: String) {
-  article(filter: {slug: {eq: $slug}}) {
+  articleMenager(filter: {slug: {eq: $slug}}) {
     author {
       name
     }

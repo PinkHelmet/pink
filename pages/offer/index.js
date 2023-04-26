@@ -1,6 +1,9 @@
+//next components
 import Image from "next/image";
 import Link from "next/link";
+//framer
 import { motion } from "framer-motion";
+//icons
 import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 //components
 import HeadSeo from "../../components/Head";
