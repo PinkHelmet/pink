@@ -7,55 +7,7 @@ import HeaderTitle from "../../components/HeaderTitle";
 import boats from "../../public/boats.jpg";
 import houses from "../../public/houses.jpg";
 
-import { request } from "../../lib/datocms";
-const HOMEPAGE_QUERY = `
-query MyQuery {
-  allArticles {
-    title
-    coverImage {
-      url
-      responsiveImage {
-        width
-        webpSrcSet
-        title
-        srcSet
-        src
-        sizes
-        height
-        bgColor
-        base64
-        aspectRatio
-        alt
-      }
-    }
-    excerpt
-    publishedDate
-    slug
-    author {
-      name
-    }
-    content {
-      value
-    }
-    id
-  }
-}
-`;
-
-export async function getStaticProps() {
-  const data = await request({
-    query: HOMEPAGE_QUERY,
-  });
-  return {
-    props: { data },
-  };
-}
-
 export default function Home(props) {
-  const { data } = props;
-
-  const posts = data.allArticles;
-
   return (
     <>
       <HeadSeo
@@ -87,7 +39,6 @@ export default function Home(props) {
                 nunc.
               </p>
             </div>
-            {/* <hr /> */}
             <div className="flex flex-col mx-auto w-full container md:flex-row my-6">
               <div className="w-full md:w-1/2 m-2 overflow-hidden relative bg-blend-darken">
                 <Link href="/courses/menager">
@@ -96,7 +47,7 @@ export default function Home(props) {
                     className={`hover:scale-110 transition transition-500 brightness-75 `}
                   />
                   <p className="absolute top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow">
-                    Szkolenia menadzerskie z zarządzania
+                    Szkolenia menadżerskie z zarządzania
                   </p>
                 </Link>
               </div>
@@ -113,26 +64,6 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-          {/* {posts.map((el) => (
-            <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">
-              <div className="rounded-lg">
-                <Image
-                  data={el.coverImage.responsiveImage}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="p-6">
-                <h2 className="my-4 text-2xl">
-                  <Link href={`/courses/${el.slug}`}>{el.title}</Link>
-                </h2>
-                <p className="font-thin">{el.excerpt}</p>
-                <div className="flex justify-between py-6 font-thin text-xs">
-                  <span>Autor: {el.author.name}</span>
-                  <span>Publikowany: {el.publishedDate}</span>
-                </div>
-              </div>
-            </div>
-          ))} */}
         </>
       </motion.section>
     </>

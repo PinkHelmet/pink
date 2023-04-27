@@ -7,7 +7,6 @@ import {
   useInView,
 } from "framer-motion";
 //custom hooks
-import useAnimateOnInView from "../hooks/useAnimateOnInView";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -195,13 +194,18 @@ export default function Home(props) {
             </motion.div>
 
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <PowerOutlined
-                style={{ fontSize: 100 }}
-                className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-              />
-              <p className="text-center">
-                Świadectwa charakterystyki energetycznej
-              </p>
+              <Link
+                href="offer/swiadectwa-charakterystyki-energetycznej"
+                className="text-center"
+              >
+                <PowerOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">
+                  Świadectwa charakterystyki energetycznej
+                </p>
+              </Link>
             </motion.div>
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
               <Link href="offer/drenaze" className="text-center">
@@ -209,7 +213,7 @@ export default function Home(props) {
                   style={{ fontSize: 100 }}
                   className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
                 />
-                <p className="text-center">Drenaze</p>
+                <p className="text-center">Drenaże</p>
               </Link>
             </motion.div>
           </div>

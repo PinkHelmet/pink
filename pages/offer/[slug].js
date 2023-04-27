@@ -16,7 +16,7 @@ export default function BlogPost(props) {
         title={`Pink Helmet - ${postData.title}`}
         description={`opis opis`}
       />{" "}
-      <div className="container mx-auto">
+      <div className="container mx-auto list-disc">
         {postData?.coverImage?.responsiveImage && (
           <Image
             data={postData?.coverImage?.responsiveImage}
@@ -26,7 +26,7 @@ export default function BlogPost(props) {
 
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
-          <div className="text-xl my-4">
+          <div className="text-xl list-disc list-inside  my-4">
             <StructuredText data={postData.contentFirst} />
           </div>
 
@@ -36,7 +36,7 @@ export default function BlogPost(props) {
               className="w-full cover max-h-1/2 my-6 "
             />
           )}
-          <div className="text-xl list-disc my-4">
+          <div className="text-xl list-disc list-inside my-4">
             <StructuredText data={postData.contentSecond} />
           </div>
 
@@ -47,7 +47,7 @@ export default function BlogPost(props) {
             />
           )}
 
-          <div className="text-xl list-disc my-4">
+          <div className="text-xl list-disc list-inside my-4">
             <StructuredText data={postData.contentThird} />
           </div>
 
