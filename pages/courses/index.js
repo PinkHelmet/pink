@@ -47,7 +47,7 @@ export default function Home(props) {
                     className={`hover:scale-110 transition transition-500 brightness-75 `}
                   />
                   <p className="absolute top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow">
-                    Szkolenia menadżerskie z zarządzania
+                    Szkolenia menedżerskie z zarządzania
                   </p>
                 </Link>
               </div>

@@ -1,5 +1,5 @@
 import { Image, StructuredText, useQuerySubscription } from "react-datocms";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import { request } from "../../lib/datocms";
 //components
 import HeadSeo from "../../components/Head";
@@ -16,44 +16,51 @@ export default function BlogPost(props) {
         title={`Pink Helmet - ${postData.title}`}
         description={`opis opis`}
       />{" "}
-      <div className="container mx-auto list-disc">
+      <motion.div
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, delay: 0.4 }}
+        className="container mx-auto "
+      >
         {postData?.coverImage?.responsiveImage && (
           <Image
             data={postData?.coverImage?.responsiveImage}
-            className="w-full cover max-h-1/2 mb-6 "
+            className="w-full cover max-h-1/2 mb-6 self-center"
           />
         )}
 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center leading-8">
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
-          <div className="text-xl list-disc list-inside  my-4">
+          <div className="my-4">
             <StructuredText data={postData.contentFirst} />
           </div>
 
           {postData?.secondImage?.responsiveImage && (
             <Image
               data={postData?.secondImage?.responsiveImage}
-              className="w-full cover max-h-1/2 my-6 "
+              className="w-full cover h-1/2 my-6 self-center"
             />
           )}
-          <div className="text-xl list-disc list-inside my-4">
+          <div className="my-4">
             <StructuredText data={postData.contentSecond} />
           </div>
 
           {postData?.thirdImage?.responsiveImage && (
             <Image
               data={postData?.thirdImage?.responsiveImage}
-              className="w-full cover max-h-1/2 my-6"
+              className="w-1/2 cover h-[30vh] my-6 self-center"
             />
           )}
 
-          <div className="text-xl list-disc list-inside my-4">
+          <div className="my-4">
             <StructuredText data={postData.contentThird} />
           </div>
 
-          <RedirectButton href="offer" redirectTo="Cofnij do ofert" />
+          <div className="self-center">
+            <RedirectButton href="offer" redirectTo="Cofnij do ofert" />
+          </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

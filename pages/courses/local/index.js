@@ -97,7 +97,7 @@ export default function Home(props) {
               <h2 className="my-4 text-2xl">
                 <Link href={`/courses/local/${el.slug}`}>{el.title}</Link>
               </h2>
-              <p className="font-thin">{el.excerpt}</p>
+              <p>{el.excerpt}</p>
               <div className="flex justify-between py-6 font-thin text-xs">
                 <span>Autor: {el.author.name}</span>
                 <span>Publikowany: {el.publishedDate}</span>

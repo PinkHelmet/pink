@@ -1,5 +1,5 @@
 import { Image, StructuredText, useQuerySubscription } from "react-datocms";
-import Link from "next/link";
+import { motion } from "framer-motion";
 // import styles from "../../styles/BlogPost.module.css";
 import { request } from "../../../lib/datocms";
 import HeadSeo from "../../../components/Head";
@@ -16,7 +16,12 @@ export default function BlogPost(props) {
         title={`Pink Helmet - ${postData.title}`}
         description={`opis opis`}
       />
-      <div className="container mx-auto">
+      <motion.div
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, delay: 0.4 }}
+        className="container mx-auto leading-8"
+      >
         <Image
           data={postData.coverImage.responsiveImage}
           className="w-full cover max-h-1/2 "
@@ -24,17 +29,7 @@ export default function BlogPost(props) {
         <div className="container mx-auto">
           <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
 
-          <StructuredText
-            data={postData.content}
-            renderBlock={({ record }) => {
-              switch (record.__typename) {
-                case "ImageRecord":
-                  return <Image data={record.image.responsiveImage} />;
-                default:
-                  return null;
-              }
-            }}
-          />
+          <StructuredText data={postData.content} />
           <div className="flex justify-end font-extralight my-6">
             <p>
               {postData.author.name} / {postData.publishedDate}
@@ -44,7 +39,7 @@ export default function BlogPost(props) {
             <RedirectButton href="courses/local" redirectTo="Cofnij" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
