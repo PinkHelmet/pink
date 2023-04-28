@@ -15,6 +15,10 @@ ul {
   list-style: inside;
 }
 
+ul li p{
+  display: inline;
+}
+
 h1,
 h2,
 h3,
