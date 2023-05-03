@@ -10,10 +10,12 @@ export default function BlogPost(props) {
 
   const postData = data.offer;
 
+  if (!postData) return null;
+
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - ${postData.title}`}
+        title={`Pink Helmet - ${postData?.title}`}
         description={`opis opis`}
       />{" "}
       <motion.div
@@ -34,7 +36,7 @@ export default function BlogPost(props) {
           key={postData.id}
           className="flex flex-col justify-center text-justify leading-8 mx-2"
         >
-          <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
+          <h1 className="text-4xl w-full text-center p-6">{postData?.title}</h1>
           <div className="my-4">
             <StructuredText data={postData.contentFirst} />
           </div>

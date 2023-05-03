@@ -128,7 +128,7 @@ export default function Offer(props) {
                   bounce: 0.3,
                   delay: 0.8,
                 }}
-                className={`w-full md:w-1/2 h-auto flex flex-col  ${offer.orderText}`}
+                className={`w-full md:w-1/2 h-auto flex flex-col text-justify ${offer.orderText}`}
               >
                 <h2 className="p-4 flex justify-center text-xl">
                   {offer.title}
