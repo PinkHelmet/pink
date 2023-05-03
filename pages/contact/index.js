@@ -1,6 +1,6 @@
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
-
+import siteMetadata from "../../data/siteMetadata";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -19,10 +19,11 @@ export default function Contact() {
           <p>Chcesz skorzystać z oferty ? </p>
           <p>Zapraszam do kontaktu:</p>
           <p>
-            tel: <span className="text-pink-rose">516 289 995</span>
+            tel:{" "}
+            <span className="text-pink-rose">{siteMetadata.phoneNumber}</span>
           </p>
           <p>
-            email: <span className="text-pink-rose">biuro@pinkhelmet.pl</span>
+            email: <span className="text-pink-rose">{siteMetadata.email}</span>
           </p>
         </div>
       </motion.section>

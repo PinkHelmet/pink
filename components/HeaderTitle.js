@@ -10,7 +10,7 @@ const HeaderTitle = ({ title }) => {
       className="inline-flex items-center justify-center w-full mt-8"
     >
       <hr className="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-      <h1 className="absolute px-3 font-medium text-2xl text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-black ">
+      <h1 className="absolute px-3 font-medium text-2xl text-center text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-black ">
         {title}
       </h1>
     </motion.div>

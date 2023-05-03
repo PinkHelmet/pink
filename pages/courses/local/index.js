@@ -68,22 +68,41 @@ export default function Home(props) {
         className="container min-h-screen flex flex-col mx-auto min-h-screen w-full"
       >
         <div className="container mx-auto w-full min-h-fit">
-          <div className="flex p-6">
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
-              venenatis ligula, non mattis sapien. Aenean tortor eros, tincidunt
-              sed ligula eu, fermentum faucibus magna. Aenean augue nisi, ornare
-              a ullamcorper ut, dignissim semper tortor. Integer aliquet varius
-              turpis, eu tempus diam dignissim ac. Aliquam porttitor nibh neque,
-              ut hendrerit leo venenatis aliquam. Vestibulum ut dictum leo.
-              Donec eu arcu in ligula efficitur mattis. Maecenas vestibulum,
-              risus vel elementum ornare, felis eros maximus velit, in
-              condimentum risus neque dictum arcu. Praesent at lorem cursus erat
-              varius pulvinar. In nisl magna, feugiat quis scelerisque vitae,
-              pretium nec tellus. Sed eu ante nunc.
+          <div className="flex flex-col p-6 text-justify leading-7">
+            <p className="mb-4">
+              Zgodnie z obowiązującym prawem Deweloper sprzedając mieszkanie lub
+              dom musi udzielić Nabywcy 5-letniej rękojmi na nieruchomość.
+              Oznacza to w praktyce, że Deweloper odpowiada za wszystkie wady
+              ukryte zarówno fizyczne jak i prawne jakie posiada dana
+              nieruchomość. Może to być przeciekający dach, mostki termiczne w
+              izolacji termicznej ścian czy też np. pękająca elewacja na
+              ścianach zewnętrznych budynku. Poziom obsługi posprzedażowej ma
+              ogromny wpływ na ocenę danego Dewelopera w procesie zakupowym, a
+              łatwy dostęp do informacji w Internecie ułatwia dzielenie się
+              informacjami pomiędzy potencjalnymi Nabywcami.
             </p>
+            <p className="mb-2">
+              Zakres szkoleń z zakresu rękojmi nieruchomości prowadzonych przez
+              <strong className="text-pink-rose"> Pink Helmet</strong> obejmuje
+              m.in.:
+            </p>
+            <ul className="mb-2">
+              <li>
+                przegląd przepisów prawnych i ich wpływ na obsługę
+                posprzedażową,
+              </li>
+              <li>
+                optymalizację przyjmowania i rozpatrywania zgłoszeń usterkowych,
+              </li>
+              <li>
+                przegląd typowych wad technicznych nieruchomości i wiele innych.
+              </li>
+            </ul>
+            <p className="mb-2">
+              Szkolenia mogą być przygotowane dokładnie pod Twoje potrzeby.
+            </p>
+            <p>Konkurencja nie śpi - a Ty? 😴</p>
           </div>
-          <hr />
         </div>
         {posts.map((el) => (
           <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">

@@ -25,18 +25,11 @@ export default function Home(props) {
           <div className="container mx-auto w-full min-h-fit">
             <div className="flex p-6">
               <p className="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                in venenatis ligula, non mattis sapien. Aenean tortor eros,
-                tincidunt sed ligula eu, fermentum faucibus magna. Aenean augue
-                nisi, ornare a ullamcorper ut, dignissim semper tortor. Integer
-                aliquet varius turpis, eu tempus diam dignissim ac. Aliquam
-                porttitor nibh neque, ut hendrerit leo venenatis aliquam.
-                Vestibulum ut dictum leo. Donec eu arcu in ligula efficitur
-                mattis. Maecenas vestibulum, risus vel elementum ornare, felis
-                eros maximus velit, in condimentum risus neque dictum arcu.
-                Praesent at lorem cursus erat varius pulvinar. In nisl magna,
-                feugiat quis scelerisque vitae, pretium nec tellus. Sed eu ante
-                nunc.
+                <strong className="text-pink-rose">„Pink Helmet” </strong>
+                prowadzi szkolenia z zakresu zarządzania przedsiębiorstwami w
+                tym przede wszystkim zarządzania kapitałem ludzkim oraz z
+                zakresu rękojmi nieruchomości i obsługi posprzedażowej Nabywców
+                nieruchomości od Dewelopera.
               </p>
             </div>
             <div className="flex flex-col mx-auto w-full container md:flex-row my-6">
@@ -46,7 +39,7 @@ export default function Home(props) {
                     src={boats}
                     className={`hover:scale-110 transition transition-500 brightness-75 `}
                   />
-                  <p className="absolute top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow">
+                  <p className="absolute top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow ">
                     Szkolenia menedżerskie z zarządzania
                   </p>
                 </Link>

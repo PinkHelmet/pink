@@ -109,12 +109,14 @@ export default function Offer(props) {
                   bounce: 0.1,
                   delay: 0.6,
                 }}
+                key={dataOffer.id}
                 className={`w-full md:w-1/2 flex ${offer.orderImage} h-auto md:rounded-lg overflow-hidden`}
               >
                 <Image
                   src={offer.coverImage.responsiveImage}
                   height={"100%"}
                   alt={offer.coverImage.responsiveImage.alt}
+                  className={"mx-auto"}
                 />
               </motion.div>
               <motion.div

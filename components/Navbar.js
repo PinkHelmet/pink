@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <Popover className={"sticky top-0 z-50"}>
+    <Popover className={"sticky top-0 z-10"}>
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -26,7 +26,7 @@ export default function BlogPost(props) {
           data={postData.coverImage.responsiveImage}
           className="w-full cover max-h-1/2 "
         />
-        <div className="container mx-auto">
+        <div className="mx-2 text-justify">
           <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
 
           <StructuredText
@@ -40,7 +40,7 @@ export default function BlogPost(props) {
               }
             }}
           />
-          <div className="flex justify-end font-extralight my-6">
+          <div className="flex justify-end text-sm font-extralight my-6">
             <p>
               {postData.author.name} / {postData.publishedDate}
             </p>
@@ -85,6 +85,23 @@ query MyQuery($slug: String) {
       name
     }
     content {
+      blocks {
+        image {
+          responsiveImage {
+            width
+            webpSrcSet
+            title
+            srcSet
+            src
+            sizes
+            height
+            base64
+            aspectRatio
+            alt
+            bgColor
+          }
+        }
+      }
       value
     }
     coverImage {

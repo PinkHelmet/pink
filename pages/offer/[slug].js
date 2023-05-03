@@ -25,11 +25,15 @@ export default function BlogPost(props) {
         {postData?.coverImage?.responsiveImage && (
           <Image
             data={postData?.coverImage?.responsiveImage}
-            className="w-full cover max-h-1/2 mb-6 self-center"
+            className="w-auto cover mb-6 self-center"
+            alt={postData?.coverImage?.responsiveImage.alt}
           />
         )}
 
-        <div className="flex flex-col justify-center leading-8">
+        <div
+          key={postData.id}
+          className="flex flex-col justify-center text-justify leading-8 mx-2"
+        >
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
           <div className="my-4">
             <StructuredText data={postData.contentFirst} />
@@ -38,7 +42,7 @@ export default function BlogPost(props) {
           {postData?.secondImage?.responsiveImage && (
             <Image
               data={postData?.secondImage?.responsiveImage}
-              className="w-full cover h-1/2 my-6 self-center"
+              className="w-auto cover mb-6 self-center"
             />
           )}
           <div className="my-4">
@@ -48,7 +52,7 @@ export default function BlogPost(props) {
           {postData?.thirdImage?.responsiveImage && (
             <Image
               data={postData?.thirdImage?.responsiveImage}
-              className="w-1/2 cover h-[30vh] my-6 self-center"
+              className="w-auto cover mb-6 self-center"
             />
           )}
 

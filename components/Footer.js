@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import siteMetadata from "../data/siteMetadata";
 import { FacebookOutlined } from "@mui/icons-material";
 const Footer = () => {
   return (
@@ -9,7 +9,8 @@ const Footer = () => {
           <div className="w-1/2 text-center m-6">
             <p className="p-4">Social media </p>
             <a
-              href="https://www.facebook.com/profile.php?id=100090664581682"
+              href={siteMetadata.facebook}
+              target="_blank"
               className="hover:transition hover:ease-in-out delay-150
             hover:text-facebook hover:cursor-pointer "
             >
@@ -20,12 +21,14 @@ const Footer = () => {
             <p className="p-4">Dane Kontaktowe</p>
             <p className="p-2">
               <span className="font-regular">tel:</span>{" "}
-              <span className="text-xl font-bold">516 289 995</span>
+              <span className="text-xl font-bold">
+                {siteMetadata.phoneNumber}
+              </span>
             </p>
             <p className="p-2">
               <span className="font-regular">email: </span>
               <span className="text-xl font-bold">
-                biuro@pinkhelmet.pl
+                {siteMetadata.email}
               </span>{" "}
             </p>
             <p className="p-2 max-w-screen-sm">
