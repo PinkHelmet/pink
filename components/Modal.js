@@ -1,14 +1,23 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Close } from "@mui/icons-material";
+import { Close, ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 import Image from "next/image";
 
 function Modal({ open, setOpen, data, image, setImage }) {
-  //   const [open, setOpen] = useState(true);
-  console.log("😀", data, image, setImage);
   const cancelButtonRef = useRef(null);
   const [pic, setPic] = useState(image);
-  console.log(pic);
+
+  const indexImage = data.findIndex((img) => img.id === pic.id);
+  console.log(indexImage);
+  const handleIncrement = () => {
+    if (indexImage < data.length) {
+      console.log("srodek");
+      setPic(data[indexImage + 1]);
+    }
+  };
+  const handleDecrement = () => {
+    indexImage > -1 ? setPic(data[indexImage - 1]) : pic;
+  };
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog
@@ -30,7 +39,7 @@ function Modal({ open, setOpen, data, image, setImage }) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full items-end justify-center items-center p-4 text-center sm:items-center sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -40,24 +49,47 @@ function Modal({ open, setOpen, data, image, setImage }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 mx-12 ">
-                <div className="bg-gray-50 px-4 py-3 ">
+              <Dialog.Panel className="relative transform rounded-lg bg-transparent text-left transition-all sm:my-8 mx-12 ">
+                <div className="px-4 py-3 max-h-[80vh] overflow-hidden">
                   <div
-                    className="absolute top-0 right-0 cursor-pointer"
+                    className="absolute -top-4 -right-4 text-white text-2xl cursor-pointer"
                     onClick={() => {
                       setImage(null);
                       setOpen(false);
                     }}
                   >
-                    <Close />
+                    <Close style={{ fontSize: 30 }} />
                   </div>
                   <Image
-                    src={`${pic}`}
+                    src={`${pic.image.responsiveImage.src}`}
                     width={0}
                     height={0}
+                    alt={image.image.responsiveImage.alt}
                     sizes="100vw"
+                    // className="max-h-[80vh]"
                     style={{ width: "100%", height: "auto" }}
                   />
+                </div>
+
+                <div
+                  className={`absolute top-1/2 -left-10 text-white ${
+                    indexImage === 0
+                      ? "opacity-50 pointer-events-none"
+                      : "cursor-pointer"
+                  }`}
+                  onClick={handleDecrement}
+                >
+                  <ArrowBackIos style={{ fontSize: 60 }} />
+                </div>
+                <div
+                  className={`absolute top-1/2 -right-12 text-white ${
+                    indexImage === data.length - 1
+                      ? "opacity-50 pointer-events-none"
+                      : "cursor-pointer"
+                  }`}
+                  onClick={handleIncrement}
+                >
+                  <ArrowForwardIos style={{ fontSize: 60 }} />
                 </div>
               </Dialog.Panel>
             </Transition.Child>
