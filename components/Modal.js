@@ -48,7 +48,7 @@ function Modal({ open, setOpen, data, image, setImage }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform rounded-lg bg-transparent text-left transition-all md:my-8 md:mx-12 ">
-                <div className="px-4 py-3 max-h-[80vh] overflow-hidden">
+                <div className="px-4 py-3 max-h-[90vh] overflow-hidden">
                   <div
                     className="absolute -top-4 -right-4 text-white text-2xl cursor-pointer"
                     onClick={() => {
@@ -64,10 +64,10 @@ function Modal({ open, setOpen, data, image, setImage }) {
                     height={0}
                     alt={image.image.responsiveImage.alt}
                     sizes="100vw"
-                    // className="max-h-[80vh]"
+                    className="max-h-[80vh]"
                     style={{ width: "100%", height: "auto" }}
                   />
-                  <p className="bg-white text-center p-2">
+                  <p className="z-50 bg-white text-center p-2">
                     {pic.image.responsiveImage.title}
                   </p>
                 </div>
