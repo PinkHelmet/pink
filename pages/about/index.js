@@ -10,7 +10,14 @@ import aboutImg from "../../public/hero-about.jpg";
 export default function About() {
   return (
     <>
-      <Head title={`Pink Helmet - o Firmie`} description={`opis opis`} />
+      <Head
+        title={`Pink Helmet - O Firmie`}
+        description={`Od dawna moim marzeniem było prowadzić własną działalność
+            gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
+            satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak
+            najpierw chce się nauczyć jak najwięcej i znaleźć w życiu to co mnie
+            dodatkowo fascynuje i co może mi zapewnić przysłowiowy chleb.`}
+      />
       <HeaderTitle title="O firmie" />
       <motion.section
         initial={{ y: 25, opacity: 0 }}
@@ -27,7 +34,10 @@ export default function About() {
           />
         </div>
         <div className={`md:w-6/12 m-6 font-medium`}>
-          <h1 className="text-2xl m-6">Pink Helmet - Karolina Szuba</h1>
+          <h1 className="text-2xl my-6">
+            <strong className="text-pink-rose">Pink Helmet</strong> - Karolina
+            Szuba
+          </h1>
           <p className="mb-2">
             Od dawna moim marzeniem było prowadzić własną działalność
             gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
@@ -58,8 +68,8 @@ export default function About() {
             Któregoś dnia stwierdziłam, że chyba już wewnętrzny głos, który do
             tej pory zawsze mówił „nie dasz sobie rady!”, „gdzie kobieta w
             budownictwie?” zaczyna zmieniać retorykę na tekst niczym z polskiego
-            filmu „dlaczego nie?”. I tak o to powstał „
-            <strong>Pink Helmet</strong>” 😊
+            filmu „dlaczego nie?”. I tak o to powstał
+            <strong className="text-pink-rose"> Pink Helmet</strong> 😊
           </p>
           <p className="fmb-2">
             A kim jestem prywatnie? Żoną, córką, wnuczką... i pancią gromady

@@ -6,7 +6,11 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <>
-      <HeadSeo title={`Pink Helmet - kontakt`} description={`opis opis`} />
+      <HeadSeo
+        title={`Pink Helmet - kontakt`}
+        description={`Skontaktuj się z nami: ${siteMetadata.phoneNumber} bądź napisz do nas 
+      ${siteMetadata.email}`}
+      />
       <HeaderTitle title="Kontakt" />
       <motion.section
         initial={{ y: 25, opacity: 0 }}

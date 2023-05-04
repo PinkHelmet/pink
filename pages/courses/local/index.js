@@ -53,12 +53,21 @@ export default function Home(props) {
   const { data } = props;
 
   const posts = data.allArticles;
-  // console.log(posts);
+
   return (
     <>
       <HeadSeo
         title={`Pink Helmet - szkolenia menadzerskie`}
-        description={`opis opis`}
+        description={`Zgodnie z obowiązującym prawem Deweloper sprzedając mieszkanie lub
+              dom musi udzielić Nabywcy 5-letniej rękojmi na nieruchomość.
+              Oznacza to w praktyce, że Deweloper odpowiada za wszystkie wady
+              ukryte zarówno fizyczne jak i prawne jakie posiada dana
+              nieruchomość. Może to być przeciekający dach, mostki termiczne w
+              izolacji termicznej ścian czy też np. pękająca elewacja na
+              ścianach zewnętrznych budynku. Poziom obsługi posprzedażowej ma
+              ogromny wpływ na ocenę danego Dewelopera w procesie zakupowym, a
+              łatwy dostęp do informacji w Internecie ułatwia dzielenie się
+              informacjami pomiędzy potencjalnymi Nabywcami.`}
       />
       <HeaderTitle title="Szkolenia z zakresu rękojmi nieruchomości" />
       <motion.section

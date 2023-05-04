@@ -12,7 +12,10 @@ export default function Home(props) {
     <>
       <HeadSeo
         title={`Pink Helmet - szkolenia`}
-        description={`Strona z wyborem szkolen menadzerski lub szkolenia z zakresu rękojmi nieruchomości`}
+        description={`Pink Helmet prowadzi szkolenia z zakresu zarządzania przedsiębiorstwami w
+                tym przede wszystkim zarządzania kapitałem ludzkim oraz z
+                zakresu rękojmi nieruchomości i obsługi posprzedażowej Nabywców
+                nieruchomości od Dewelopera.`}
       />
       <HeaderTitle title="Szkolenia" />
       <motion.section
@@ -25,7 +28,7 @@ export default function Home(props) {
           <div className="container mx-auto w-full min-h-fit">
             <div className="flex p-6">
               <p className="text-justify">
-                <strong className="text-pink-rose">„Pink Helmet” </strong>
+                <strong className="text-pink-rose">Pink Helmet </strong>
                 prowadzi szkolenia z zakresu zarządzania przedsiębiorstwami w
                 tym przede wszystkim zarządzania kapitałem ludzkim oraz z
                 zakresu rękojmi nieruchomości i obsługi posprzedażowej Nabywców

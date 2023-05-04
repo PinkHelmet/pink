@@ -1,11 +1,5 @@
-import { useRef, useEffect } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useAnimation,
-  useInView,
-} from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useInView } from "framer-motion";
 //custom hooks
 
 import Link from "next/link";
@@ -50,8 +44,10 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - strona główna`}
-        description={`opis opis`}
+        title={`Pink Helmet - Strona główna`}
+        description={`Pink Helmet to nie tylko działalność gospodarcza. To 
+        droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
+        gospodarczych w Polsce.`}
       />
 
       <motion.div
@@ -99,7 +95,7 @@ export default function Home(props) {
               className="absolute -top-12 left-1/2 transform -translate-x-1/2 origin-center rounded-full border-2 border-pink-rose"
             />
             <p className="my-24 mx-4 text-center leading-7">
-              <span className="font-bold text-pink-rose">"Pink Helmet" </span>to
+              <span className="font-bold text-pink-rose">Pink Helmet </span>to
               nie tylko działalność gospodarcza. To droga od kompleksowej
               mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
               gospodarczych w Polsce.
@@ -124,7 +120,7 @@ export default function Home(props) {
             Dlaczego Pink Helmet ?
           </motion.h2>
           <motion.p className="font-normal p-6">
-            <span className="font-bold text-pink-rose">„Pink Helmet”</span>{" "}
+            <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
             zajmuje się przede wszystkim kompleksową obsługą inżynieryjną od
             momentu zakupu lokalu (sprawdzenie zapisów umowy deweloperskiej,
             sprawdzenie kompletności dokumentów, pomoc doradcza w zakresie zmian

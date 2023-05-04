@@ -10,11 +10,13 @@ export default function BlogPost(props) {
   const { data, error, status } = useQuerySubscription(props.subscription);
   const postData = data.article;
 
+  if (!postData) return null;
+
   return (
     <>
       <HeadSeo
         title={`Pink Helmet - ${postData.title}`}
-        description={`opis opis`}
+        description={postData.excerpt}
       />
       <motion.div
         initial={{ y: 25, opacity: 0 }}
@@ -94,6 +96,7 @@ query MyQuery($slug: String) {
     publishedDate
     slug
     title
+    excerpt
   }
 }
 

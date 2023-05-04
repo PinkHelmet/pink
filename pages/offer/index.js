@@ -93,7 +93,13 @@ export default function Offer(props) {
 
   return (
     <>
-      <HeadSeo title={`Pink Helmet - oferta`} description={`opis opis`} />{" "}
+      <HeadSeo
+        title={`Pink Helmet - Oferta`}
+        description={`W ofercie Pink Helmet znajdują się usługi takie jak doradztwo inżynieryjne
+        pomoc przy odbiorze lokali, od projektowania po remonty i wykończenia. Oferuję także pomoc 
+        przy montażu drenaży, a gdy pojawi się problem z izolacja budynku pomogę zlokalizować 'zimne miejsca'
+        przy pomocy kamery termowizyjnej. Poprowadzę Cię od początku do końca, aby Twoje cztery ściany były tymi wymarzonymi! `}
+      />{" "}
       <HeaderTitle title="Oferta" />
       <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full flex-wrap">
         {dataOffer.map((offer) => (

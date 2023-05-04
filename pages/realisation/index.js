@@ -43,7 +43,6 @@ export async function getStaticProps() {
 export default function Realisation(props) {
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState(null);
-  let data = [`/boats.jpg`, `/houses.jpg`];
 
   const { dataS } = props;
 
@@ -51,7 +50,10 @@ export default function Realisation(props) {
 
   return (
     <>
-      <HeadSeo title={`Pink Helmet - realizacje`} description={`opis opis`} />
+      <HeadSeo
+        title={`Pink Helmet - Realizacje`}
+        description={`Galeria zrealizowanych projektów`}
+      />
       <HeaderTitle title="Realizacje" />
       <motion.section
         initial={{ y: 25, opacity: 0 }}
@@ -72,8 +74,6 @@ export default function Realisation(props) {
             >
               <Image
                 src={el.image.responsiveImage}
-                // width="50%"
-                // height="50%"
                 className="h-auto max-w-full rounded-lg"
               />
             </div>

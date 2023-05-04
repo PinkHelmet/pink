@@ -16,7 +16,7 @@ export default function BlogPost(props) {
     <>
       <HeadSeo
         title={`Pink Helmet - ${postData?.title}`}
-        description={`opis opis`}
+        description={postData?.excerpt}
       />{" "}
       <motion.div
         initial={{ y: 25, opacity: 0 }}
@@ -27,7 +27,7 @@ export default function BlogPost(props) {
         {postData?.coverImage?.responsiveImage && (
           <Image
             data={postData?.coverImage?.responsiveImage}
-            className="w-auto cover mb-6 self-center"
+            className="w-auto cover mx-auto mb-6 self-center"
             alt={postData?.coverImage?.responsiveImage.alt}
           />
         )}
@@ -98,6 +98,7 @@ query MyQuery($slug: String) {
   offer(filter: {slug: {eq: $slug}}){
     title
     slug
+    excerpt
     id
     contentFirst {
       value

@@ -54,7 +54,17 @@ export default function Home(props) {
     <>
       <HeadSeo
         title={`Pink Helmet - szkolenia menedżerskie`}
-        description={`opis opis`}
+        description={`Zarządzanie przedsiębiorstwem jest jak budowanie domu. Najpierw
+              musi pojawić się koncepcja i projekt. Nie może zabraknąć
+              kosztorysu (biznes plan, analiza strategiczna przedsiębiorstwa).
+              Następnie solidne fundamenty (misja i wizja przedsiębiorstwa).
+              Teraz można już wznosić ściany, stropy, posadzki (marketing,
+              zatrudnienie pracowników, inwestycja w sprzęt, narzędzia,
+              oprogramowanie). Na końcu kładziemy dach (znajdujemy klientów,
+              budujemy silną markę wewnątrz i na zewnętrz, inwestujemy w
+              szkolenia). Mimo, że dom już stoi to przed nami jeszcze długa
+              droga do zamieszkania w nim i tak samo jest z przedsiębiorstwem –
+              to codzienna praca i codzienne działania prowadzące do sukcesu.`}
       />
       <HeaderTitle title="Szkolenia menedżerskie z zarządzania" />
       <motion.section

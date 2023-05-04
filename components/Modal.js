@@ -10,14 +10,12 @@ function Modal({ open, setOpen, data, image, setImage }) {
   const indexImage = data.findIndex((img) => img.id === pic.id);
   console.log(indexImage);
   const handleIncrement = () => {
-    if (indexImage < data.length) {
-      console.log("srodek");
-      setPic(data[indexImage + 1]);
-    }
+    setPic(data[indexImage + 1]);
   };
   const handleDecrement = () => {
-    indexImage > -1 ? setPic(data[indexImage - 1]) : pic;
+    setPic(data[indexImage - 1]);
   };
+
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog
@@ -49,7 +47,7 @@ function Modal({ open, setOpen, data, image, setImage }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform rounded-lg bg-transparent text-left transition-all sm:my-8 mx-12 ">
+              <Dialog.Panel className="relative transform rounded-lg bg-transparent text-left transition-all md:my-8 md:mx-12 ">
                 <div className="px-4 py-3 max-h-[80vh] overflow-hidden">
                   <div
                     className="absolute -top-4 -right-4 text-white text-2xl cursor-pointer"
@@ -69,10 +67,13 @@ function Modal({ open, setOpen, data, image, setImage }) {
                     // className="max-h-[80vh]"
                     style={{ width: "100%", height: "auto" }}
                   />
+                  <p className="bg-white text-center p-2">
+                    {pic.image.responsiveImage.title}
+                  </p>
                 </div>
 
                 <div
-                  className={`absolute top-1/2 -left-10 text-white ${
+                  className={`absolute left-1/3 md:top-1/2 md:-left-10 transform md:-translate-y-1/2  text-white ${
                     indexImage === 0
                       ? "opacity-50 pointer-events-none"
                       : "cursor-pointer"
@@ -82,7 +83,7 @@ function Modal({ open, setOpen, data, image, setImage }) {
                   <ArrowBackIos style={{ fontSize: 60 }} />
                 </div>
                 <div
-                  className={`absolute top-1/2 -right-12 text-white ${
+                  className={`absolute right-1/3 md:top-1/2 md:-right-12 transform md:-translate-y-1/2 text-white ${
                     indexImage === data.length - 1
                       ? "opacity-50 pointer-events-none"
                       : "cursor-pointer"

@@ -14,6 +14,7 @@ const Navbar = () => {
     { path: "/about", route: "O firmie" },
     { path: "/offer", route: "Oferta" },
     { path: "/courses", route: "Szkolenia" },
+    { path: "/realisation", route: "Realizacje" },
     { path: "/contact", route: "Kontakt" },
   ];
 
