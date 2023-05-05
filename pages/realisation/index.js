@@ -60,7 +60,7 @@ export default function Realisation(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        className="container mx-auto h-[70vh]"
+        className="container mx-auto mb-8"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {dataGallery.map((el) => (
