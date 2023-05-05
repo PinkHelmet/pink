@@ -23,6 +23,7 @@ export default function BlogPost(props) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
         className="container mx-auto "
+        key={postData.id}
       >
         {postData?.coverImage?.responsiveImage && (
           <Image
@@ -32,10 +33,7 @@ export default function BlogPost(props) {
           />
         )}
 
-        <div
-          key={postData.id}
-          className="flex flex-col justify-center text-justify leading-8 mx-2"
-        >
+        <div className="flex flex-col justify-center text-justify leading-8 mx-2">
           <h1 className="text-4xl w-full text-center p-6">{postData?.title}</h1>
           <div className="my-4">
             <StructuredText data={postData.contentFirst} />

@@ -22,22 +22,45 @@ export default function BlogPost(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        className="container mx-auto leading-8"
+        className="container mx-auto "
+        key={postData.id}
       >
-        <Image
-          data={postData.coverImage.responsiveImage}
-          className="w-full cover max-h-1/2 "
-        />
-        <div className="container mx-auto">
-          <h1 className="text-3xl w-full text-center p-6">{postData.title}</h1>
+        {postData?.coverImage?.responsiveImage && (
+          <Image
+            data={postData?.coverImage?.responsiveImage}
+            className="w-auto cover mx-auto mb-6 self-center"
+            alt={postData?.coverImage?.responsiveImage.alt}
+          />
+        )}
 
-          <StructuredText data={postData.content} />
-          <div className="flex justify-end font-extralight my-6">
-            <p>
-              {postData.author.name} / {postData.publishedDate}
-            </p>
+        <div className="flex flex-col justify-center text-justify leading-8 mx-2">
+          <h1 className="text-4xl w-full text-center p-6">{postData?.title}</h1>
+          <div className="my-4">
+            <StructuredText data={postData.content} />
           </div>
-          <div className="flex flex-col justify-center items-center">
+
+          {postData?.secondImage?.responsiveImage && (
+            <Image
+              data={postData?.secondImage?.responsiveImage}
+              className="w-auto cover mb-6 self-center"
+            />
+          )}
+          <div className="my-4">
+            <StructuredText data={postData.contentSecond} />
+          </div>
+
+          {postData?.thirdImage?.responsiveImage && (
+            <Image
+              data={postData?.thirdImage?.responsiveImage}
+              className="w-auto cover mb-6 self-center"
+            />
+          )}
+
+          <div className="my-4">
+            <StructuredText data={postData.contentThird} />
+          </div>
+
+          <div className="self-center">
             <RedirectButton href="courses/local" redirectTo="Cofnij" />
           </div>
         </div>
@@ -71,32 +94,68 @@ export const getStaticPaths = async (context) => {
 const ARTICLE_QUERY = `
 query MyQuery($slug: String) {
   article(filter: {slug: {eq: $slug}}) {
-    author {
-      name
-    }
-    content {
-      value
-    }
-    coverImage {
-      responsiveImage {
-        width
-        webpSrcSet
+        author {
+          name
+        }
+        content {
+          value
+        }
+        contentSecond {
+          value
+        }
+        contentThird {
+          value
+        }
+        coverImage {
+          responsiveImage {
+            width
+            webpSrcSet
+            title
+            srcSet
+            src
+            sizes
+            height
+            base64
+            aspectRatio
+            alt
+            bgColor
+          }
+        }
+        secondImage {
+          responsiveImage {
+            alt
+            aspectRatio
+            base64
+            bgColor
+            height
+            sizes
+            src
+            srcSet
+            title
+            webpSrcSet
+            width
+          }
+        }
+        thirdImage {
+          responsiveImage {
+            width
+            webpSrcSet
+            title
+            src
+            sizes
+            height
+            bgColor
+            base64
+            aspectRatio
+            alt
+            srcSet
+          }
+        }
         title
-        aspectRatio
-        alt
-        base64
-        bgColor
-        height
-        sizes
-        src
-        srcSet
-      }
-    }
-    id
-    publishedDate
-    slug
-    title
-    excerpt
+        slug
+        publishedDate
+        id
+        excerpt
   }
 }
 
