@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import HeadSeo from "../../../components/Head";
 import HeaderTitle from "../../../components/HeaderTitle";
 
-import { Image } from "react-datocms";
+import { Image, useQuerySubscription } from "react-datocms";
 import Link from "next/link";
 
 import { request } from "../../../lib/datocms";
@@ -41,19 +41,28 @@ query MyQuery {
 `;
 
 export async function getStaticProps() {
-  const data = await request({
+  const data = {
     query: HOMEPAGE_QUERY,
-  });
+  };
   return {
-    props: { data },
-    revalidate: 120,
+    props: {
+      subscription: {
+        ...data,
+        initialData: await request(data),
+        token: process.env.NEXT_DATOCMS_API_TOKEN,
+      },
+    },
+    revalidate: 10,
   };
 }
 
-export default function Home(props) {
-  const { data } = props;
+export default function Home({ subscription }) {
+  const { data, error, status } = useQuerySubscription(subscription);
 
   const posts = data.allArticles;
+
+  if (error) return <div>Error: {error.message}</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <>

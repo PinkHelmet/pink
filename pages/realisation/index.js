@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+import { useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
 const HOMEPAGE_QUERY = `
 query MyQuery {
@@ -32,22 +33,30 @@ query MyQuery {
 `;
 
 export async function getStaticProps() {
-  const dataS = await request({
+  const data = {
     query: HOMEPAGE_QUERY,
-  });
+  };
   return {
-    props: { dataS },
-    revalidate: 120,
+    props: {
+      subscription: {
+        ...data,
+        initialData: await request(data),
+        token: process.env.NEXT_DATOCMS_API_TOKEN,
+      },
+    },
+    revalidate: 10,
   };
 }
 
-export default function Realisation(props) {
+export default function Realisation({ subscription }) {
+  const { data, error, status } = useQuerySubscription(subscription);
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState(null);
 
-  const { dataS } = props;
+  const dataGallery = data.allGalleries;
 
-  const dataGallery = dataS.allGalleries;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <>
@@ -63,7 +72,7 @@ export default function Realisation(props) {
         className="container mx-auto mb-8"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {dataGallery.map((el) => (
+          {dataGallery?.map((el) => (
             <div
               onClick={() => {
                 console.log(el);
@@ -74,7 +83,7 @@ export default function Realisation(props) {
               className="grid gap-4"
             >
               <Image
-                src={el.image.responsiveImage}
+                src={el?.image?.responsiveImage}
                 className="h-auto max-w-full rounded-lg"
               />
             </div>
