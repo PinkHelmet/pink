@@ -44,10 +44,10 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - Strona główna`}
-        description={`Pink Helmet to nie tylko działalność gospodarcza. To 
+        title="Pink Helmet - Strona główna"
+        description="Pink Helmet to nie tylko działalność gospodarcza. To 
         droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
-        gospodarczych w Polsce.`}
+        gospodarczych w Polsce."
       />
 
       <motion.div
