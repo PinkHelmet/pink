@@ -28,7 +28,7 @@ export default function About() {
         <div className="md:w-6/12 md:8/12 m-6 h-2/3">
           <Image
             src={aboutImg}
-            alt="Image About"
+            alt="Pink Helmet image"
             height={600}
             className="mx-auto"
           />

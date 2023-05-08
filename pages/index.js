@@ -36,8 +36,6 @@ export default function Home(props) {
     offset: ["0 0.5", "end end"],
   });
 
-  // let y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
-  // let opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
   let y;
   let opacity;
 
@@ -90,6 +88,7 @@ export default function Home(props) {
           <div className="border-2 border-pink-rose rounded mx-4 bg-gray-100 relative shadow-lg">
             <Image
               src={face}
+              alt="Pink Helmet owner face"
               width={120}
               height={120}
               className="absolute -top-12 left-1/2 transform -translate-x-1/2 origin-center rounded-full border-2 border-pink-rose"
@@ -116,9 +115,9 @@ export default function Home(props) {
           style={{ opacity, y }}
           className="flex w-100 container mx-auto flex-col items-center w-full py-10"
         >
-          <motion.h2 className="text-3xl text-center drop-shadow-lg">
+          <motion.h1 className="text-3xl text-center drop-shadow-lg">
             Dlaczego Pink Helmet ?
-          </motion.h2>
+          </motion.h1>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
             zajmuje się przede wszystkim kompleksową obsługą inżynieryjną od

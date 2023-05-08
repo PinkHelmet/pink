@@ -64,10 +64,10 @@ function Modal({ open, setOpen, data, image, setImage }) {
                     height={0}
                     alt={image.image.responsiveImage.alt}
                     sizes="100vw"
-                    className="max-h-[80vh]"
+                    className="max-h-[80vh] rounded-t-lg"
                     style={{ width: "100%", height: "auto" }}
                   />
-                  <p className="z-50 bg-white text-center p-2">
+                  <p className="z-50 bg-black text-white text-center p-2 rounded-b-lg">
                     {pic.image.responsiveImage.title}
                   </p>
                 </div>
