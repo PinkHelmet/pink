@@ -37,6 +37,14 @@ const Footer = () => {
                 Piaseczno, Warszawa i okolice
               </span>
             </p>
+            <p className="p-2 ">
+              <span className="font-regular">NIP:</span>{" "}
+              <span className="text-xl font-bold">{siteMetadata.NIP}</span>
+            </p>
+            <p className="p-2 ">
+              <span className="font-regular">REGON:</span>{" "}
+              <span className="text-xl font-bold">{siteMetadata.REGON}</span>
+            </p>
           </div>
         </div>
       </div>

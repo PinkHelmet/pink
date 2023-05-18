@@ -19,7 +19,7 @@ export default function Contact() {
         className="container mx-auto h-[70vh]"
       >
         <div className="flex flex-col w-full h-full justify-center items-center text-2xl">
-          <p>Masz pytanie? </p>
+          <h1 className="text-4xl mb-4">Masz pytanie? </h1>
           <p>Chcesz skorzystać z oferty ? </p>
           <p>Zapraszam do kontaktu:</p>
           <p>
@@ -28,6 +28,13 @@ export default function Contact() {
           </p>
           <p>
             email: <span className="text-pink-rose">{siteMetadata.email}</span>
+          </p>
+          <h2 className="text-4xl mt-4">Dane firmy:</h2>
+          <p>
+            NIP: <span>{siteMetadata.NIP}</span>
+          </p>
+          <p>
+            REGON: <span>{siteMetadata.REGON}</span>
           </p>
         </div>
       </motion.section>
