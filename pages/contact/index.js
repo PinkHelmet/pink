@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - kontakt`}
+        title={siteMetadata.title}
         description={`Skontaktuj się z nami: ${siteMetadata.phoneNumber} bądź napisz do nas 
       ${siteMetadata.email}`}
       />

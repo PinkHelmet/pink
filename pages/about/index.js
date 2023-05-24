@@ -11,7 +11,7 @@ export default function About() {
   return (
     <>
       <Head
-        title={`Pink Helmet - O Firmie`}
+        title={siteMetadata.title}
         description={`Od dawna moim marzeniem było prowadzić własną działalność
             gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
             satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak

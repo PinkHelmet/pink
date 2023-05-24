@@ -67,7 +67,7 @@ export default function Home({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - szkolenia menadzerskie`}
+        title={siteMetadata.title}
         description={`Zgodnie z obowiązującym prawem Deweloper sprzedając mieszkanie lub
               dom musi udzielić Nabywcy 5-letniej rękojmi na nieruchomość.
               Oznacza to w praktyce, że Deweloper odpowiada za wszystkie wady

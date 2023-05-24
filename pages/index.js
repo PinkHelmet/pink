@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
 //custom hooks
-
+import siteMetadata from "../data/siteMetadata";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -38,11 +38,11 @@ export default function Home(props) {
 
   let y;
   let opacity;
-
+  console.log(siteMetadata.title);
   return (
     <>
       <HeadSeo
-        title="Pink Helmet - Strona główna"
+        title={siteMetadata.title}
         description="Pink Helmet to nie tylko działalność gospodarcza. To 
         droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
         gospodarczych w Polsce."

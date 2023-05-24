@@ -63,7 +63,7 @@ export default function Home({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - szkolenia menedżerskie`}
+        title={siteMetadata.title}
         description={`Zarządzanie przedsiębiorstwem jest jak budowanie domu. Najpierw
               musi pojawić się koncepcja i projekt. Nie może zabraknąć
               kosztorysu (biznes plan, analiza strategiczna przedsiębiorstwa).
