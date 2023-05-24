@@ -38,7 +38,7 @@ export default function Home(props) {
 
   let y;
   let opacity;
-  console.log(siteMetadata.title);
+
   return (
     <>
       <HeadSeo

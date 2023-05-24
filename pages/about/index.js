@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Lexend } from "next/font/google";
 import { motion } from "framer-motion";
+//meta
+import siteMetadata from "../../data/siteMetadata";
 //components
 import Head from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";

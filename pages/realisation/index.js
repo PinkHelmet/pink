@@ -2,7 +2,8 @@ import HeadSeo from "../../components/Head";
 import Modal from "../../components/Modal";
 import HeaderTitle from "../../components/HeaderTitle";
 import Image from "next/image";
-
+//meta
+import siteMetadata from "../../data/siteMetadata";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
+//meta
+import siteMetadata from "../../data/siteMetadata";
 //img
 import boats from "../../public/boats.jpg";
 import houses from "../../public/houses.jpg";
@@ -11,7 +13,7 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - szkolenia`}
+        title={siteMetadata.title}
         description={`Pink Helmet prowadzi szkolenia z zakresu zarządzania przedsiębiorstwami w
                 tym przede wszystkim zarządzania kapitałem ludzkim oraz z
                 zakresu rękojmi nieruchomości i obsługi posprzedażowej Nabywców

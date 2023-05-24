@@ -11,6 +11,8 @@ import HeaderTitle from "../../components/HeaderTitle";
 //datocms
 import { useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
+//meta
+import siteMetadata from "../../data/siteMetadata";
 
 const HOMEPAGE_QUERY = `
 query MyQuery {

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import HeadSeo from "../../../components/Head";
 import HeaderTitle from "../../../components/HeaderTitle";
-
+//meta
+import siteMetadata from "../../../data/siteMetadata";
 import { Image, useQuerySubscription } from "react-datocms";
 import Link from "next/link";
 
