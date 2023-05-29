@@ -13,7 +13,7 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleCourses}
         description={`Pink Helmet prowadzi szkolenia z zakresu zarządzania przedsiębiorstwami w
                 tym przede wszystkim zarządzania kapitałem ludzkim oraz z
                 zakresu rękojmi nieruchomości i obsługi posprzedażowej Nabywców

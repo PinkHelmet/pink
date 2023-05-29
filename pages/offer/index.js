@@ -109,7 +109,7 @@ export default function Offer({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleOffer}
         description={`W ofercie Pink Helmet znajdują się usługi takie jak doradztwo inżynieryjne
         pomoc przy odbiorze lokali, od projektowania po remonty i wykończenia. Oferuję także pomoc 
         przy montażu drenaży, a gdy pojawi się problem z izolacja budynku pomogę zlokalizować 'zimne miejsca'

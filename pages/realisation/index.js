@@ -62,7 +62,7 @@ export default function Realisation({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleRealisation}
         description={`Galeria zrealizowanych projektów`}
       />
       <HeaderTitle title="Realizacje" />

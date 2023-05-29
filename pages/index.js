@@ -42,7 +42,7 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleHome}
         description="Pink Helmet to nie tylko działalność gospodarcza. To 
         droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
         gospodarczych w Polsce."

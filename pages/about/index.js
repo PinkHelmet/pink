@@ -13,7 +13,7 @@ export default function About() {
   return (
     <>
       <Head
-        title={siteMetadata.title}
+        title={siteMetadata.titleAbout}
         description={`Od dawna moim marzeniem było prowadzić własną działalność
             gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
             satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak
