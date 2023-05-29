@@ -15,7 +15,7 @@ export default function BlogPost(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - ${postData?.title}`}
+        title={`Pink Helmet - ${postData?.titleDesc}`}
         description={postData?.excerpt}
       />{" "}
       <motion.div
@@ -95,6 +95,7 @@ const OFFER_QUERY = `
 query MyQuery($slug: String) {
   offer(filter: {slug: {eq: $slug}}){
     title
+    titleDesc
     slug
     excerpt
     id

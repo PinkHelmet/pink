@@ -15,7 +15,7 @@ export default function BlogPost(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - ${postData.title}`}
+        title={`Pink Helmet - ${postData?.titleDesc}`}
         description={postData.excerpt}
       />
       <motion.div
@@ -94,6 +94,7 @@ export const getStaticPaths = async (context) => {
 const ARTICLE_QUERY = `
 query MyQuery($slug: String) {
   article(filter: {slug: {eq: $slug}}) {
+        titleDesc
         author {
           name
         }
