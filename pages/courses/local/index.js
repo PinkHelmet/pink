@@ -68,7 +68,7 @@ export default function Home({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleLocal}
         description={`Zgodnie z obowiązującym prawem Deweloper sprzedając mieszkanie lub
               dom musi udzielić Nabywcy 5-letniej rękojmi na nieruchomość.
               Oznacza to w praktyce, że Deweloper odpowiada za wszystkie wady

@@ -12,6 +12,11 @@ const siteMetadata = {
     "Pink Helmet | Warszawa, Piaseczno i okolice | Realizacje, wykonane prace, rekomendacje",
   titleContact:
     "Pink Helmet | Warszawa, Piaseczno i okolice | Kontakt, telefon, email, dane firmy, firma",
+  titleManager:
+    "Pink Helmet | Warszawa, Piaseczno i okolice | Szkolenia menedżerskie, szkolenia dla menedżerów, szkolenia dla menegerów, szkolenia z zarządzania, szkolenia dla kierowników, szkolenia dla kadry zarządzającej, szkolenia z negocjacji, szkolenia z optymalizacji procesów, szkolenia zarządzania zasobami ludzkimi, szkolenia zarządzania zespołem",
+  titleLocal:
+    "Pink Helmet | Warszawa, Piaseczno i okolice | Szkolenia deweloperskie, szkolenia dla Deweloperów, szkolenia z rękojmi nieruchomości, szkolenia z obsługi posprzedażowej, szkolenia wady i usterki, szkolenia z obsługi gwarancyjnej",
+  titleCourses: "Pink Helmet | Warszawa, Piaseczno i okolice | Szkolenia ",
   siteUrl: "https://pinkhelmet.pl",
   email: "biuro@pinkhelmet.pl",
   facebook:

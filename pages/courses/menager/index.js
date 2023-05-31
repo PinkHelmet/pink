@@ -64,7 +64,7 @@ export default function Home({ subscription }) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.title}
+        title={siteMetadata.titleManager}
         description={`Zarządzanie przedsiębiorstwem jest jak budowanie domu. Najpierw
               musi pojawić się koncepcja i projekt. Nie może zabraknąć
               kosztorysu (biznes plan, analiza strategiczna przedsiębiorstwa).
