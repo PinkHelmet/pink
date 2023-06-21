@@ -18,6 +18,7 @@ const HeadSeo = ({
         {description && <meta name="description" content={description} />}
         <link rel="canonical" href={canonicalUrl} />{" "}
         <link rel="favicon" href="/public/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         {children}
