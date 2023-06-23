@@ -94,6 +94,8 @@ export default function Home(props) {
               className="absolute -top-12 left-1/2 transform -translate-x-1/2 origin-center rounded-full border-2 border-pink-rose"
             />
             <p className="my-24 mx-4 text-center leading-7">
+              <span className="font-bold text-pink-rose">Pink Helmet </span>
+              oferuje kompleksowe usługi z zakresu budownictwa oraz szkoleń. Ale{" "}
               <span className="font-bold text-pink-rose">Pink Helmet </span>to
               nie tylko działalność gospodarcza. To droga od kompleksowej
               mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
