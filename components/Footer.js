@@ -4,7 +4,7 @@ import { FacebookOutlined } from "@mui/icons-material";
 const Footer = () => {
   return (
     <div className="bg-no-repeat bg-footer_bg bg-cover bg-center bg-fixed shadow-lg">
-      <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
+      <div className="relative w-full h-full flex relative justify-center items-center backdrop-brightness-50">
         <div className="container mx-auto h-full flex flex-col md:flex-row justify-center items-center text-white">
           <div className="w-1/2 text-center m-6">
             <p className="p-4">Social media </p>
@@ -38,6 +38,12 @@ const Footer = () => {
               </span>
             </p>
           </div>
+        </div>
+        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-white">
+          Created by{" "}
+          <a href="https://headincode.com" type="_blank">
+            HeadInCode
+          </a>
         </div>
       </div>
     </div>

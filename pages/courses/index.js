@@ -6,8 +6,8 @@ import HeaderTitle from "../../components/HeaderTitle";
 //meta
 import siteMetadata from "../../data/siteMetadata";
 //img
-import boats from "../../public/boats.jpg";
-import houses from "../../public/houses.jpg";
+import boats from "../../public/boats.webp";
+import houses from "../../public/houses.webp";
 
 export default function Home(props) {
   return (

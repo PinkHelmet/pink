@@ -20,10 +20,10 @@ module.exports = {
         facebook: "#3B5998",
       },
       backgroundImage: {
-        hero_bg: "url('/hero-bg.jpg')",
-        footer_bg: "url('/footer-bg.jpg')",
-        boats: "url('/boats.jpg')",
-        houses: "url('/houses.jpg')",
+        hero_bg: "url('/hero-bg.webp')",
+        footer_bg: "url('/footer-bg.webp')",
+        boats: "url('/boats.webp')",
+        houses: "url('/houses.webp')",
       },
       maxHeight: {
         "50vh": "50vh",

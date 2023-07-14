@@ -7,7 +7,7 @@ import siteMetadata from "../../data/siteMetadata";
 import Head from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
 //img
-import aboutImg from "../../public/hero-about.jpg";
+import aboutImg from "../../public/hero-about.webp";
 
 export default function About() {
   return (
