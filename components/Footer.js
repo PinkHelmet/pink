@@ -13,6 +13,7 @@ const Footer = () => {
               target="_blank"
               className="hover:transition hover:ease-in-out delay-150
             hover:text-facebook hover:cursor-pointer "
+            aria-label="Zobacz więcej o mojej firmie na facebooku"
             >
               <FacebookOutlined fontSize="large" />
             </a>

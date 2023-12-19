@@ -61,7 +61,7 @@ export default function Home(props) {
               Zapraszamy do zapoznania się z naszą ofertą!
             </h2>
 
-            <button className="bg-blue-500 hover:bg-blue-700 text-white drop-shadow-lg font-bold py-2 px-6 duration-100 rounded-full">
+            <button className="bg-blue-700 hover:bg-blue-800 text-white drop-shadow-lg font-bold py-2 px-6 duration-100 rounded-full">
               <Link href="/offer">Tutaj!</Link>
             </button>
           </div>
