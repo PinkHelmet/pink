@@ -31,6 +31,8 @@ export default function Home(props) {
   const isInViewSecond = useInView(refSecond, { once: true });
   const isInViewThird = useInView(refThird, { once: true });
 
+  const { titleHome } = siteMetadata;
+
   let { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 0.5", "end end"],
@@ -42,7 +44,7 @@ export default function Home(props) {
   return (
     <>
       <HeadSeo
-        title={siteMetadata.titleHome}
+        title={titleHome}
         description="Pink Helmet to nie tylko działalność gospodarcza. To 
         droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
         gospodarczych w Polsce."
