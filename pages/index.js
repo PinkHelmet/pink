@@ -14,6 +14,7 @@ import {
 import HeadSeo from "../components/Head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const bg = "/hero-bg.webp";
 import face from "../public/face.jpg";
 // import the icons you need
 import {
@@ -54,8 +55,10 @@ export default function Home(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.2 }}
-        className="bg-fixed bg-blend-overlay bg-no-repeat bg-hero_bg bg-cover bg-center h-[90vh] shadow-lg"
+        className="bg-fixed bg-blend-overlay bg-no-repeat  bg-cover bg-center h-[90vh] shadow-lg relative"
+        // className="h-[90vh] overflow-hidden"
       >
+        <Image src={bg} alt="Langing page background" fill priority />
         <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
           {" "}
           <div className="flex flex-col h-[10vh] justify-between items-center">
@@ -77,7 +80,7 @@ export default function Home(props) {
           </motion.div>
         </div>
       </motion.div>
-      <section className={"overflow-hidden"}>
+      <section className={"overflow-hidden bg-white"}>
         <div
           ref={ref}
           style={{

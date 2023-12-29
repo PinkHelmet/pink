@@ -24,7 +24,7 @@ export default function Home(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        className="container min-h-screen flex flex-col mx-auto min-h-screen w-full"
+        className="container flex flex-col mx-auto min-h-screen w-full"
       >
         <>
           <div className="container mx-auto w-full min-h-fit">
