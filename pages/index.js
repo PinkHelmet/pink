@@ -70,14 +70,9 @@ export default function Home(props) {
               <Link href="/offer">Tutaj!</Link>
             </button>
           </div>
-          <motion.div
-            initial={{ bottom: "25px" }}
-            animate={{ bottom: 0 }}
-            transition={{ repeat: Infinity, duration: 1 }}
-            className="absolute text-white text-6xl bottom-16"
-          >
+          <div className={`absolute text-white text-6xl bottom-16 bounce`}>
             <KeyboardDoubleArrowDown className="text-6xl" />
-          </motion.div>
+          </div>
         </div>
       </motion.div>
       <section className={"overflow-hidden bg-white"}>
