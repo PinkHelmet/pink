@@ -42,6 +42,7 @@ const Navbar = () => {
           <div className="hidden sm:flex items-center justify-end gap-2 md:gap-8">
             {navlinks.map((el) => (
               <Link
+                key={el.path}
                 href={el.path}
                 className={
                   router.pathname == el.path
@@ -92,6 +93,7 @@ const Navbar = () => {
                     <nav className="grid gap-y-8">
                       {navlinks.map((el) => (
                         <Link
+                          key={el.path}
                           href={el.path}
                           className={
                             router.pathname == el.path

@@ -14,7 +14,7 @@ import {
 import HeadSeo from "../components/Head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import face from "../public/face.jpg";
+import face from "../public/face.webp";
 // import the icons you need
 import {
   faHandshake,
@@ -54,7 +54,7 @@ export default function Home(props) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.2 }}
-        className="bg-fixed bg-blend-overlay bg-no-repeat bg-hero_bg bg-cover bg-center h-[90vh] shadow-lg"
+        className="bg-fixed bg-blend-overlay bg-no-repeat bg-mobile_hero_bg md:bg-hero_bg bg-cover bg-center h-[90vh] shadow-lg"
       >
         <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
           {" "}

@@ -20,8 +20,9 @@ module.exports = {
         facebook: "#3B5998",
       },
       backgroundImage: {
+        mobile_hero_bg:"url('/mobile-hero-bg.webp')",
         hero_bg: "url('/hero-bg.webp')",
-        footer_bg: "url('/footer-bg.webp')",
+        footer_bg: "url('/footer_bg.webp')",
         boats: "url('/boats.webp')",
         houses: "url('/houses.webp')",
       },

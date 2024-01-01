@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className="bg-footer_bg bg-cover bg-center bg-fixed shadow-lg">
-      <div className="container mx-auto h-full flex flex-col md:flex-row justify-center items-center text-white backdrop-brightness-50">
+      <div className="container mx-auto h-full flex flex-col md:flex-row justify-center items-center text-white ">
         <div className="w-1/2 text-center m-6">
           <p className="p-4">Social media </p>
           <a
@@ -38,8 +38,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-white">
-        Created by{" "}
+      <div className="container mx-auto text-white text-center">
+        <span className="inline-block mr-2">Created by</span>
         <a
           href="https://headincode.com"
           target="_blank"
