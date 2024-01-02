@@ -2,6 +2,8 @@ import React from "react";
 import HeaderTitle from "../../components/HeaderTitle";
 import HeadSeo from "../../components/Head";
 
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 import { useQuerySubscription } from "react-datocms";
@@ -21,7 +23,15 @@ export default function Blog({ subscription }) {
       <HeaderTitle title="Blog" />
       <section className="mx-auto flex flex-col md:flex-row flex-wrap">
         {dataOffer.map((el, index) => (
-          <a
+          <motion.a
+            initial={{ y: "450px", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.1,
+              delay: 0.6,
+            }}
             href="#"
             className="flex flex-col justify-center items-center w-full md:w-1/2 lg:w-1/3 p-4"
             key={index}
@@ -42,7 +52,7 @@ export default function Blog({ subscription }) {
             <div className="mt-4">
               <h3 className="text-lg font-semibold">{el.title}</h3>
             </div>
-          </a>
+          </motion.a>
         ))}
       </section>
     </>
