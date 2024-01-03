@@ -8,20 +8,21 @@ import Image from "next/image";
 
 import { useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
+import siteMetadata from "../../data/siteMetadata";
 
 export default function Blog({ subscription }) {
   const { data, error, status } = useQuerySubscription(subscription);
+  const { titleBlog } = siteMetadata;
 
-  const dataOffer = data.allOffers;
-  console.log(dataOffer, "❤");
+  const dataOffer = data.allBlogs;
 
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;
   return (
     <>
-      <HeadSeo title={`Pink Helmet - Blog`} description={"Blog opis"} />
+      <HeadSeo title={titleBlog} description={"Blog opis"} />
       <HeaderTitle title="Blog" />
-      <section className="mx-auto flex flex-col md:flex-row flex-wrap">
+      <section className="mx-auto flex flex-col items-start md:flex-row flex-wrap min-h-[90vh]">
         {dataOffer.map((el, index) => (
           <motion.a
             initial={{ y: "450px", opacity: 0 }}
@@ -32,7 +33,7 @@ export default function Blog({ subscription }) {
               bounce: 0.1,
               delay: 0.6,
             }}
-            href="#"
+            href={`/blog/${el.slug}`}
             className="flex flex-col justify-center items-center w-full md:w-1/2 lg:w-1/3 p-4"
             key={index}
           >
@@ -48,6 +49,9 @@ export default function Blog({ subscription }) {
               <p className="absolute top-1/2 -left-1/2 text-white uppercase text-2xl transform -translate-y-1/2 -translate-x-1/2 transition duration-300 group-hover:left-1/2">
                 Czytaj więcej
               </p>
+              <p className="absolute top-2 -left-1/2 text-white transition duration-300 group-hover:left-20">
+                {el.datePublic}
+              </p>
             </div>
             <div className="mt-4">
               <h3 className="text-lg font-semibold">{el.title}</h3>
@@ -60,67 +64,27 @@ export default function Blog({ subscription }) {
 }
 const HOMEPAGE_QUERY = `
 query MyQuery {
-  allOffers {
-    title
-    orderText
-    orderImage
+  allBlogs {
     id
-    excerpt
-    contentFirst {
-      value
-    }
-    contentSecond {
-      value
-    }
-    contentThird {
-      value
-    }
+    datePublic
     coverImage {
       responsiveImage {
-        alt
-        aspectRatio
-        base64
+        width
+        webpSrcSet
+        title
+        srcSet
+        src
         bgColor
+        base64
+        aspectRatio
+        alt
         height
         sizes
-        src
-        srcSet
-        title
-        webpSrcSet
-        width
-      }
-    }
-    secondImage {
-      responsiveImage {
-        alt
-        aspectRatio
-        base64
-        bgColor
-        height
-        sizes
-        src
-        srcSet
-        title
-        webpSrcSet
-        width
       }
     }
     slug
-    thirdImage {
-      responsiveImage {
-        alt
-        aspectRatio
-        base64
-        bgColor
-        sizes
-        height
-        src
-        srcSet
-        title
-        width
-        webpSrcSet
-      }
-    }
+    title
+    titleDescription
   }
 }
 `;

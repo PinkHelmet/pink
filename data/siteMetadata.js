@@ -17,6 +17,7 @@ const siteMetadata = {
   titleLocal:
     "Pink Helmet | Warszawa, Piaseczno i okolice | Szkolenia deweloperskie, szkolenia dla Deweloperów, szkolenia z rękojmi nieruchomości, szkolenia z obsługi posprzedażowej, szkolenia wady i usterki, szkolenia z obsługi gwarancyjnej",
   titleCourses: "Pink Helmet | Warszawa, Piaseczno i okolice | Szkolenia ",
+  titleBlog: "Pink Helmet | Warszawa, Piaseczno i okolice | Blog",
   siteUrl: "https://pinkhelmet.pl",
   email: "biuro@pinkhelmet.pl",
   facebook:
