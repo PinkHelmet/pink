@@ -1,9 +1,139 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import { StructuredText } from "react-datocms";
+
+import { motion } from "framer-motion";
+
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
+import Image from "next/image";
 import { request } from "../../lib/datocms";
+import HeadSeo from "../../components/Head";
 
 export default function BlogPost({ postData }) {
   console.log(postData, "❤");
-  return <div>Blog Post</div>;
+  //Destrukturyzacja
+  const {
+    firstPoint,
+    secondPoint,
+    thirdPoint,
+    fourthPoint,
+    fifthPoint,
+    sixthPoint,
+    seventhPoint,
+    eighthPoint,
+    ninthPoint,
+    tenthPoint,
+  } = postData;
+
+  //tablica z tytułami
+  let arrayOfTitles = [
+    firstPoint,
+    secondPoint,
+    thirdPoint,
+    fourthPoint,
+    fifthPoint,
+    sixthPoint,
+    seventhPoint,
+    eighthPoint,
+    ninthPoint,
+    tenthPoint,
+  ];
+  console.log(postData, "😂😂");
+  if (!postData) return null;
+
+  useEffect(() => {
+    const smoothScroll = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    let listItems = document.querySelectorAll("ol li a");
+
+    console.log(listItems, "😂");
+    listItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        smoothScroll(event.target.getAttribute("href").substring(1));
+      });
+    });
+
+    return () => {
+      listItems.forEach((item) => {
+        item.removeEventListener("click", smoothScroll);
+      });
+    };
+  }, [arrayOfTitles, postData]);
+  return (
+    <>
+      <HeadSeo
+        title={"Pink Helmet - tytul posta"}
+        description={"Opis pod seo"}
+      />
+      <motion.div
+        id="top"
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.75, delay: 0.4 }}
+        className="container mx-auto "
+        key={postData.id}
+      >
+        {postData.coverImage.responsiveImage && (
+          <Image
+            src={postData.coverImage.responsiveImage}
+            className="w-auto cover mx-auto mb-6 self-center"
+            alt={postData.coverImage.responsiveImage.alt}
+          />
+        )}
+        <div className="flex flex-col justify-center text-justify leading-8 mx-2">
+          <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
+
+          <ol>
+            {arrayOfTitles.map((el, index) => (
+              <li key={index}>
+                <a href={`#${el}`}>{el}</a>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <section className="relative w-full">
+          <div id={arrayOfTitles[0]} className="min-h-[90vh]">
+            <h3>{arrayOfTitles[0]}</h3>
+            {postData.imageFirstPoint.responsiveImage && (
+              <Image
+                src={postData.imageFirstPoint.responsiveImage}
+                className="w-4/6 mx-auto cover mb-6 self-center"
+                alt={postData.imageFirstPoint.responsiveImage.alt}
+              />
+            )}
+            <div className="my-4">
+              <StructuredText data={postData.contentFirstPoint} />
+            </div>
+          </div>
+
+          <div id={arrayOfTitles[1]} className="min-h-[90vh]">
+            <div>bla bla bla 2</div>
+          </div>
+
+          <div id={arrayOfTitles[2]} className="min-h-[90vh]">
+            <div>bla bla bla 3</div>
+          </div>
+
+          <div className="fixed bottom-4 right-4 border p-3 rounded bg-pink-rose text-white hover:bg-pink-600 hover:text-white transition duration-300">
+            <a href="#top">
+              <KeyboardArrowUpIcon style={{ fontSize: 35 }} />
+            </a>
+          </div>
+        </section>
+      </motion.div>
+    </>
+  );
 }
 
 export const getServerSideProps = async ({ params, preview }) => {
@@ -25,34 +155,34 @@ export const getServerSideProps = async ({ params, preview }) => {
             ninthPoint
             tenthPoint
             contentFirstPoint {
-              blocks
+              value
             }
             contentSecondPoint {
-              blocks
+              value
             }
             contentThirdPoint {
-              blocks
+              value
             }
             contentFourthPoint {
-              blocks
+              value
             }
             contentFifthPoint {
-              blocks
+              value
             }
             contentSixthPoint {
-              blocks
+              value
             }
             contentSeventhPoint {
-              blocks
+              value
             }
             contentEighthPoint {
-              blocks
+              value
             }
             contentNinthPoint {
-              blocks
+              value
             }
             contentTenthPoint {
-              blocks
+              value
             }
             imageFirstPoint {
               responsiveImage {
