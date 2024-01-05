@@ -32,8 +32,18 @@ export default function BlogPost({ postData, allPosts }) {
     contentThirdPoint,
     imageFouthPoint,
     contentFourthPoint,
-    contentFifthPoint,
     imageFifthPoint,
+    contentFifthPoint,
+    imageSixthPoint,
+    contentSixthPoint,
+    imageSeventhPoint,
+    contentSeventhPoint,
+    imageEighthPoint,
+    contentEighthPoint,
+    imageNinthPoint,
+    contentNinthPoint,
+    imageTenthPoint,
+    contentTenthPoint,
   } = postData;
 
   //tablica z tytułami
@@ -76,6 +86,31 @@ export default function BlogPost({ postData, allPosts }) {
       title: fifthPoint,
       image: imageFifthPoint,
       content: contentFifthPoint,
+    },
+    {
+      title: sixthPoint,
+      image: imageSixthPoint,
+      content: contentSixthPoint,
+    },
+    {
+      title: seventhPoint,
+      image: imageSeventhPoint,
+      content: contentSeventhPoint,
+    },
+    {
+      title: eighthPoint,
+      image: imageEighthPoint,
+      content: contentEighthPoint,
+    },
+    {
+      title: ninthPoint,
+      image: imageNinthPoint,
+      content: contentNinthPoint,
+    },
+    {
+      title: tenthPoint,
+      image: imageTenthPoint,
+      content: contentTenthPoint,
     },
   ];
 
@@ -128,26 +163,30 @@ export default function BlogPost({ postData, allPosts }) {
           <div className="lg:w-9/12">
             {content &&
               content.map((el, index) => (
-                <div key={index} id={el.title} className="min-h-[90vh]">
-                  {el?.title && (
-                    <h3 className="text-3xl text-center p-4">{el.title}</h3>
-                  )}
-                  {el?.image?.responsiveImage && (
-                    <Image
-                      src={el?.image?.responsiveImage}
-                      className="w-4/6 mx-auto cover mb-6 self-center"
-                      alt={postData.imageFirstPoint.responsiveImage.alt}
-                    />
-                  )}
-                  {el?.content && (
-                    <div className="mx-2 my-4 text-justify">
-                      <StructuredText data={el?.content} />
+                <>
+                  {el.title !== "" && (
+                    <div key={index} id={el.title} className="min-h-[90vh]">
+                      {el?.title && (
+                        <h3 className="text-3xl text-center p-4">{el.title}</h3>
+                      )}
+                      {el?.image?.responsiveImage && (
+                        <Image
+                          src={el?.image?.responsiveImage}
+                          className="w-4/6 mx-auto cover mb-6 self-center"
+                          alt={postData.imageFirstPoint.responsiveImage.alt}
+                        />
+                      )}
+                      {el?.content && (
+                        <div className="mx-2 my-4 text-justify">
+                          <StructuredText data={el?.content} />
+                        </div>
+                      )}
+                      <div className="w-1/2 mx-auto p-6">
+                        <span className="block border-t-2 border-pink-rose w-full"></span>
+                      </div>
                     </div>
                   )}
-                  <div className="w-1/2 mx-auto p-6">
-                    <span className="block border-t-2 border-pink-rose w-full"></span>
-                  </div>
-                </div>
+                </>
               ))}
           </div>
           <div className="lg:w-3/12 border-t-2 lg:border-t-0 lg:border-l-2 relative">
@@ -155,42 +194,6 @@ export default function BlogPost({ postData, allPosts }) {
               <h3 className="text-center">Polecane Artykuły</h3>
               {filteredPosts.map((el, index) => (
                 <BlogCart el={el} index={index} />
-                // <motion.a
-                //   initial={{ y: "450px", opacity: 0 }}
-                //   animate={{ y: 0, opacity: 1 }}
-                //   transition={{
-                //     type: "spring",
-                //     duration: 1,
-                //     bounce: 0.1,
-                //     delay: 0.6,
-                //   }}
-                //   href={`/blog/${el.slug}`}
-                //   className="flex flex-col justify-center items-center w-full p-4"
-                //   key={index}
-                // >
-                //   <div className="h-64 mx-auto w-full group relative overflow-hidden">
-                //     <Image
-                //       src={el.coverImage.responsiveImage}
-                //       alt={el.coverImage.responsiveImage.alt}
-                //       width={500}
-                //       height={288}
-                //       className="absolute inset-0 mx-auto transition duration-300 group-hover:rotate-1 group-hover:scale-105 overflow-hidden"
-                //     />
-                //     <div className="absolute w-[500px] mx-auto inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:rotate-1 group-hover:scale-105 transition duration-300"></div>
-                //     <p className="absolute top-1/2 -left-1/2 text-white uppercase text-2xl transform -translate-y-1/2 -translate-x-1/2 transition duration-300 group-hover:left-1/2">
-                //       Czytaj więcej
-                //     </p>
-                //     <p className="absolute top-2 -left-1/2 text-white transition duration-300 group-hover:left-20">
-                //       {el.datePublic}
-                //     </p>
-                //   </div>
-                //   <div className="mt-4">
-                //     <h3 className="text-lg font-semibold">{el.title}</h3>
-                //   </div>
-                //   <div className="w-1/2 mx-auto p-6">
-                //     <span className="block border-t-2 border-pink-rose w-full"></span>
-                //   </div>
-                // </motion.a>
               ))}
             </div>
           </div>
