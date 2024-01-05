@@ -9,9 +9,9 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Image from "next/image";
 import { request } from "../../lib/datocms";
 import HeadSeo from "../../components/Head";
+import BlogCart from "../../components/BlogCart";
 
-export default function BlogPost({ postData }) {
-  console.log(postData, "❤");
+export default function BlogPost({ postData, allPosts }) {
   //Destrukturyzacja
   const {
     firstPoint,
@@ -24,6 +24,16 @@ export default function BlogPost({ postData }) {
     eighthPoint,
     ninthPoint,
     tenthPoint,
+    imageFirstPoint,
+    contentFirstPoint,
+    imageSecondPoint,
+    contentSecondPoint,
+    imageThirdPoint,
+    contentThirdPoint,
+    imageFouthPoint,
+    contentFourthPoint,
+    contentFifthPoint,
+    imageFifthPoint,
   } = postData;
 
   //tablica z tytułami
@@ -39,36 +49,41 @@ export default function BlogPost({ postData }) {
     ninthPoint,
     tenthPoint,
   ];
-  console.log(postData, "😂😂");
+  let filteredArrayOfTitles = arrayOfTitles.filter((el) => el !== "");
+
+  const content = [
+    {
+      title: firstPoint,
+      image: imageFirstPoint,
+      content: contentFirstPoint,
+    },
+    {
+      title: secondPoint,
+      image: imageSecondPoint,
+      content: contentSecondPoint,
+    },
+    {
+      title: thirdPoint,
+      image: imageThirdPoint,
+      content: contentThirdPoint,
+    },
+    {
+      title: fourthPoint,
+      image: imageFouthPoint,
+      content: contentFourthPoint,
+    },
+    {
+      title: fifthPoint,
+      image: imageFifthPoint,
+      content: contentFifthPoint,
+    },
+  ];
+
+  //filtrowanie postów, aby nie zawierał aktualnego posta w polecanych
+  const filteredPosts = allPosts.filter((el) => el.id !== postData.id);
+
   if (!postData) return null;
 
-  useEffect(() => {
-    const smoothScroll = (id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    };
-
-    let listItems = document.querySelectorAll("ol li a");
-
-    console.log(listItems, "😂");
-    listItems.forEach((item) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        smoothScroll(event.target.getAttribute("href").substring(1));
-      });
-    });
-
-    return () => {
-      listItems.forEach((item) => {
-        item.removeEventListener("click", smoothScroll);
-      });
-    };
-  }, [arrayOfTitles, postData]);
   return (
     <>
       <HeadSeo
@@ -76,53 +91,108 @@ export default function BlogPost({ postData }) {
         description={"Opis pod seo"}
       />
       <motion.div
-        id="top"
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        className="container mx-auto "
+        className="mx-auto "
         key={postData.id}
       >
         {postData.coverImage.responsiveImage && (
           <Image
             src={postData.coverImage.responsiveImage}
-            className="w-auto cover mx-auto mb-6 self-center"
+            className="container w-auto cover mx-auto mb-6 self-center"
             alt={postData.coverImage.responsiveImage.alt}
           />
         )}
-        <div className="flex flex-col justify-center text-justify leading-8 mx-2">
+        <div
+          id="top"
+          className="flex flex-col justify-center text-justify leading-8 mx-2"
+        >
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
 
-          <ol>
-            {arrayOfTitles.map((el, index) => (
-              <li key={index}>
-                <a href={`#${el}`}>{el}</a>
+          <ol className="list-decimal p-6">
+            {filteredArrayOfTitles.map((el, index) => (
+              <li key={index} className="">
+                <a
+                  className="transition duration-300 hover:text-pink-rose"
+                  href={`#${el}`}
+                >
+                  {el}
+                </a>
               </li>
             ))}
           </ol>
         </div>
 
-        <section className="relative w-full">
-          <div id={arrayOfTitles[0]} className="min-h-[90vh]">
-            <h3>{arrayOfTitles[0]}</h3>
-            {postData.imageFirstPoint.responsiveImage && (
-              <Image
-                src={postData.imageFirstPoint.responsiveImage}
-                className="w-4/6 mx-auto cover mb-6 self-center"
-                alt={postData.imageFirstPoint.responsiveImage.alt}
-              />
-            )}
-            <div className="my-4">
-              <StructuredText data={postData.contentFirstPoint} />
+        <section className="relative w-full flex flex-col lg:flex-row border-t-2">
+          <div className="lg:w-9/12">
+            {content &&
+              content.map((el, index) => (
+                <div key={index} id={el.title} className="min-h-[90vh]">
+                  {el?.title && (
+                    <h3 className="text-3xl text-center p-4">{el.title}</h3>
+                  )}
+                  {el?.image?.responsiveImage && (
+                    <Image
+                      src={el?.image?.responsiveImage}
+                      className="w-4/6 mx-auto cover mb-6 self-center"
+                      alt={postData.imageFirstPoint.responsiveImage.alt}
+                    />
+                  )}
+                  {el?.content && (
+                    <div className="mx-2 my-4 text-justify">
+                      <StructuredText data={el?.content} />
+                    </div>
+                  )}
+                  <div className="w-1/2 mx-auto p-6">
+                    <span className="block border-t-2 border-pink-rose w-full"></span>
+                  </div>
+                </div>
+              ))}
+          </div>
+          <div className="lg:w-3/12 border-t-2 lg:border-t-0 lg:border-l-2 relative">
+            <div className="stickyClass p-2">
+              <h3 className="text-center">Polecane Artykuły</h3>
+              {filteredPosts.map((el, index) => (
+                <BlogCart el={el} index={index} />
+                // <motion.a
+                //   initial={{ y: "450px", opacity: 0 }}
+                //   animate={{ y: 0, opacity: 1 }}
+                //   transition={{
+                //     type: "spring",
+                //     duration: 1,
+                //     bounce: 0.1,
+                //     delay: 0.6,
+                //   }}
+                //   href={`/blog/${el.slug}`}
+                //   className="flex flex-col justify-center items-center w-full p-4"
+                //   key={index}
+                // >
+                //   <div className="h-64 mx-auto w-full group relative overflow-hidden">
+                //     <Image
+                //       src={el.coverImage.responsiveImage}
+                //       alt={el.coverImage.responsiveImage.alt}
+                //       width={500}
+                //       height={288}
+                //       className="absolute inset-0 mx-auto transition duration-300 group-hover:rotate-1 group-hover:scale-105 overflow-hidden"
+                //     />
+                //     <div className="absolute w-[500px] mx-auto inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:rotate-1 group-hover:scale-105 transition duration-300"></div>
+                //     <p className="absolute top-1/2 -left-1/2 text-white uppercase text-2xl transform -translate-y-1/2 -translate-x-1/2 transition duration-300 group-hover:left-1/2">
+                //       Czytaj więcej
+                //     </p>
+                //     <p className="absolute top-2 -left-1/2 text-white transition duration-300 group-hover:left-20">
+                //       {el.datePublic}
+                //     </p>
+                //   </div>
+                //   <div className="mt-4">
+                //     <h3 className="text-lg font-semibold">{el.title}</h3>
+                //   </div>
+                //   <div className="w-1/2 mx-auto p-6">
+                //     <span className="block border-t-2 border-pink-rose w-full"></span>
+                //   </div>
+                // </motion.a>
+              ))}
             </div>
-          </div>
-
-          <div id={arrayOfTitles[1]} className="min-h-[90vh]">
-            <div>bla bla bla 2</div>
-          </div>
-
-          <div id={arrayOfTitles[2]} className="min-h-[90vh]">
-            <div>bla bla bla 3</div>
           </div>
 
           <div className="fixed bottom-4 right-4 border p-3 rounded bg-pink-rose text-white hover:bg-pink-600 hover:text-white transition duration-300">
@@ -350,6 +420,27 @@ export const getServerSideProps = async ({ params, preview }) => {
                 }
               }
         }
+        allBlogs {
+          id
+          title
+          slug
+          datePublic
+          coverImage {
+            responsiveImage {
+              width
+              webpSrcSet
+              title
+              srcSet
+              src
+              sizes
+              height
+              bgColor
+              base64
+              aspectRatio
+              alt
+            }
+          }
+        }
       }
     `;
 
@@ -364,6 +455,7 @@ export const getServerSideProps = async ({ params, preview }) => {
   return {
     props: {
       postData: data.blog,
+      allPosts: data.allBlogs,
     },
   };
 };

@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Lexend", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -15,7 +16,7 @@ ul {
   list-style: inside;
 }
 
-ul li p{
+ul li p {
   display: inline;
 }
 
@@ -41,8 +42,15 @@ a {
   animation: bounce 1s infinite;
 }
 
+.stickyClass {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+}
+
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(25px);
   }
   50% {
