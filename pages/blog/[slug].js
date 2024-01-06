@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import { StructuredText } from "react-datocms";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -61,20 +63,6 @@ export default function BlogPost({ postData, allPosts }) {
     ninthPoint,
     tenthPoint,
   ];
-  const controls = useAnimation();
-
-  const olRef = useRef(null);
-
-  const handleScrollToTop = () => {
-    const olElement = olRef.current;
-    if (olElement) {
-      const offset = olElement.offsetTop - 120;
-      controls.start({
-        y: -offset,
-        transition: { duration: 0.5, ease: "easeInOut" },
-      });
-    }
-  };
   let filteredArrayOfTitles = arrayOfTitles.filter((el) => el !== "");
 
   const content = [
@@ -138,10 +126,11 @@ export default function BlogPost({ postData, allPosts }) {
   return (
     <>
       <HeadSeo
-        title={"Pink Helmet - tytul posta"}
-        description={"Opis pod seo"}
+        title={`Pink Helmet - ${postData.title}`}
+        description={postData.titleDescription}
       />
       <motion.div
+        id="top"
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
@@ -155,10 +144,7 @@ export default function BlogPost({ postData, allPosts }) {
             alt={postData.coverImage.responsiveImage.alt}
           />
         )}
-        <div
-          id="top"
-          className="flex flex-col justify-center text-justify leading-8 mx-2"
-        >
+        <div className="flex flex-col justify-center text-justify leading-8 mx-2">
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
 
           <div className="w-fit bg-pink-rose p-2 rounded group hover:bg-pink-600 transition duration-300">
@@ -170,19 +156,25 @@ export default function BlogPost({ postData, allPosts }) {
             </a>
           </div>
 
-          <ol
-            ref={olRef}
-            className="list-decimal p-6"
-            onClick={handleScrollToTop}
-          >
+          <ol className="list-decimal p-6">
             {filteredArrayOfTitles.map((el, index) => (
               <li key={index}>
-                <a
+                <Link
+                  href={el}
+                  to={el}
+                  spy={true}
+                  smooth={true}
+                  offset={-120}
+                  duration={500}
+                >
+                  {el}
+                </Link>
+                {/* <a
                   className="transition duration-300 hover:text-pink-rose"
                   href={`#${el}`}
                 >
                   {el}
-                </a>
+                </a> */}
               </li>
             ))}
           </ol>
@@ -192,9 +184,9 @@ export default function BlogPost({ postData, allPosts }) {
           <div className="lg:w-9/12">
             {content &&
               content.map((el, index) => (
-                <>
+                <React.Fragment key={index}>
                   {el.title !== "" && (
-                    <div key={index} id={el.title}>
+                    <div id={el.title}>
                       {el?.title && (
                         <h3 className="text-3xl mt-5 p-4">{el.title}</h3>
                       )}
@@ -205,7 +197,9 @@ export default function BlogPost({ postData, allPosts }) {
                           alt={el?.image?.responsiveImage.alt}
                         />
                       )}
-                      <span className="inline-block w-full text-center text-sm mb-5">{el?.image?.responsiveImage.alt}</span>
+                      <span className="inline-block w-full text-center text-sm mb-5">
+                        {el?.image?.responsiveImage.alt}
+                      </span>
                       {el?.content && (
                         <div className="mx-2 my-4 text-justify">
                           <StructuredText data={el?.content} />
@@ -216,7 +210,7 @@ export default function BlogPost({ postData, allPosts }) {
                       </div>
                     </div>
                   )}
-                </>
+                </React.Fragment>
               ))}
           </div>
           <div className="lg:w-3/12 border-t-2 lg:border-t-0 lg:border-l-2 relative">
@@ -229,9 +223,16 @@ export default function BlogPost({ postData, allPosts }) {
           </div>
 
           <div className="fixed bottom-4 right-4 border p-3 rounded bg-pink-rose text-white hover:bg-pink-600 hover:text-white transition duration-300">
-            <a href="#top">
+            <Link
+              href={"top"}
+              to={"top"}
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={500}
+            >
               <KeyboardArrowUpIcon style={{ fontSize: 35 }} />
-            </a>
+            </Link>
           </div>
         </section>
       </motion.div>
@@ -246,6 +247,7 @@ export const getServerSideProps = async ({ params, preview }) => {
             id
             datePublic
             title
+            titleDescription
             slug
             firstPoint
             secondPoint
