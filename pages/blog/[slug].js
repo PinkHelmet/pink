@@ -201,10 +201,11 @@ export default function BlogPost({ postData, allPosts }) {
                       {el?.image?.responsiveImage && (
                         <Image
                           src={el?.image?.responsiveImage}
-                          className="w-4/6 mx-auto cover mb-6 self-center"
-                          alt={postData?.imageFirstPoint?.responsiveImage.alt}
+                          className="w-4/6 mx-auto cover mb-1 self-center"
+                          alt={el?.image?.responsiveImage.alt}
                         />
                       )}
+                      <span className="inline-block w-full text-center text-sm mb-5">{el?.image?.responsiveImage.alt}</span>
                       {el?.content && (
                         <div className="mx-2 my-4 text-justify">
                           <StructuredText data={el?.content} />
