@@ -27,11 +27,10 @@ export default function BlogCart({ el, index, list = false }) {
         <Image
           src={el?.coverImage?.responsiveImage}
           alt={el?.coverImage?.responsiveImage.alt}
-          width={500}
-          height={288}
-          className="absolute inset-0 mx-auto transition duration-300 group-hover:rotate-1 group-hover:scale-105 overflow-hidden"
+          fill
+          className="absolute inset-0 mx-auto transition cover duration-300 group-hover:rotate-1 group-hover:scale-105 overflow-hidden"
         />
-        <div className="absolute w-[500px] mx-auto inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:rotate-1 group-hover:scale-105 transition duration-300"></div>
+        <div className="absolute mx-auto inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:rotate-1 group-hover:scale-105 transition duration-300"></div>
         <p className="absolute top-1/2 -left-1/2 text-white uppercase text-2xl transform -translate-y-1/2 -translate-x-1/2 transition duration-300 group-hover:left-1/2">
           Czytaj więcej
         </p>

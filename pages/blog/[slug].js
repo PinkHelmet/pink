@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 
 import { StructuredText } from "react-datocms";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import Image from "next/image";
 import { request } from "../../lib/datocms";
+//components
 import HeadSeo from "../../components/Head";
 import BlogCart from "../../components/BlogCart";
 
@@ -59,6 +61,20 @@ export default function BlogPost({ postData, allPosts }) {
     ninthPoint,
     tenthPoint,
   ];
+  const controls = useAnimation();
+
+  const olRef = useRef(null);
+
+  const handleScrollToTop = () => {
+    const olElement = olRef.current;
+    if (olElement) {
+      const offset = olElement.offsetTop - 120;
+      controls.start({
+        y: -offset,
+        transition: { duration: 0.5, ease: "easeInOut" },
+      });
+    }
+  };
   let filteredArrayOfTitles = arrayOfTitles.filter((el) => el !== "");
 
   const content = [
@@ -145,9 +161,22 @@ export default function BlogPost({ postData, allPosts }) {
         >
           <h1 className="text-4xl w-full text-center p-6">{postData.title}</h1>
 
-          <ol className="list-decimal p-6">
+          <div className="w-fit bg-pink-rose p-2 rounded group hover:bg-pink-600 transition duration-300">
+            <a href="/blog">
+              <ArrowBackIcon className="transition duration-300 transform group-hover:-translate-x-1 group-hover:text-white " />
+              <span className="inline-block text-sm uppercase ml-2 group-hover:text-white transition duration-300">
+                Cofnij do pozostałych artykułów
+              </span>
+            </a>
+          </div>
+
+          <ol
+            ref={olRef}
+            className="list-decimal p-6"
+            onClick={handleScrollToTop}
+          >
             {filteredArrayOfTitles.map((el, index) => (
-              <li key={index} className="">
+              <li key={index}>
                 <a
                   className="transition duration-300 hover:text-pink-rose"
                   href={`#${el}`}
@@ -165,15 +194,15 @@ export default function BlogPost({ postData, allPosts }) {
               content.map((el, index) => (
                 <>
                   {el.title !== "" && (
-                    <div key={index} id={el.title} className="min-h-[90vh]">
+                    <div key={index} id={el.title}>
                       {el?.title && (
-                        <h3 className="text-3xl text-center p-4">{el.title}</h3>
+                        <h3 className="text-3xl mt-5 p-4">{el.title}</h3>
                       )}
                       {el?.image?.responsiveImage && (
                         <Image
                           src={el?.image?.responsiveImage}
                           className="w-4/6 mx-auto cover mb-6 self-center"
-                          alt={postData.imageFirstPoint.responsiveImage.alt}
+                          alt={postData?.imageFirstPoint?.responsiveImage.alt}
                         />
                       )}
                       {el?.content && (
