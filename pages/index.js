@@ -55,10 +55,7 @@ export default function Home(props) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.2 }}
         className="bg-fixed bg-blend-overlay bg-no-repeat bg-mobile_hero_bg md:bg-hero_bg bg-cover bg-center h-[90vh] shadow-lg"
-        // className="bg-fixed bg-blend-overlay bg-no-repeat  bg-cover bg-center h-[90vh] shadow-lg relative"
-        // className="h-[90vh] overflow-hidden"
       >
-        {/* <Image src={bg} alt="Langing page background" fill priority /> */}
         <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
           {" "}
           <div className="flex flex-col h-[10vh] justify-between items-center">
