@@ -37,7 +37,7 @@ export default function BlogPost({ postData, allPosts }) {
     contentSecondPoint,
     imageThirdPoint,
     contentThirdPoint,
-    imageFouthPoint,
+    imageFourthPoint,
     contentFourthPoint,
     imageFifthPoint,
     contentFifthPoint,
@@ -51,6 +51,26 @@ export default function BlogPost({ postData, allPosts }) {
     contentNinthPoint,
     imageTenthPoint,
     contentTenthPoint,
+    secondImageFirstPoint,
+    secondContentFirstPoint,
+    secondImageSecondPoint,
+    secondContentSecondPoint,
+    secondImageThirdPoint,
+    secondContentThirdPoint,
+    secondImageFourthPoint,
+    secondContentFourthPoint,
+    secondImageFifthPoint,
+    secondContentFifthPoint,
+    secondImageSixthPoint,
+    secondContentSixthPoint,
+    secondImageSeventhPoint,
+    secondContentSeventhPoint,
+    secondImageEighthPoint,
+    secondContentEighthPoint,
+    secondImageNinthPoint,
+    secondContentNinthPoint,
+    secondImageTenthPoint,
+    secondContentTenthPoint,
   } = postData;
 
   //tablica z tytułami
@@ -73,51 +93,71 @@ export default function BlogPost({ postData, allPosts }) {
       title: firstPoint,
       image: imageFirstPoint,
       content: contentFirstPoint,
+      sec_image: secondImageFirstPoint,
+      sec_content: secondContentFirstPoint,
     },
     {
       title: secondPoint,
       image: imageSecondPoint,
       content: contentSecondPoint,
+      sec_image: secondImageSecondPoint,
+      sec_content: secondContentSecondPoint,
     },
     {
       title: thirdPoint,
       image: imageThirdPoint,
       content: contentThirdPoint,
+      sec_image: secondImageThirdPoint,
+      sec_content: secondContentThirdPoint,
     },
     {
       title: fourthPoint,
-      image: imageFouthPoint,
+      image: imageFourthPoint,
       content: contentFourthPoint,
+      sec_image: secondImageFourthPoint,
+      sec_content: secondContentFourthPoint,
     },
     {
       title: fifthPoint,
       image: imageFifthPoint,
       content: contentFifthPoint,
+      sec_image: secondImageFifthPoint,
+      sec_content: secondContentFifthPoint,
     },
     {
       title: sixthPoint,
       image: imageSixthPoint,
       content: contentSixthPoint,
+      sec_image: secondImageSixthPoint,
+      sec_content: secondContentSixthPoint,
     },
     {
       title: seventhPoint,
       image: imageSeventhPoint,
       content: contentSeventhPoint,
+      sec_image: secondImageSeventhPoint,
+      sec_content: secondContentSeventhPoint,
     },
     {
       title: eighthPoint,
       image: imageEighthPoint,
       content: contentEighthPoint,
+      sec_image: secondImageEighthPoint,
+      sec_content: secondContentEighthPoint,
     },
     {
       title: ninthPoint,
       image: imageNinthPoint,
       content: contentNinthPoint,
+      sec_image: secondImageNinthPoint,
+      sec_content: secondContentNinthPoint,
     },
     {
       title: tenthPoint,
       image: imageTenthPoint,
       content: contentTenthPoint,
+      sec_image: secondImageTenthPoint,
+      sec_content: secondContentTenthPoint,
     },
   ];
 
@@ -200,6 +240,21 @@ export default function BlogPost({ postData, allPosts }) {
                       {el?.content && (
                         <div className="mx-2 my-4 text-justify">
                           <StructuredText data={el?.content} />
+                        </div>
+                      )}
+                      {el?.sec_image?.responsiveImage && (
+                        <Image
+                          src={el?.sec_image?.responsiveImage}
+                          className="w-4/6 mx-auto cover mb-1 self-center"
+                          alt={el?.sec_image?.responsiveImage.alt}
+                        />
+                      )}
+                      <span className="inline-block w-full text-center text-sm mb-5">
+                        {el?.sec_image?.responsiveImage.alt}
+                      </span>
+                      {el?.sec_content && (
+                        <div className="mx-2 my-4 text-justify">
+                          <StructuredText data={el?.sec_content} />
                         </div>
                       )}
                       <div className="w-1/2 mx-auto p-6">
