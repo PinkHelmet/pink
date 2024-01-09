@@ -25,7 +25,7 @@ export default function Blog({ subscription }) {
       <HeaderTitle title="Blog" />
       <section className="mx-auto flex flex-col items-start md:flex-row flex-wrap min-h-[90vh]">
         {dataOffer.map((el, index) => (
-          <BlogCart el={el} index={index} list={true} />
+          <BlogCart el={el} index={index} list={true} key={index} />
         ))}
       </section>
     </>

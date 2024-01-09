@@ -182,9 +182,9 @@ export default function BlogPost({ postData, allPosts }) {
       >
         {postData.coverImage.responsiveImage && (
           <Image
-            src={postData.coverImage.responsiveImage}
+            src={postData?.coverImage?.responsiveImage}
             className="container w-auto cover mx-auto mb-6 self-center"
-            alt={postData.coverImage.responsiveImage.alt}
+            alt={postData?.coverImage?.responsiveImage.alt}
           />
         )}
         <div className="flex flex-col justify-center text-justify leading-8 mx-2">
@@ -269,7 +269,7 @@ export default function BlogPost({ postData, allPosts }) {
             <div className="stickyClass p-2">
               <h3 className="text-center">Polecane Artykuły</h3>
               {filteredPosts.map((el, index) => (
-                <BlogCart el={el} index={index} />
+                <BlogCart el={el} index={index} key={index} />
               ))}
             </div>
           </div>
