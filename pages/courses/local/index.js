@@ -125,7 +125,10 @@ export default function Home({ subscription }) {
           </div>
         </div>
         {posts.map((el) => (
-          <div className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg">
+          <Link
+            href={`/courses/local/${el.slug}`}
+            className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg"
+          >
             <div className="rounded-lg">
               <Image
                 data={el.coverImage.responsiveImage}
@@ -133,16 +136,14 @@ export default function Home({ subscription }) {
               />
             </div>
             <div className="p-6">
-              <h2 className="my-4 text-2xl">
-                <Link href={`/courses/local/${el.slug}`}>{el.title}</Link>
-              </h2>
+              <h2 className="my-4 text-2xl">{el.title}</h2>
               <p>{el.excerpt}</p>
               <div className="flex justify-between py-6 font-thin text-xs">
                 <span>Autor: {el.author.name}</span>
                 <span>Publikowany: {el.publishedDate}</span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </motion.section>
     </>
