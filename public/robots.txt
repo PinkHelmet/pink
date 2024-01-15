@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pinkhelmet.pl
+
+# Sitemaps
+Sitemap: https://pinkhelmet.pl/sitemap.xml
