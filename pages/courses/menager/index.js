@@ -145,7 +145,7 @@ export default function Home({ subscription }) {
               <h2 className="my-4 text-2xl">{el.title}</h2>
               <p>{el.excerpt}</p>
               <div className="flex justify-between py-6 font-thin text-xs">
-                <span>Autor : {el.author.name}</span>
+                <span>Autor: {el.author.name}</span>
                 <span>Opublikowany: {el.publishedDate}</span>
               </div>
             </div>
