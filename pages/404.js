@@ -12,7 +12,7 @@ function CustomError404() {
       className="min-h-[70vh] container mx-auto flex w-full flex-col items-center justify-center"
     >
       <div>
-        <p>Ooou, coś poszlo nie tak 🧐🧐🧐</p>
+        <p>Ooou, coś poszło nie tak 🧐🧐🧐</p>
       </div>
       <div>
         <RedirectButton href="/" redirectTo="Cofnij do strony głównej" />
