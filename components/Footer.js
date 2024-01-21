@@ -21,7 +21,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="w-1/2 text-center order-first mt-6 mb-4">
-          <p className="p-4">Dane Kontaktowe</p>
+          <p className="p-4">Dane Kontaktowe:</p>
           <p className="p-2">
             <span className="font-regular">tel:</span>{" "}
             <span className="text-xl font-bold">{phoneNumber}</span>
