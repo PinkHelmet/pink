@@ -1,27 +1,45 @@
 import React from "react";
 import siteMetadata from "../data/siteMetadata";
-import { FacebookOutlined } from "@mui/icons-material";
+import { FacebookOutlined, Instagram, YouTube } from "@mui/icons-material";
 
 const Footer = () => {
-  const { facebook, phoneNumber, email } = siteMetadata;
+  const { facebook, instagram, youtube, phoneNumber, email } = siteMetadata;
 
   return (
     <div className="bg-footer_bg bg-cover bg-center bg-fixed shadow-lg">
       <div className="container mx-auto h-full flex flex-col md:flex-row justify-center items-center text-white ">
-        <div className="w-1/2 text-center m-6">
+        <div className="w-full md:w-1/2 text-center m-6">
           <p className="p-4">Social media </p>
           <a
             href={facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:transition hover:ease-in-out delay-150 hover:text-facebook hover:cursor-pointer"
+            className="hover:transition hover:ease-in-out delay-150 hover:text-facebook hover:cursor-pointer px-4"
             aria-label="Zobacz więcej o mojej firmie na Facebooku"
           >
             <FacebookOutlined fontSize="large" />
           </a>
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:transition hover:ease-in-out delay-150 hover:text-instagram hover:cursor-pointer px-4"
+            aria-label="Zobacz mój profil na Instagramie"
+          >
+            <Instagram fontSize="large" />
+          </a>
+          <a
+            href={youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:transition hover:ease-in-out delay-150 hover:text-youtube hover:cursor-pointer px-4"
+            aria-label="Odwiedź mojego youtuba i dowiedź się więcej o mnie "
+          >
+            <YouTube fontSize="large" />
+          </a>
         </div>
-        <div className="w-1/2 text-center order-first mt-6 mb-4">
-          <p className="p-4">Dane Kontaktowe:</p>
+        <div className="w-full md:w-1/2 text-left order-first mt-6 mb-4 pl-10">
+          <p className="p-4 pl-2">Dane Kontaktowe:</p>
           <p className="p-2">
             <span className="font-regular">tel:</span>{" "}
             <span className="text-xl font-bold">{phoneNumber}</span>

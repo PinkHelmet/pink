@@ -22,6 +22,8 @@ const siteMetadata = {
   email: "biuro@pinkhelmet.pl",
   facebook:
     "https://www.facebook.com/people/Pink-Helmet-Karolina-Szuba/100090664581682/",
+  instagram: "https://www.instagram.com/pink_helmet_budownictwo/",
+  youtube: "https://www.youtube.com/@PinkHelmetKarolinaSzuba",
   NIP: "9222974196",
   REGON: "525262707",
 };
