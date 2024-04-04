@@ -8,7 +8,6 @@ function Modal({ open, setOpen, data, image, setImage }) {
   const [pic, setPic] = useState(image);
 
   const indexImage = data.findIndex((img) => img.id === pic.id);
-  console.log(indexImage);
   const handleIncrement = () => {
     setPic(data[indexImage + 1]);
   };
@@ -62,7 +61,7 @@ function Modal({ open, setOpen, data, image, setImage }) {
                     src={`${pic.image.responsiveImage.src}`}
                     width={0}
                     height={0}
-                    alt={image.image.responsiveImage.alt}
+                    alt={pic.id}
                     sizes="100vw"
                     className="max-h-[80vh] rounded-t-lg"
                     style={{ width: "100%", height: "auto" }}

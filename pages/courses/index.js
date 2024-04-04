@@ -43,6 +43,7 @@ export default function Home(props) {
                   <Image
                     src={boats}
                     className={`hover:scale-110 transition transition-500 brightness-75 `}
+                    alt="Szkolenia menedżerskie z zarządzania"
                   />
                   <p className="absolute top-1/2 left-1/2 transform  -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow ">
                     Szkolenia menedżerskie z zarządzania
@@ -54,6 +55,7 @@ export default function Home(props) {
                   <Image
                     src={houses}
                     className={`hover:scale-110 transition transition-500 brightness-75 `}
+                    alt="Szkolenia z zakresu rękojmi nieruchomości"
                   />
                   <p className="absolute top-1/2 left-1/2 transform z-10 -translate-x-1/2 -translate-y-1/2 text-4xl text-center text-white drop-shadow">
                     Szkolenia z zakresu rękojmi nieruchomości

@@ -130,8 +130,9 @@ export default function Home({ subscription }) {
             <p>Konkurencja nie śpi - a Ty? 😴</p>
           </div>
         </div>
-        {posts.map((el) => (
+        {posts.map((el, index) => (
           <Link
+            key={index}
             href={`/courses/menager/${el.slug}`}
             className="md:w-6/12 md:8/12 m-6 h-2/3 rounded-lg shadow-lg"
           >

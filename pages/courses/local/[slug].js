@@ -15,7 +15,7 @@ export default function BlogPost(props) {
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - ${postData?.titleDesc}`}
+        title={`Pink Helmet - ${postData.title}`}
         description={postData.excerpt}
       />
       <motion.div

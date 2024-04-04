@@ -70,10 +70,8 @@ export default function Realisation({ subscription }) {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        // className="container mx-auto mb-8 min-h-[70vh]"
         className="container mx-auto min-h-[70vh]"
       >
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4"> */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 p-8">
           {dataGallery?.map((el) => (
             <div
@@ -84,15 +82,13 @@ export default function Realisation({ subscription }) {
               key={el.id}
               className="h-min w-full"
             >
-              {/* <div className="w-1/2 p-1 md:p-2"> */}
               {el.image && (
                 <Image
                   src={el.image.responsiveImage}
-                  // className="h-auto max-w-full rounded-lg"
+                  alt={el.image.responsiveImage.title}
                   className="object-cover rounded-lg"
                 />
               )}
-              {/* </div> */}
             </div>
           ))}
         </div>

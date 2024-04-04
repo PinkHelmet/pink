@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export default function BlogCart({ el, index, list = false }) {
   if (!el) return null;
-
   return (
     <motion.a
       initial={{ y: "450px", opacity: 0 }}
@@ -26,7 +25,7 @@ export default function BlogCart({ el, index, list = false }) {
       <div className="h-64 mx-auto w-full group relative overflow-hidden">
         <Image
           src={el?.coverImage?.responsiveImage}
-          alt={el?.coverImage?.responsiveImage.alt}
+          alt={el.title}
           fill
           className="absolute inset-0 mx-auto transition cover duration-300 group-hover:rotate-1 group-hover:scale-105 overflow-hidden"
         />

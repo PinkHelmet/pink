@@ -7,13 +7,12 @@ import RedirectButton from "../../components/RedirectButton";
 
 export default function BlogPost({ postData }) {
   if (!postData) return null;
-
   return (
     <>
       <HeadSeo
-        title={`Pink Helmet - ${postData?.titleDesc}`}
-        description={postData?.excerpt}
-      />{" "}
+        title={`Pink Helmet - ${postData.title}`}
+        description={postData.titleDesc}
+      />
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
