@@ -5,6 +5,9 @@ import siteMetadata from "../data/siteMetadata";
 import Link from "next/link";
 import Image from "next/image";
 import {
+  AutoStoriesOutlined,
+  CameraIndoorOutlined,
+  ConstructionOutlined,
   KeyboardDoubleArrowDown,
   Key,
   FormatPaintOutlined,
@@ -92,11 +95,11 @@ export default function Home(props) {
             />
             <p className="my-24 mx-4 text-center leading-7">
               <span className="font-bold text-pink-rose">Pink Helmet </span>
-              oferuje kompleksowe usługi z zakresu budownictwa oraz szkoleń. Ale{" "}
-              <span className="font-bold text-pink-rose">Pink Helmet </span>to
-              nie tylko działalność gospodarcza. To droga od kompleksowej
-              mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
-              gospodarczych w Polsce.
+              oferuje kompleksowe usługi z zakresu budownictwa oraz szkoleń tj.
+              odbiory techniczne nieruchomości, sporządzenie świadectw
+              charakterystyki energetycznej, badania kamerą termowizyjną, prace
+              wykończeniowe i remontowe, renowacje, odwodnienia ogrodów oraz
+              budowę tarasów.
             </p>
           </div>
         </div>
@@ -115,8 +118,15 @@ export default function Home(props) {
           className="flex w-100 container mx-auto flex-col items-center w-full py-10"
         >
           <motion.h1 className="text-3xl text-center drop-shadow-lg">
-            Dlaczego Pink Helmet ?
+            Dlaczego Pink Helmet to dobry wybór?
           </motion.h1>
+          <motion.p className="font-normal p-6">
+            <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
+            konkuruje kompleksowością swoich usług oraz świetną jakością prac i
+            obsługą klienta. Nie musisz już szukać kilku ekip. Wszystko czego
+            potrzebujesz z zakresu budownictwa jest w jednym miejscu. Dzięki
+            temu oszczędzasz czas, nerwy i pieniądze.
+          </motion.p>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
             zajmuje się przede wszystkim kompleksową obsługą inżynieryjną od
@@ -127,7 +137,8 @@ export default function Home(props) {
             remontowych, projektowanie zabudów meblowych i ich montaż,
             projektowanie i doradztwo w zakresie aranżacji wnętrz oraz wykonanie
             systemu odprowadzania wód opadowych w ogrodzie. Wykonuje również
-            świadectwa charakterystyki energetycznej domów oraz mieszkań.
+            świadectwa charakterystyki energetycznej domów oraz mieszkań oraz
+            badania kamerą termowizyjną.
           </motion.p>
           <motion.p className="font-normal p-6">
             Drugim filarem działalności są szkolenia dedykowane Deweloperom z
@@ -208,6 +219,33 @@ export default function Home(props) {
                   className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
                 />
                 <p className="text-center">Drenaże</p>
+              </Link>
+            </motion.div>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer/badania-kamera-termowizyjna" className="text-center">
+                <CameraIndoorOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Kamera termowizyjna</p>
+              </Link>
+            </motion.div>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="offer" className="text-center">
+                <ConstructionOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Renowacje</p>
+              </Link>
+            </motion.div>
+            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+              <Link href="courses" className="text-center">
+                <AutoStoriesOutlined
+                  style={{ fontSize: 100 }}
+                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
+                />
+                <p className="text-center">Szkolenia</p>
               </Link>
             </motion.div>
           </div>
