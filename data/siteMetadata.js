@@ -1,5 +1,7 @@
 const siteMetadata = {
   companyName: "Pink Helmet Karolina Szuba",
+  companyName_SP: "Pink Helmet Sp. z o.o.",
+  city: "05-500 Piaseczno",
   phoneNumber: "516 289 995",
   titleHome:
     "Pink Helmet | Warszawa, Piaseczno i okolice | Kompleksowe usługi budowlane",
@@ -26,6 +28,9 @@ const siteMetadata = {
   youtube: "https://www.youtube.com/@PinkHelmetKarolinaSzuba",
   NIP: "9222974196",
   REGON: "525262707",
+  NIP_SP: "1231551686",
+  REGON_SP: "52795324900000",
+  KRS: "0001091756"
 };
 
 export default siteMetadata;

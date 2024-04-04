@@ -1,15 +1,30 @@
 import HeadSeo from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
+import SocialMedia from "../../components/SocialMedia";
 import siteMetadata from "../../data/siteMetadata";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  const {
+    companyName,
+    companyName_SP,
+    city,
+    NIP,
+    NIP_SP,
+    REGON,
+    REGON_SP,
+    KRS,
+    email,
+    titleContact,
+    phoneNumber,
+  } = siteMetadata;
+
   return (
     <>
       <HeadSeo
-        title={siteMetadata.titleContact}
-        description={`Skontaktuj się z nami: ${siteMetadata.phoneNumber} bądź napisz do nas 
-      ${siteMetadata.email}`}
+        title={titleContact}
+        description={`Skontaktuj się z nami: ${phoneNumber} lub napisz do nas 
+      ${email}`}
       />
       <HeaderTitle title="Kontakt" />
       <motion.section
@@ -18,31 +33,30 @@ export default function Contact() {
         transition={{ duration: 0.75, delay: 0.4 }}
         className="container mx-auto h-[70vh]"
       >
-        <div className="flex flex-col md:flex-row w-full h-full justify-center items-center text-2xl">
+        <div className="flex flex-col md:flex-row w-full  justify-center items-center text-2xl">
           <div className="flex flex-col items-center m-6">
-            <h1 className="text-4xl mb-4">Masz pytanie? </h1>
-            <p>Chcesz skorzystać z oferty ? </p>
-            <p>Zapraszam do kontaktu:</p>
             <p>
-              tel:{" "}
-              <span className="text-pink-rose">{siteMetadata.phoneNumber}</span>
+              tel: <span className="text-pink-rose">{phoneNumber}</span>
             </p>
             <p>
-              email:{" "}
-              <span className="text-pink-rose ">{siteMetadata.email}</span>
+              email: <span className="text-pink-rose ">{email}</span>
             </p>
+            <SocialMedia />
           </div>
-          <div className="flex flex-col items-center m-6">
-            <h2 className="text-4xl mt-4">Dane firmy:</h2>
-            <p className="text-pink-rose font-bold">
-              {siteMetadata.companyName}
-            </p>
-            <p>
-              NIP: <span>{siteMetadata.NIP}</span>
-            </p>
-            <p>
-              REGON: <span>{siteMetadata.REGON}</span>
-            </p>
+        </div>
+        <div className="flex w-full">
+          <div className="w-full md:w-1/2 flex flex-col  items-center text-2xl">
+            <p>{companyName}</p>
+            <p>{city}</p>
+            <p>NIP: {NIP}</p>
+            <p>REGON: {REGON}</p>
+          </div>
+          <div className="w-full md:w-1/2 flex flex-col  items-center text-2xl">
+          <p>{companyName_SP}</p>
+            <p>{city}</p>
+            <p>KRS: {KRS}</p>
+            <p>NIP: {NIP_SP}</p>
+            <p>REGON: {REGON_SP}</p>
           </div>
         </div>
       </motion.section>
