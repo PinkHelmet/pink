@@ -8,6 +8,7 @@ import Head from "../../components/Head";
 import HeaderTitle from "../../components/HeaderTitle";
 //img
 import aboutImg from "../../public/hero-about.webp";
+import logo from "../../public/logo.png";
 
 export default function About() {
   return (
@@ -36,47 +37,49 @@ export default function About() {
           />
         </div>
         <div className={`md:w-6/12 m-6 font-medium`}>
-          <h1 className="text-2xl my-6">
-            <strong className="text-pink-rose">Pink Helmet</strong> - Karolina
-            Szuba
-          </h1>
+          <div className="flex w-full items-center gap-12 mb-4">
+            <h1 className="text-2xl my-6">
+              Marka <strong className="text-pink-rose">Pink Helmet</strong>
+            </h1>
+            <Image
+              src={logo}
+              alt="Picture of the author"
+              width="150"
+              height="150"
+            />
+          </div>
+
           <p className="mb-2">
-            Od dawna moim marzeniem było prowadzić własną działalność
-            gospodarczą. Daje to swego rodzaju wolność oraz nieopisaną
-            satysfakcję budowania czegoś od podstaw. Stwierdziłam, że jednak
-            najpierw chce się nauczyć jak najwięcej i znaleźć w życiu to co mnie
-            dodatkowo fascynuje i co może mi zapewnić przysłowiowy chleb.
+            Firma Pink Helmet Karolina Szuba powstała w maju 2023 r, jako
+            pokłosie marzeń i ciężkiej pracy jej właścicielki Karoliny Szuby.
           </p>
           <p className="mb-2">
-            Ukończyłam <strong>Politechnikę Warszawską</strong> na kierunku{" "}
-            Inżynieria Środowiska, a następnie studia podyplomowe w{" "}
-            <strong>Szkole Głównej Handlowej</strong> w Warszawie z zarządzania.
+            W związku z dynamicznym rozwojem firmy w marcu 2024 r. marka Pink
+            Helmet podzieliła się na Pink Helmet Karolina Szuba, realizująca
+            usługi inżynierskie z zakresu budownictwa: doradztwo inżynieryjne,
+            odbiory lokatorskie nieruchomości, badania termowizyjne, świadectwa
+            energetyczne, projektowanie, szkolenia oraz prace ogrodnicze tj.
+            odwodnienia, niwelacja gruntu, budowa tarasów i nie tylko oraz Pink
+            Helmet Sp. z o.o. zajmująca się remontami i wykończeniami
+            nieruchomości.
           </p>
           <p className="mb-2">
-            W życiu robiłam wiele rzeczy... udzielałam korepetycji, sprzedawałam
-            bieliznę, kosmetyki, pozyskiwałam darczyńców dla organizacji
-            pozarządowych, zarządzałam projektami w call center, byłam
-            koordynatorem biura i oferentem w agencji reklamowej, projektowałam
-            instalacje przeciwpożarowe... Aż trafiłam do firmy Deweloperskiej. O
-            budownictwie wiedziałam mniej więcej tyle co o balecie - niewiele.
-            Jednak okazało się, że wiedza którą dostawałam każdego dnia sama
-            wchłaniała się w mój mózg niczym woda w gąbkę. Kupiłam mieszkanie.
-            Niespodziewane wydarzenia zmusiły mnie do wykonania części prac
-            wykończeniowych samodzielnie. Znowu uczyłam się wielu rzeczy
-            praktycznie od zera, ale znowu ta wiedza przychodziła mi nad wyraz
-            łatwo.
+            A kim jest Karolina? Absolwentką <strong>Politechniki Warszawskiej</strong> na
+            kierunku Inżynieria Środowiska oraz absolwentką studiów
+            podyplomowych menedżerskich w <strong>Szkole Głównej Handlowej </strong>w Warszawie.
+            Przez lata zdobywała doświadczenie w wielu branżach by ostatecznie
+            związać się z budownictwem. Jej marzeniem zawodowym jest stworzyć
+            silną, konkurencyjną markę w branży, która ze względu na dużą ilość
+            nierzetelnych firm jest obecnie postrzegana dość negatywnie wśród
+            społeczeństwa. Celem Pink Helmet jest przekonać klientów, że remonty
+            i wykończenia nie muszą „wykańczać” również psychicznie i finansowo.
+            Można zrobić coś raz i dobrze, bez zbędnej zwłoki w terminach.
           </p>
           <p className="mb-2">
-            Któregoś dnia stwierdziłam, że chyba już wewnętrzny głos, który do
-            tej pory zawsze mówił „nie dasz sobie rady!”, „gdzie kobieta w
-            budownictwie?” zaczyna zmieniać retorykę na tekst niczym z polskiego
-            filmu „dlaczego nie?”. I tak o to powstał
-            <strong className="text-pink-rose"> Pink Helmet</strong> 😊
-          </p>
-          <p className="fmb-2">
-            A kim jestem prywatnie? Żoną, córką, wnuczką... i pancią gromady
-            królików. Uwielbiam czytać, malować, pisać wiersze, jeść oraz
-            pogłębiać wiedzę na różne tematy 😀
+            Natomiast misją Pink Helmet jest droga od kompleksowej mikrofirmy
+            inżynieryjnej po zmianę prowadzenia działalności gospodarczych w
+            Polsce, również w innych branżach, dzięki szkoleniom menedżerskim
+            oferowanym przez Karolinę Szubę.
           </p>
         </div>
       </motion.section>
