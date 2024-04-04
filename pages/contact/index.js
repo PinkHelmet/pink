@@ -31,9 +31,9 @@ export default function Contact() {
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.4 }}
-        className="container mx-auto h-[70vh]"
+        className="container mx-auto"
       >
-        <div className="flex flex-col md:flex-row w-full  justify-center items-center text-2xl">
+        <div className="flex flex-col md:flex-row w-full justify-center items-center text-2xl">
           <div className="flex flex-col items-center m-6">
             <p>
               tel: <span className="text-pink-rose">{phoneNumber}</span>
@@ -44,8 +44,8 @@ export default function Contact() {
             <SocialMedia />
           </div>
         </div>
-        <div className="flex w-full">
-          <div className="w-full md:w-1/2 flex flex-col  items-center text-2xl">
+        <div className="flex flex-col gap-10 w-full md:flex-row mb-10">
+          <div className="w-full md:w-1/2 flex flex-col items-center text-2xl">
             <p>{companyName}</p>
             <p>{city}</p>
             <p>NIP: {NIP}</p>

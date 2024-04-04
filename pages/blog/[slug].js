@@ -203,12 +203,12 @@ export default function BlogPost({ postData, allPosts }) {
             {filteredArrayOfTitles.map((el, index) => (
               <li key={index}>
                 <Link
-                  href={el}
                   to={el}
                   spy={true}
                   smooth={true}
                   offset={-120}
                   duration={500}
+                  className="cursor-pointer"
                 >
                   {el}
                 </Link>
@@ -276,12 +276,12 @@ export default function BlogPost({ postData, allPosts }) {
 
           <div className="fixed bottom-4 right-4 border p-3 rounded bg-pink-rose text-white hover:bg-pink-600 hover:text-white transition duration-300">
             <Link
-              href={"top"}
               to={"top"}
               spy={true}
               smooth={true}
               offset={-120}
               duration={500}
+              className="cursor-pointer"
             >
               <KeyboardArrowUpIcon style={{ fontSize: 35 }} />
             </Link>
