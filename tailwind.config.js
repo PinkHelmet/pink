@@ -20,6 +20,8 @@ module.exports = {
         facebook: "#3B5998",
         instagram: "#3F729B",
         youtube: "#c4302b",
+        linkedin: "#0077B5",
+        google: "#34A853"
       },
       backgroundImage: {
         mobile_hero_bg:"url('/mobile-hero-bg.webp')",

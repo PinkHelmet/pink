@@ -118,9 +118,9 @@ export default function Offer({ subscription }) {
       />{" "}
       <HeaderTitle title="Oferta" />
       <section className="container min-h-screen flex flex-col md:flex-row mx-auto min-h-screen w-full flex-wrap">
-        {dataOffer.map((offer) => (
+        {dataOffer.map((offer, index) => (
           <>
-            <div className="w-full flex flex-col md:flex-row md:relative items-center justify-center  gap-10 my-6">
+            <div key={index} className="w-full flex flex-col md:flex-row md:relative items-center justify-center gap-10 my-6">
               <motion.div
                 // animate={animation}
                 initial={{ x: "-100vw" }}

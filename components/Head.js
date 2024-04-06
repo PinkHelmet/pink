@@ -14,7 +14,7 @@ const HeadSeo = ({
       <Head>
         <title>{title}</title>
         <meta charSet="UFT-8" />
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
         {description && <meta name="description" content={description} />}
         <link rel="canonical" href={canonicalUrl} />{" "}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
