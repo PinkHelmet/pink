@@ -219,16 +219,6 @@ export default function Home(props) {
                 <p className="text-center">Kamera termowizyjna</p>
               </Link>
             </motion.div>
-         
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="courses" className="text-center">
-                <AutoStoriesOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Szkolenia</p>
-              </Link>
-            </motion.div>
           </div>
         </motion.div>
       </section>
