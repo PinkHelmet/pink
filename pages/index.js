@@ -122,29 +122,26 @@ export default function Home(props) {
           </motion.h1>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
-            konkuruje kompleksowością swoich usług oraz świetną jakością prac i
-            obsługą klienta. Nie musisz już szukać kilku ekip. Wszystko czego
+            konkuruje kompleksowością swoich usług, świetną jakością prac i
+            obsługą klienta oraz dotrzymywaniem uzgodnionych terminów. Nie musisz już szukać kilku ekip. Wszystko czego
             potrzebujesz z zakresu budownictwa jest w jednym miejscu. Dzięki
             temu oszczędzasz czas, nerwy i pieniądze.
           </motion.p>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
-            zajmuje się przede wszystkim kompleksową obsługą inżynieryjną od
-            momentu zakupu lokalu (sprawdzenie zapisów umowy deweloperskiej,
-            sprawdzenie kompletności dokumentów, pomoc doradcza w zakresie zmian
-            aranżacyjnych proponowanych przez Dewelopera) oraz odbioru
-            technicznego od Dewelopera, poprzez usługi prac wykończeniowych i
-            remontowych, projektowanie zabudów meblowych i ich montaż,
-            projektowanie i doradztwo w zakresie aranżacji wnętrz oraz wykonanie
-            systemu odprowadzania wód opadowych w ogrodzie. Wykonuje również
-            świadectwa charakterystyki energetycznej domów oraz mieszkań oraz
-            badania kamerą termowizyjną.
+            zajmuje się przede wszystkim kompleksową obsługą inżynieryjną z zakresu budownictwa. 
+            Tutaj zadbamy o odbiór Twojemu domu lub mieszkania od Dewelopera,
+            sprawdzimy ściany, dach i podłogi kamerą termowizyjną, napiszemy opinię techniczną
+            w przypadku wad budowlanych, wykonamy przegląd okresowy budowlany Twojej nieruchomości. 
+            Gdy zdecydujesz się sprzedać lub wynając swój lokal przygotujemy dla Ciebie świadectwo 
+            charakterystyki energetycznej. Z przyjemnością obejmiemy również rolę kierownika budowy 
+            przy budowie Twojego wymarzonego domu jednorodzinnego. 
           </motion.p>
           <motion.p className="font-normal p-6">
-            Drugim filarem działalności są szkolenia dedykowane Deweloperom z
-            zakresu rękojmi nieruchomości i obsługi posprzedażowej oraz
-            szkolenia dedykowane przedsiębiorstwom z zakresu zarządzania
-            przeznaczone dla kadry menedżerskiej.
+            Drugim filarem działalności są prace wykończeniowe i remonty. Oferujemy również 
+            usługę projektowania wykończenia wnętrz aby zapewnić naszym klientom kompleksowe
+            rozwiązania wykończeniowe lub remontowe. Wykonujemy zarówno wykończenia pod klucz jak
+            i wykończenia samych łazienek. To ty ustalasz w jakim zakresie chcesz z nami pracować. 
           </motion.p>
 
           <div
@@ -157,13 +154,13 @@ export default function Home(props) {
             className="flex flex-row w-full flex-wrap justify-between my-6 items-center"
           >
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/doradztwo-inzynieryjne" className="text-center">
+              <Link href="offer/kierownik-budowy-/-opinie-techniczne" className="text-center">
                 <FontAwesomeIcon
                   icon={faHandshake}
                   style={{ fontSize: 100 }}
                   className="mb-4 drop-shadow-lg text-pink-rose"
                 />
-                <p className="text-center">Doradztwo inżynieryjne</p>
+                <p className="text-center">Kierownik budowy/opinie techniczne</p>
               </Link>
             </motion.div>
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
@@ -179,13 +176,13 @@ export default function Home(props) {
               </Link>
             </motion.div>
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/projektowanie" className="text-center">
+              <Link href="offer/projektowanie-wnetrz" className="text-center">
                 <FontAwesomeIcon
                   icon={faPenToSquare}
                   style={{ fontSize: 100 }}
                   className="mb-4 drop-shadow-lg text-pink-rose"
                 />
-                <p className="text-center">Projektowanie</p>
+                <p className="text-center">Projektowanie wnętrz</p>
               </Link>
             </motion.div>
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
@@ -212,15 +209,7 @@ export default function Home(props) {
                 </p>
               </Link>
             </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/drenaze" className="text-center">
-                <WaterDamageOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Drenaże</p>
-              </Link>
-            </motion.div>
+                    
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
               <Link href="offer/badania-kamera-termowizyjna" className="text-center">
                 <CameraIndoorOutlined
@@ -230,15 +219,7 @@ export default function Home(props) {
                 <p className="text-center">Kamera termowizyjna</p>
               </Link>
             </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer" className="text-center">
-                <ConstructionOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Renowacje</p>
-              </Link>
-            </motion.div>
+         
             <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
               <Link href="courses" className="text-center">
                 <AutoStoriesOutlined
