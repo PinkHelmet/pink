@@ -95,11 +95,11 @@ export default function Home(props) {
             />
             <p className="my-24 mx-4 text-center leading-7">
               <span className="font-bold text-pink-rose">Pink Helmet </span>
-              oferuje kompleksowe usługi z zakresu budownictwa oraz szkoleń tj.
-              odbiory techniczne nieruchomości, sporządzenie świadectw
-              charakterystyki energetycznej, badania kamerą termowizyjną, prace
-              wykończeniowe i remontowe, renowacje, odwodnienia ogrodów oraz
-              budowę tarasów.
+              oferuje kompleksowe usługi z zakresu budownictwa oraz remontów mieszkań i domów tj.
+              odbiory techniczne nieruchomości od deweloperów lub z rynku wtórnego, 
+              kierowanie budową domków jednorodzinnych, opinie techniczne budowlane, 
+              okresowe przeglądy budowlane, sporządzenie świadectw charakterystyki energetycznej, 
+              badania kamerą termowizyjną, prace wykończeniowe i remontowe, budowę tarasów.
             </p>
           </div>
         </div>
