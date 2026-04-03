@@ -169,7 +169,7 @@ export default function Home(props) {
   className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12 w-full px-4"
 >
     <motion.div whileHover={{ scale: 1.05 }}>
-  <Link href="offer/kierownik-budowy-/-opinie-techniczne">
+  <Link href="offer/kierownik-budowy-i-opinie-techniczne">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
       
       <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
@@ -194,38 +194,6 @@ export default function Home(props) {
 
       <p className="font-semibold">
         Odbiory techniczne lokali
-      </p>
-
-    </div>
-  </Link>
-</motion.div>
-
-<motion.div whileHover={{ scale: 1.05 }}>
-  <Link href="offer/projektowanie-wnetrz">
-    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
-      </div>
-
-      <p className="font-semibold">
-        Projektowanie wnętrz
-      </p>
-
-    </div>
-  </Link>
-</motion.div>
-
-<motion.div whileHover={{ scale: 1.05 }}>
-  <Link href="offer/projektowanie-wnetrz">
-    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
-      </div>
-
-      <p className="font-semibold">
-        Projektowanie wnętrz
       </p>
 
     </div>
