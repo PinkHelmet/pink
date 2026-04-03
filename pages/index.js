@@ -174,7 +174,7 @@ export default function Home(props) {
   <Link href="offer/kierownik-budowy-/-opinie-techniczne">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
       
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <FontAwesomeIcon icon={faHandshake} style={{ fontSize: 40 }} />
       </div>
 
@@ -190,7 +190,7 @@ export default function Home(props) {
   <Link href="offer/odbiory-techniczne-lokali">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <Key style={{ fontSize: 40 }} />
       </div>
 
@@ -206,7 +206,7 @@ export default function Home(props) {
   <Link href="offer/projektowanie-wnetrz">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
       </div>
 
@@ -222,7 +222,7 @@ export default function Home(props) {
   <Link href="offer/projektowanie-wnetrz">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
       </div>
 
@@ -238,7 +238,7 @@ export default function Home(props) {
   <Link href="offer/projektowanie-wnetrz">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
       </div>
 
@@ -254,7 +254,7 @@ export default function Home(props) {
   <Link href="offer/remonty-i-wykonczenia">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <FormatPaintOutlined style={{ fontSize: 40 }} />
       </div>
 
@@ -270,7 +270,7 @@ export default function Home(props) {
   <Link href="offer/swiadectwa-charakterystyki-energetycznej">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <PowerOutlined style={{ fontSize: 40 }} />
       </div>
 
@@ -286,7 +286,7 @@ export default function Home(props) {
   <Link href="offer/badania-kamera-termowizyjna">
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
-      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+      <div className="text-pink-rose text-white p-6 rounded-full mb-4">
         <CameraIndoorOutlined style={{ fontSize: 40 }} />
       </div>
 
