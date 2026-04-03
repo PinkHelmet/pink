@@ -142,8 +142,6 @@ export default function Home(props) {
     <span>porządek i czystość podczas prac</span>
   </li>
 </motion.ul>
-            
-          </motion.p>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
             zajmuje się przede wszystkim kompleksową obsługą inżynieryjną z zakresu budownictwa. 
