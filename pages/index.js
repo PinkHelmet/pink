@@ -142,6 +142,7 @@ export default function Home(props) {
     <span>porządek i czystość podczas prac</span>
   </li>
 </motion.ul>
+            
           </motion.p>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
@@ -159,82 +160,141 @@ export default function Home(props) {
             rozwiązania wykończeniowe lub remontowe. Wykonujemy zarówno wykończenia pod klucz jak
             i wykończenia samych łazienek. To ty ustalasz w jakim zakresie chcesz z nami pracować. 
           </motion.p>
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+
+<motion.div
+  ref={refThird}
+  style={{
+    transform: isInViewThird ? "none" : "translateX(-200px)",
+    opacity: isInViewThird ? 1 : 0,
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+  }}
+  className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12 w-full px-4"
+>
+    <motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/kierownik-budowy-/-opinie-techniczne">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <FontAwesomeIcon
-        icon={faHandshake}
-        style={{ fontSize: 100 }}
-        className="mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+      
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <FontAwesomeIcon icon={faHandshake} style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
         Kierownik budowy i opinie techniczne
       </p>
+
     </div>
   </Link>
 </motion.div>
 
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+<motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/odbiory-techniczne-lokali">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <Key
-        style={{ fontSize: 100 }}
-        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">Odbiory techniczne lokali</p>
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <Key style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
+        Odbiory techniczne lokali
+      </p>
+
     </div>
   </Link>
 </motion.div>
 
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+<motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/projektowanie-wnetrz">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <FontAwesomeIcon
-        icon={faPenToSquare}
-        style={{ fontSize: 100 }}
-        className="mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">Projektowanie wnętrz</p>
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
+        Projektowanie wnętrz
+      </p>
+
     </div>
   </Link>
 </motion.div>
 
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+<motion.div whileHover={{ scale: 1.05 }}>
+  <Link href="offer/projektowanie-wnetrz">
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
+        Projektowanie wnętrz
+      </p>
+
+    </div>
+  </Link>
+</motion.div>
+
+<motion.div whileHover={{ scale: 1.05 }}>
+  <Link href="offer/projektowanie-wnetrz">
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <FontAwesomeIcon icon={faPenToSquare} style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
+        Projektowanie wnętrz
+      </p>
+
+    </div>
+  </Link>
+</motion.div>
+
+<motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/remonty-i-wykonczenia">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <FormatPaintOutlined
-        style={{ fontSize: 100 }}
-        className="w-full mx-auto mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">Remonty i wykończenia</p>
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <FormatPaintOutlined style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
+        Remonty i wykończenia
+      </p>
+
     </div>
   </Link>
 </motion.div>
 
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+<motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/swiadectwa-charakterystyki-energetycznej">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <PowerOutlined
-        style={{ fontSize: 100 }}
-        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <PowerOutlined style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
         Świadectwa charakterystyki energetycznej
       </p>
+
     </div>
   </Link>
 </motion.div>
 
-<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+<motion.div whileHover={{ scale: 1.05 }}>
   <Link href="offer/badania-kamera-termowizyjna">
-    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-      <CameraIndoorOutlined
-        style={{ fontSize: 100 }}
-        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
-      />
-      <p className="text-center font-medium">
+    <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+
+      <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
+        <CameraIndoorOutlined style={{ fontSize: 40 }} />
+      </div>
+
+      <p className="font-semibold">
         Badania kamerą termowizyjną
       </p>
+
     </div>
   </Link>
+</motion.div>
 </motion.div>
