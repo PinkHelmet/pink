@@ -48,9 +48,8 @@ export default function Home(props) {
     <>
       <HeadSeo
         title={titleHome}
-        description="Pink Helmet to nie tylko działalność gospodarcza. To 
-        droga od kompleksowej mikrofirmy inżynieryjnej po zmianę prowadzenia działalności
-        gospodarczych w Polsce."
+        description="Kompleksowe usługi z zakresu budownictwa i remontów: Odbiory techniczne mieszkań i domów od deweloperów, badania kamerą termowizyjną, 
+        kierowanie budową domków jednorodzinnych, świadectwa energetyczne, remonty i wykończenia wnętrz."
       />
 
       <motion.div
@@ -117,15 +116,32 @@ export default function Home(props) {
           style={{ opacity, y }}
           className="flex w-100 container mx-auto flex-col items-center w-full py-10"
         >
-          <motion.h1 className="text-3xl text-center drop-shadow-lg">
-            Dlaczego Pink Helmet to dobry wybór?
-          </motion.h1>
-          <motion.p className="font-normal p-6">
-            <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
-            konkuruje kompleksowością swoich usług, świetną jakością prac i
-            obsługą klienta oraz dotrzymywaniem uzgodnionych terminów. Nie musisz już szukać kilku ekip. Wszystko czego
-            potrzebujesz z zakresu budownictwa jest w jednym miejscu. Dzięki
-            temu oszczędzasz czas, nerwy i pieniądze.
+        <motion.h1 className="text-3xl text-center drop-shadow-lg">
+  Dlaczego Pink Helmet to dobry wybór?
+</motion.h1>
+
+<motion.ul className="font-normal p-6 space-y-3">
+  <li className="flex items-start">
+    <span className="text-pink-rose mr-2">✓</span>
+     <span>kompleksowe usługi budowlane w jednym miejscu
+    </span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-pink-rose mr-2">✓</span>
+    <span>wysoka jakość prac i obsługi klienta</span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-pink-rose mr-2">✓</span>
+    <span>dotrzymywanie uzgodnionych terminów</span>
+  </li>
+
+  <li className="flex items-start">
+    <span className="text-pink-rose mr-2">✓</span>
+    <span>porządek i czystość podczas prac</span>
+  </li>
+</motion.ul>
           </motion.p>
           <motion.p className="font-normal p-6">
             <span className="font-bold text-pink-rose">Pink Helmet</span>{" "}
