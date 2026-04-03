@@ -4,7 +4,7 @@ const siteMetadata = {
   city: "05-500 Piaseczno",
   phoneNumber: "516 289 995",
   titleHome:
-    "Pink Helmet | Warszawa, Piaseczno i okolice | Kompleksowe usługi budowlane",
+    "Pink Helmet | Warszawa, Piaseczno i okolice | Odbiory mieszkań i domów, kierownik budowy, badania termowizyjne, remonty i wykończenia",
   titleAbout:
     "Pink Helmet | Warszawa, Piaseczno i okolice | Pink Helmet Karolina Szuba",
   titleOffer:
