@@ -1,10 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
-
 import siteMetadata from "../data/siteMetadata";
 import Link from "next/link";
 import Image from "next/image";
-
 import {
   CameraIndoorOutlined,
   KeyboardDoubleArrowDown,
@@ -12,16 +10,13 @@ import {
   FormatPaintOutlined,
   PowerOutlined,
 } from "@mui/icons-material";
-
 import HeadSeo from "../components/Head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import face from "../public/face.webp";
-
 import {
   faHandshake,
   faPenToSquare,
 } from "@fortawesome/free-regular-svg-icons";
+import face from "../public/face.webp";
 
 export default function Home() {
   const ref = useRef(null);
@@ -49,6 +44,7 @@ export default function Home() {
         description="Kompleksowe usługi budowlane: odbiory techniczne mieszkań, kierownik budowy, świadectwa energetyczne, badania kamerą termowizyjną, remonty i wykończenia."
       />
 
+      {/* HERO */}
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -57,9 +53,10 @@ export default function Home() {
       >
         <div className="w-full h-full flex relative justify-center items-center backdrop-brightness-50">
           <div className="flex flex-col h-[10vh] justify-between items-center">
-          <h1 className="text-center text-white font-bold text-3xl my-6 drop-shadow-lg">
-          Odbiory techniczne mieszkań i domów od deweloperów, remonty i wykończenia wnętrz - Pink Helmet Piaseczno
-          </h1>
+            <h1 className="text-center text-white font-bold text-3xl my-6 drop-shadow-lg">
+              Odbiory techniczne mieszkań i domów od deweloperów, remonty i
+              wykończenia wnętrz - Pink Helmet Piaseczno
+            </h1>
 
             <button className="bg-blue-700 hover:bg-blue-800 text-white drop-shadow-lg font-bold py-2 px-6 duration-100 rounded-full">
               <Link href="/offer">Tutaj!</Link>
@@ -115,27 +112,23 @@ export default function Home() {
         className="overflow-hidden"
       >
         <motion.div className="container mx-auto flex flex-col items-center w-full py-10">
-
           <motion.h1 className="text-3xl text-center drop-shadow-lg">
             Dlaczego Pink Helmet to dobry wybór?
           </motion.h1>
 
-          <motion.ul className="font-normal p-6 space-y-3">
+          <motion.ul className="font-normal p-10 space-y-3">
             <li className="flex">
               <span className="text-pink-rose mr-2">✓</span>
               kompleksowe usługi budowlane w jednym miejscu
             </li>
-
             <li className="flex">
               <span className="text-pink-rose mr-2">✓</span>
               wysoka jakość prac i obsługi klienta
             </li>
-
             <li className="flex">
               <span className="text-pink-rose mr-2">✓</span>
               dotrzymywanie uzgodnionych terminów
             </li>
-
             <li className="flex">
               <span className="text-pink-rose mr-2">✓</span>
               porządek i czystość podczas prac
@@ -152,45 +145,128 @@ export default function Home() {
             }}
             className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12 w-full px-4"
           >
-
             <ServiceCard
               href="offer/kierownik-budowy-/-opinie-techniczne"
               icon={<FontAwesomeIcon icon={faHandshake} />}
               title="Kierownik budowy i opinie techniczne"
             />
-
             <ServiceCard
               href="offer/odbiory-techniczne-lokali"
               icon={<Key />}
               title="Odbiory techniczne lokali"
             />
-
             <ServiceCard
               href="offer/projektowanie-wnetrz"
               icon={<FontAwesomeIcon icon={faPenToSquare} />}
               title="Projektowanie wnętrz"
             />
-
             <ServiceCard
               href="offer/remonty-i-wykonczenia"
               icon={<FormatPaintOutlined />}
               title="Remonty i wykończenia"
             />
-
             <ServiceCard
               href="offer/swiadectwa-charakterystyki-energetycznej"
               icon={<PowerOutlined />}
               title="Świadectwa energetyczne"
             />
-
             <ServiceCard
               href="offer/badania-kamera-termowizyjna"
               icon={<CameraIndoorOutlined />}
               title="Badania kamerą termowizyjną"
             />
-
           </motion.div>
         </motion.div>
+      </section>
+
+      {/* Opinie */}
+      <section className="bg-gray-100 py-20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">
+            Opinie naszych klientów
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 px-6">
+            <div className="bg-white p-8 rounded-xl shadow-md">
+              <p className="text-yellow-500 text-xl mb-3">★★★★★</p>
+              <p className="italic">
+                "Pani Karolina to prawdziwa profesjonalistka..."
+              </p>
+              <p className="mt-4 font-semibold">Konrad K.</p>
+              <p className="text-sm text-gray-500">Opinia z Google</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-md">
+              <p className="text-yellow-500 text-xl mb-3">★★★★★</p>
+              <p className="italic">
+                "Profesjonalna obsługa, Pani Karolina normy ma w małym
+                paluszku..."
+              </p>
+              <p className="mt-4 font-semibold">Damian G.</p>
+              <p className="text-sm text-gray-500">Opinia z Google</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-md">
+              <p className="text-yellow-500 text-xl mb-3">★★★★★</p>
+              <p className="italic">
+                "Bardzo polecam usługi Karoliny i jej ekipy..."
+              </p>
+              <p className="mt-4 font-semibold">Szymon K.</p>
+              <p className="text-sm text-gray-500">Opinia z Google</p>
+            </div>
+          </div>
+          <a
+            href="https://g.page/r/"
+            target="_blank"
+            className="inline-block mt-12 bg-pink-rose text-white px-8 py-3 rounded-full hover:opacity-90"
+          >
+            Zobacz więcej opinii w Google
+          </a>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto max-w-4xl px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Najczęściej zadawane pytania
+          </h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-semibold text-lg">
+                Ile kosztuje odbiór techniczny mieszkania?
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Cena odbioru technicznego zależy od wielkości mieszkania,
+                lokalizacji oraz zakresu kontroli.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">
+                Czy warto zrobić odbiór mieszkania z inżynierem?
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Profesjonalny odbiór techniczny pozwala wykryć usterki
+                których często nie widać bez specjalistycznej wiedzy.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">
+                Ile kosztuje wykończenie mieszkania pod klucz?
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Koszt wykończenia zależy od standardu materiałów, zakresu
+                prac oraz metrażu mieszkania.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">
+                Jak długo trwa remont mieszkania?
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Standardowe wykończenie mieszkania trwa około 4-6 tygodni w
+                zależności od zakresu prac.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
@@ -201,159 +277,12 @@ function ServiceCard({ href, icon, title }) {
     <motion.div whileHover={{ scale: 1.05 }}>
       <Link href={href}>
         <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-
           <div className="bg-pink-rose text-white p-6 rounded-full mb-4 text-2xl">
             {icon}
           </div>
-
           <p className="font-semibold">{title}</p>
-
         </div>
       </Link>
     </motion.div>
   );
 }
-
-<section className="bg-gray-100 py-20">
-<div className="container mx-auto text-center">
-
-<h2 className="text-3xl font-bold mb-12">
-Opinie naszych klientów
-</h2>
-
-<div className="grid md:grid-cols-3 gap-8 px-6">
-
-<div className="bg-white p-8 rounded-xl shadow-md">
-<p className="text-yellow-500 text-xl mb-3">★★★★★</p>
-<p className="italic">
-"Pani Karolina to prawdziwa profesjonalistka w dziedzinie technicznej, która z pasją i zaangażowaniem zajmuje 
-  się szeroko pojętymi zagadnieniami technicznymi związanymi z budownictwem. Jej wiedza, umiejętności i kreatywność są godne podziwu. 
-  Dzięki niej rozwiązałem problem w swoim domu, z którym nie mogli sobie poradzić jej poprzednicy."
-</p>
-<p className="mt-4 font-semibold">Konrad K.</p>
-<p className="text-sm text-gray-500">Opinia z Google</p>
-</div>
-
-<div className="bg-white p-8 rounded-xl shadow-md">
-<p className="text-yellow-500 text-xl mb-3">★★★★★</p>
-<p className="italic">
-"Profesjonalna obsługa, Pani Karolina normy ma w małym paluszku i co ważne jest tak szczegółowa że jak sam chciałem zobaczyć 
-  to nie wiele widziałem xD Dodatkowo odpowiedzi przedstawiciela developera tak argumentuje że przestali odpisywać a zaczeli robić :D 
-  Piękna sprawa <3
-</p>
-<p className="mt-4 font-semibold">Damian G.</p>
-<p className="text-sm text-gray-500">Opinia z Google</p>
-</div>
-
-<div className="bg-white p-8 rounded-xl shadow-md">
-<p className="text-yellow-500 text-xl mb-3">★★★★★</p>
-<p className="italic">
-"Bardzo polecam usługi Karoliny i jej ekipy - solidni fachowcy, którzy przestrzegają terminów i umów. 
-Remont przeprowadzony sprawnie i z doskonałym rezultatem."
-</p>
-<p className="mt-4 font-semibold">Szymon K.</p>
-<p className="text-sm text-gray-500">Opinia z Google</p>
-</div>
-
-<div className="bg-white p-8 rounded-xl shadow-md">
-<p className="text-yellow-500 text-xl mb-3">★★★★★</p>
-<p className="italic">
-"Zdecydowanie polecam współpracę przy remoncie/wykończeniu z Pink Helmet. Wykończenie wykonane szybko, 
-nawet szybciej niż przy wstępnych założeniach:), a na dodatek wedle oczekiwań i bez żadnych usterek 
-czy potknięć przy pracach. Panowie wykonawcy bardzo komunikatywni, pomocni (często sugerowali dobre rozwiązania) i 
-wyrozumiali dla klienta nie doświadczonego w remontach."
-</p>
-<p className="mt-4 font-semibold">Wiktor M.</p>
-<p className="text-sm text-gray-500">Opinia z Google</p>
-</div>
-
-</div>
-
-<a
-href="https://g.page/r/"
-target="_blank"
-className="inline-block mt-12 bg-pink-rose text-white px-8 py-3 rounded-full hover:opacity-90"
->
-Zobacz więcej opinii w Google
-</a>
-
-</div>
-</section>
-
-<section className="py-20 bg-white">
-<div className="container mx-auto max-w-4xl px-6">
-
-<h2 className="text-3xl font-bold text-center mb-12">
-Najczęściej zadawane pytania
-</h2>
-
-<div className="space-y-8">
-
-<div>
-<h3 className="font-semibold text-lg">
-Ile kosztuje odbiór techniczny mieszkania?
-</h3>
-<p className="text-gray-600 mt-2">
-Cena odbioru technicznego mieszkania zależy od wielkości lokalu, zakresu kontroli 
-(badanie kamerą termowizyjną przegród lub instalacji ogrzewania podłogowego) oraz lokalizacji. 
-Skontaktuj się z nami aby otrzymać dokładną wycenę.
-</p>
-</div>
-
-<div>
-<h3 className="font-semibold text-lg">
-Czy warto zrobić odbiór mieszkania z inżynierem?
-</h3>
-<p className="text-gray-600 mt-2">
-Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze
-i usterki które trudno zauważyć bez specjalistycznej wiedzy. Wady te mogą być bardzo kosztowne lub problematyczne. 
-W przypadku inwestycji rzędu setek tysięcy a nwet milionów jest to swego rodzaju "must have". 
-</p>
-</div>
-
-<div>
-<h3 className="font-semibold text-lg">
-Czy wykonujecie odbiory mieszkań od deweloperów?
-</h3>
-<p className="text-gray-600 mt-2">
-Tak. Wykonujemy profesjonalne odbiory techniczne mieszkań i domów
-od deweloperów oraz z rynku wtórnego.
-</p>
-</div>
-
-<div>
-<h3 className="font-semibold text-lg">
-Czy wykonujecie również badania kamerą termowizyjną?
-</h3>
-<p className="text-gray-600 mt-2">
-Tak. Wykonujemy badania kamerą termowizyjną które pozwalają wykryć mostki
-termiczne, nieszczelności oraz problemy z izolacją budynku.
-</p>
-</div>
-
-<div>
-<h3 className="font-semibold text-lg">
-Ile kosztuje wykończenie mieszkania pod klucz?
-</h3>
-<p className="text-gray-600 mt-2">
-Koszt wykończenia mieszkania pod klucz zależy od standardu materiałów,
-zakresu prac oraz wielkości mieszkania. Przygotowujemy indywidualną
-wycenę na podstawie projektu lub/i oczekiwań klienta.
-</p>
-</div>
-
-<div>
-<h3 className="font-semibold text-lg">
-Jak długo trwa remont mieszkania?
-</h3>
-<p className="text-gray-600 mt-2">
-Czas trwania remontu zależy od zakresu prac oraz wielkości mieszkania.
-Standardowe wykończenie dwupokojowego mieszkania trwa około czterech tygodni.
-Zawsze staramy się ustalać realistyczny harmonogram prac i dotrzymywać uzgodnionych terminów.
-Klienci doceniają naszą terminowość.
-</p>
-</div>
-
-</div>
-</div>
-</section>
