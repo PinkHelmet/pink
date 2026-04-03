@@ -159,85 +159,82 @@ export default function Home(props) {
             rozwiązania wykończeniowe lub remontowe. Wykonujemy zarówno wykończenia pod klucz jak
             i wykończenia samych łazienek. To ty ustalasz w jakim zakresie chcesz z nami pracować. 
           </motion.p>
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/kierownik-budowy-/-opinie-techniczne">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <FontAwesomeIcon
+        icon={faHandshake}
+        style={{ fontSize: 100 }}
+        className="mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">
+        Kierownik budowy i opinie techniczne
+      </p>
+    </div>
+  </Link>
+</motion.div>
 
-          <div
-            ref={refThird}
-            style={{
-              transform: isInViewThird ? "none" : "translateX(-200px)",
-              opacity: isInViewThird ? 1 : 0,
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-            }}
-            className="flex flex-row w-full flex-wrap justify-between my-6 items-center"
-          >
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/kierownik-budowy-/-opinie-techniczne" className="text-center">
-                <FontAwesomeIcon
-                  icon={faHandshake}
-                  style={{ fontSize: 100 }}
-                  className="mb-4 drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Kierownik budowy/opinie techniczne</p>
-              </Link>
-            </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link
-                href="offer/odbiory-techniczne-lokali"
-                className="text-center"
-              >
-                <Key
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Odbiory techniczne lokali</p>
-              </Link>
-            </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/projektowanie-wnetrz" className="text-center">
-                <FontAwesomeIcon
-                  icon={faPenToSquare}
-                  style={{ fontSize: 100 }}
-                  className="mb-4 drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Projektowanie wnętrz</p>
-              </Link>
-            </motion.div>
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/remonty-i-wykonczenia" className="text-center">
-                <FormatPaintOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mx-auto mb-4 drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Remonty i wykończenia</p>
-              </Link>
-            </motion.div>
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/odbiory-techniczne-lokali">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <Key
+        style={{ fontSize: 100 }}
+        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">Odbiory techniczne lokali</p>
+    </div>
+  </Link>
+</motion.div>
 
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link
-                href="offer/swiadectwa-charakterystyki-energetycznej"
-                className="text-center"
-              >
-                <PowerOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">
-                  Świadectwa charakterystyki energetycznej
-                </p>
-              </Link>
-            </motion.div>
-                    
-            <motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
-              <Link href="offer/badania-kamera-termowizyjna" className="text-center">
-                <CameraIndoorOutlined
-                  style={{ fontSize: 100 }}
-                  className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose"
-                />
-                <p className="text-center">Kamera termowizyjna</p>
-              </Link>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-    </>
-  );
-}
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/projektowanie-wnetrz">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <FontAwesomeIcon
+        icon={faPenToSquare}
+        style={{ fontSize: 100 }}
+        className="mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">Projektowanie wnętrz</p>
+    </div>
+  </Link>
+</motion.div>
+
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/remonty-i-wykonczenia">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <FormatPaintOutlined
+        style={{ fontSize: 100 }}
+        className="w-full mx-auto mb-4 drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">Remonty i wykończenia</p>
+    </div>
+  </Link>
+</motion.div>
+
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/swiadectwa-charakterystyki-energetycznej">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <PowerOutlined
+        style={{ fontSize: 100 }}
+        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">
+        Świadectwa charakterystyki energetycznej
+      </p>
+    </div>
+  </Link>
+</motion.div>
+
+<motion.div className="flex flex-col justify-center w-1/2 md:w-1/3 p-6">
+  <Link href="offer/badania-kamera-termowizyjna">
+    <div className="text-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+      <CameraIndoorOutlined
+        style={{ fontSize: 100 }}
+        className="w-full mb-4 mx-auto drop-shadow-lg text-pink-rose transition-transform duration-300 hover:scale-110"
+      />
+      <p className="text-center font-medium">
+        Badania kamerą termowizyjną
+      </p>
+    </div>
+  </Link>
+</motion.div>
