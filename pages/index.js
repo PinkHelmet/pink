@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import HeadSeo from "../components/Head";
 import siteMetadata from "../data/siteMetadata";
 
@@ -182,36 +181,35 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Najczęściej zadawane pytania
           </h2>
+
           <FAQItem
             question="Ile kosztuje odbiór techniczny mieszkania?"
-            answer="Cena odbioru technicznego mieszkania zależy od wielkości lokalu, zakresu kontroli 
-            (badanie kamerą termowizyjną przegród lub instalacji ogrzewania podłogowego) oraz lokalizacji. 
-            Skontaktuj się z nami aby otrzymać dokładną wycenę."
+            answer={`Cena odbioru technicznego mieszkania zależy od wielkości lokalu, zakresu kontroli (badanie kamerą termowizyjną przegród lub instalacji ogrzewania podłogowego) oraz lokalizacji. Skontaktuj się z nami aby otrzymać dokładną wycenę.`}
           />
+
           <FAQItem
             question="Czy warto zrobić odbiór mieszkania z inżynierem?"
-            answer="Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze i usterki które trudno zauważyć bez specjalistycznej wiedzy. 
-            Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nwet milionów jest to swego rodzaju "must have" ."
+            answer={`Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze i usterki, które trudno zauważyć bez specjalistycznej wiedzy. Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nawet milionów jest to swego rodzaju must have.`}
           />
+
           <FAQItem
             question="Ile kosztuje wykończenie mieszkania pod klucz?"
-            answer="Koszt wykończenia zależy od standardu materiałów, zakresu prac oraz metrażu mieszkania. Chcesz wiedzieć więcej? Napisz lub zadzwoń."
+            answer={`Koszt wykończenia zależy od standardu materiałów, zakresu prac oraz metrażu mieszkania. Chcesz wiedzieć więcej? Napisz lub zadzwoń.`}
           />
+
           <FAQItem
             question="Jak długo trwa remont mieszkania?"
-            answer="Czas trwania remontu zależy od zakresu prac oraz wielkości mieszkania. Standardowe wykończenie dwupokojowego mieszkania trwa około czterech tygodni. 
-            Zawsze staramy się ustalać realistyczny harmonogram prac i dotrzymywać uzgodnionych terminów. Klienci doceniają naszą terminowość." 
+            answer={`Czas trwania remontu zależy od zakresu prac oraz wielkości mieszkania. Standardowe wykończenie dwupokojowego mieszkania trwa około czterech tygodni. Zawsze staramy się ustalać realistyczny harmonogram prac i dotrzymywać uzgodnionych terminów. Klienci doceniają naszą terminowość.`}
           />
+
           <FAQItem
             question="Jakie problemy można wykryć dzięki badaniu termowizyjnemu?"
-            answer="Termowizja pozwala znaleźć m.in.: mostki termiczne czyli miejsca gdzie zachodzą wzmożone straty ciepła, wilgoć i wycieki w instalacjach, nieszczelności izolacji 
-            oraz nieprawidłowości w systemach grzewczych lub wentylacyjnych. Badanie przegród (ściany, dach, stropy, okna) należy wykonywać w okresie zimowym, gdyż 
-            takie warunki są idealne do badania strat ciepła w budynku." 
+            answer={`Termowizja pozwala znaleźć m.in.: mostki termiczne, wilgoć i wycieki w instalacjach, nieszczelności izolacji oraz nieprawidłowości w systemach grzewczych lub wentylacyjnych. Badanie przegród (ściany, dach, stropy, okna) należy wykonywać w okresie zimowym, gdyż takie warunki są idealne do badania strat ciepła w budynku.`}
           />
+
           <FAQItem
-            question="Kiedy warto wykonać badanie termowizyjne budynku?
-            answer="Badanie warto przeprowadzić np. przed odbiorem nowego domu, przy podejrzeniu 
-            strat ciepła, wilgoci lub usterkach instalacji — szczególnie gdy standardowa wizualna kontrola ich nie wykrywa."
+            question="Kiedy warto wykonać badanie termowizyjne budynku?"
+            answer={`Badanie warto przeprowadzić np. przed odbiorem nowego domu, przy podejrzeniu strat ciepła, wilgoci lub usterkach instalacji — szczególnie gdy standardowa wizualna kontrola ich nie wykrywa.`}
           />
         </div>
       </section>
