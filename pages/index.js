@@ -206,7 +206,7 @@ export default function Home() {
             question="Jakie problemy można wykryć dzięki badaniu termowizyjnemu?"
             answer="Termowizja pozwala znaleźć m.in.: mostki termiczne czyli miejsca gdzie zachodzą wzmożone straty ciepła, wilgoć i wycieki w instalacjach, nieszczelności izolacji 
             oraz nieprawidłowości w systemach grzewczych lub wentylacyjnych. Badanie przegród (ściany, dach, stropy, okna) należy wykonywać w okresie zimowym, gdyż 
-            takie warunki są idealne do badania strat ciepła w budynku. 
+            takie warunki są idealne do badania strat ciepła w budynku." 
           />
           <FAQItem
             question="Kiedy warto wykonać badanie termowizyjne budynku?
