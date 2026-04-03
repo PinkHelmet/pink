@@ -101,39 +101,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dlaczego my */}
-      <section
-        ref={refSecond}
-        style={{
-          transform: isInViewSecond ? "none" : "translateX(-200px)",
-          opacity: isInViewSecond ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}
-        className="overflow-hidden"
-      >
-        <motion.div className="container mx-auto flex flex-col items-center w-full py-10">
-          <motion.h1 className="text-3xl text-center drop-shadow-lg">
-            Dlaczego Pink Helmet to dobry wybór?
-          </motion.h1>
+    {/* Dlaczego my */}
+<section
+  ref={refSecond}
+  style={{
+    transform: isInViewSecond ? "none" : "translateX(-200px)",
+    opacity: isInViewSecond ? 1 : 0,
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+  }}
+  className="overflow-hidden"
+>
+  <motion.div className="container mx-auto flex flex-col items-center w-full py-10">
+    <motion.h1 className="text-4xl md:text-5xl text-center font-bold drop-shadow-lg mb-6">
+      Dlaczego Pink Helmet to dobry wybór?
+    </motion.h1>
 
-          <motion.ul className="font-normal p-10 space-y-3">
-            <li className="flex">
-              <span className="text-pink-rose mr-2">✓</span>
-              kompleksowe usługi budowlane w jednym miejscu
-            </li>
-            <li className="flex">
-              <span className="text-pink-rose mr-2">✓</span>
-              wysoka jakość prac i obsługi klienta
-            </li>
-            <li className="flex">
-              <span className="text-pink-rose mr-2">✓</span>
-              dotrzymywanie uzgodnionych terminów
-            </li>
-            <li className="flex">
-              <span className="text-pink-rose mr-2">✓</span>
-              porządek i czystość podczas prac
-            </li>
-          </motion.ul>
+    <motion.ul className="font-normal text-lg md:text-xl p-10 space-y-4">
+      <li className="flex items-start">
+        <span className="text-pink-rose mr-3 text-2xl">✓</span>
+        kompleksowe usługi budowlane w jednym miejscu
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-rose mr-3 text-2xl">✓</span>
+        wysoka jakość prac i obsługi klienta
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-rose mr-3 text-2xl">✓</span>
+        dotrzymywanie uzgodnionych terminów
+      </li>
+      <li className="flex items-start">
+        <span className="text-pink-rose mr-3 text-2xl">✓</span>
+        porządek i czystość podczas prac
+      </li>
+    </motion.ul>
+
+    {/* Usługi */}
+    <motion.div
+      ref={refThird}
+      style={{
+        transform: isInViewThird ? "none" : "translateX(-200px)",
+        opacity: isInViewThird ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+      className="grid grid-cols-2 md:grid-cols-3 gap-6 my-12 w-full px-4"
+    >
+      {/* ServiceCard pozostaje bez zmian */}
+    </motion.div>
+  </motion.div>
+</section>
 
           {/* Usługi */}
           <motion.div
