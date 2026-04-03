@@ -191,7 +191,7 @@ export default function Home() {
           <FAQItem
             question="Czy warto zrobić odbiór mieszkania z inżynierem?"
             answer="Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze i usterki które trudno zauważyć bez specjalistycznej wiedzy. 
-            Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nwet milionów jest to swego rodzaju "must have"."
+            Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nwet milionów jest to swego rodzaju "must have" ."
           />
           <FAQItem
             question="Ile kosztuje wykończenie mieszkania pod klucz?"
@@ -212,7 +212,7 @@ export default function Home() {
             question="Kiedy warto wykonać badanie termowizyjne budynku?
             answer="Badanie warto przeprowadzić np. przed odbiorem nowego domu, przy podejrzeniu 
             strat ciepła, wilgoci lub usterkach instalacji — szczególnie gdy standardowa wizualna kontrola ich nie wykrywa."
-           />
+          />
         </div>
       </section>
     </>
