@@ -189,7 +189,7 @@ export default function Home(props) {
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
       <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <Key style={{ fontSize: 40 }} />
+    <FontAwesomeIcon icon={Key} style={{ fontSize: 40 }} />
       </div>
 
       <p className="font-semibold">
@@ -221,7 +221,7 @@ export default function Home(props) {
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
       <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <FormatPaintOutlined style={{ fontSize: 40 }} />
+     <FontAwesomeIcon icon={FormatPaintOutlined} style={{ fontSize: 40 }} />
       </div>
 
       <p className="font-semibold">
@@ -237,7 +237,7 @@ export default function Home(props) {
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
       <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <PowerOutlined style={{ fontSize: 40 }} />
+        <FontAwesomeIcon icon={PowerOutlined} style={{ fontSize: 40 }} />
       </div>
 
       <p className="font-semibold">
@@ -253,7 +253,7 @@ export default function Home(props) {
     <div className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
 
       <div className="bg-pink-rose text-white p-6 rounded-full mb-4">
-        <CameraIndoorOutlined style={{ fontSize: 40 }} />
+       <FontAwesomeIcon icon={CameraIndoorOutlined} style={{ fontSize: 40 }} />
       </div>
 
       <p className="font-semibold">
@@ -263,4 +263,5 @@ export default function Home(props) {
     </div>
   </Link>
 </motion.div>
+    
 </motion.div>
