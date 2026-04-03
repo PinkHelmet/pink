@@ -56,12 +56,12 @@ export default function About() {
           <p className="mb-2">
             W związku z dynamicznym rozwojem firmy w marcu 2024 r. marka Pink
             Helmet podzieliła się na Pink Helmet Karolina Szuba, realizująca
-            usługi inżynierskie z zakresu budownictwa: doradztwo inżynieryjne,
-            odbiory lokatorskie nieruchomości, badania termowizyjne, świadectwa
-            energetyczne, projektowanie, szkolenia oraz prace ogrodnicze tj.
-            odwodnienia, niwelacja gruntu, budowa tarasów i nie tylko oraz Pink
+            usługi inżynieryjne z zakresu budownictwa tj. odbiory techniczne 
+            mieszkań lub domów od deweloperów oraz z rynku wtórnego, opinie techniczne
+            budowlane, pełnienie funkcji kierownika budowy przy budowie domków jednorodzinnych, 
+            badania kamerą termowizyjną, świadectwa charakterystyki energetycznej oraz Pink
             Helmet Sp. z o.o. zajmująca się remontami i wykończeniami
-            nieruchomości.
+            wnętrz mieszkań i domów.
           </p>
           <p className="mb-2">
             A kim jest Karolina? Absolwentką <strong>Politechniki Warszawskiej</strong> na
