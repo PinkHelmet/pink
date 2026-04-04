@@ -15,27 +15,27 @@ export default function ServicesSection() {
     {
       title: "Odbiory techniczne lokali",
       icon: <Key />,
-      href: "/offer/odbiory-techniczne-lokali",
+      href: "/offer/odbiory-techniczne-lokali-piaseczno",
     },
     {
       title: "Projektowanie wnętrz",
       icon: <FontAwesomeIcon icon={faPenToSquare} />,
-      href: "/offer/projektowanie-wnetrz",
+      href: "/offer/projektowanie-wnetrz-piaseczno",
     },
     {
       title: "Remonty i wykończenia",
       icon: <FormatPaintOutlined />,
-      href: "/offer/remonty-i-wykonczenia",
+      href: "/offer/remonty-i-wykonczenia-wnetrz-piaseczno",
     },
     {
       title: "Świadectwa energetyczne",
       icon: <PowerOutlined />,
-      href: "/offer/swiadectwa-charakterystyki-energetycznej",
+      href: "/offer/swiadectwa-charakterystyki-energetycznej-piaseczno",
     },
     {
       title: "Badania kamerą termowizyjną",
       icon: <CameraIndoorOutlined />,
-      href: "/offer/badania-kamera-termowizyjna",
+      href: "/offer/badania-kamera-termowizyjna-piaseczno",
     },
   ];
 
