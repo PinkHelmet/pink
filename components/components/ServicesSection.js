@@ -20,22 +20,22 @@ export default function ServicesSection() {
     {
       title: "Projektowanie wnętrz",
       icon: <FontAwesomeIcon icon={faPenToSquare} />,
-      href: "/offer/projektowanie-wnetrz-piaseczno",
+      href: "offer/projektowanie-wnetrz-piaseczno",
     },
     {
       title: "Remonty i wykończenia",
       icon: <FormatPaintOutlined />,
-      href: "/offer/remonty-i-wykonczenia-wnetrz-piaseczno",
+      href: "offer/remonty-i-wykonczenia-wnetrz-piaseczno",
     },
     {
       title: "Świadectwa energetyczne",
       icon: <PowerOutlined />,
-      href: "/offer/swiadectwa-charakterystyki-energetycznej-piaseczno",
+      href: "offer/swiadectwa-charakterystyki-energetycznej-piaseczno",
     },
     {
       title: "Badania kamerą termowizyjną",
       icon: <CameraIndoorOutlined />,
-      href: "/offer/badania-kamera-termowizyjna-piaseczno",
+      href: "offer/badania-kamera-termowizyjna-piaseczno",
     },
   ];
 
