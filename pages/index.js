@@ -74,7 +74,7 @@ export default function Home() {
         className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-16 px-4"
       >
         <ServiceCard
-          href="offer/kierownik-budowy-/-opinie-techniczne"
+          href="offer/kierownik-budowy-i-opinie-techniczne"
           icon={<FontAwesomeIcon icon={faHandshake} />}
           title="Kierownik budowy i opinie techniczne"
         />
