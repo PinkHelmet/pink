@@ -273,7 +273,8 @@ export default function Home() {
           />
           <FAQItem
             question="Jakie obowiązki ma kierownik budowy?"
-            answer={`Kierownik odpowiada m.in. za kontrolę bezpieczeństwa na budowie, prowadzenie dziennika budowy, nadzór nad zgodnością prac z projektem, odbiór poszzególnych etapów prac. `}
+            answer={`Kierownik odpowiada m.in. za kontrolę bezpieczeństwa na budowie, prowadzenie dziennika budowy, nadzór nad zgodnością prac z projektem, 
+            odbiór poszczególnych etapów prac. `}
           />
         </div>
       </section>
