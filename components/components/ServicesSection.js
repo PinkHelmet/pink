@@ -10,7 +10,7 @@ export default function ServicesSection() {
     {
       title: "Kierownik budowy i opinie techniczne",
       icon: <FontAwesomeIcon icon={faHandshake} />,
-      href: "offer/kierownik-budowy-/-opinie-techniczne",
+      href: "offer/kierownik-budowy-i-opinie-techniczne-piaseczno",
     },
     {
       title: "Odbiory techniczne lokali",
