@@ -10,12 +10,12 @@ export default function ServicesSection() {
     {
       title: "Kierownik budowy i opinie techniczne",
       icon: <FontAwesomeIcon icon={faHandshake} />,
-      href: "https://pinkhelmet.pl/offer/kierownik-budowy-i-opinie-techniczne-piaseczno",
+      href: "https://pinkhelmet.pl/offer/kierownik-budowy-/-opinie-techniczne",
     },
     {
       title: "Odbiory techniczne lokali",
       icon: <Key />,
-      href: "https://pinkhelmet.pl/offer/odbiory-techniczne-lokali-piaseczno",
+      href: "https://pinkhelmet.pl/offer/odbiory-techniczne-lokali",
     },
     {
       title: "Projektowanie wnętrz",
