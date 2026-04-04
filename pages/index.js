@@ -224,12 +224,20 @@ export default function Home() {
 
           <FAQItem
             question="Ile kosztuje odbiór techniczny mieszkania?"
-            answer={`Cena odbioru technicznego mieszkania zależy od wielkości lokalu, zakresu kontroli (badanie kamerą termowizyjną przegród lub instalacji ogrzewania podłogowego) oraz lokalizacji. Skontaktuj się z nami aby otrzymać dokładną wycenę.`}
+            answer={`Cena odbioru technicznego mieszkania zależy od wielkości lokalu, zakresu kontroli (badanie kamerą termowizyjną przegród 
+            lub instalacji ogrzewania podłogowego) oraz lokalizacji. Skontaktuj się z nami aby otrzymać dokładną wycenę.`}
+          />
+           <FAQItem
+            question="Czy przy odbiorze mieszkania można zgłosić wszystkie usterki?"
+            answer={`Tak. Podczas odbioru technicznego można zgłosić wszystkie zauważone wady wykonawcze oraz niezgodności z projektem lub standardem deweloperskim. 
+            Deweloper ma obowiązek przyjąć zgłoszone usterki do protokołu odbioru i w określonym terminie je usunąć, o ile wady są zasadne.`}
           />
 
           <FAQItem
             question="Czy warto zrobić odbiór mieszkania z inżynierem?"
-            answer={`Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze i usterki, które trudno zauważyć bez specjalistycznej wiedzy. Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nawet milionów jest to swego rodzaju must have.`}
+            answer={`Odbiór mieszkania z doświadczonym inżynierem pozwala wykryć wady wykonawcze i usterki, które trudno zauważyć bez 
+            specjalistycznej wiedzy. Wady te mogą być bardzo kosztowne lub problematyczne. W przypadku inwestycji rzędu setek tysięcy a nawet 
+            milionów jest to swego rodzaju must have.`}
           />
 
           <FAQItem
@@ -239,17 +247,33 @@ export default function Home() {
 
           <FAQItem
             question="Jak długo trwa remont mieszkania?"
-            answer={`Czas trwania remontu zależy od zakresu prac oraz wielkości mieszkania. Standardowe wykończenie dwupokojowego mieszkania trwa około czterech tygodni. Zawsze staramy się ustalać realistyczny harmonogram prac i dotrzymywać uzgodnionych terminów. Klienci doceniają naszą terminowość.`}
+            answer={`Czas trwania remontu zależy od zakresu prac oraz wielkości mieszkania. 
+            Standardowe wykończenie dwupokojowego mieszkania trwa około czterech tygodni. 
+            Zawsze staramy się ustalać realistyczny harmonogram prac i dotrzymywać uzgodnionych terminów. Klienci doceniają naszą terminowość.`}
           />
 
           <FAQItem
             question="Jakie problemy można wykryć dzięki badaniu termowizyjnemu?"
-            answer={`Termowizja pozwala znaleźć m.in.: mostki termiczne, wilgoć i wycieki w instalacjach, nieszczelności izolacji oraz nieprawidłowości w systemach grzewczych lub wentylacyjnych. Badanie przegród (ściany, dach, stropy, okna) należy wykonywać w okresie zimowym, gdyż takie warunki są idealne do badania strat ciepła w budynku.`}
+            answer={`Termowizja pozwala znaleźć m.in.: mostki termiczne, wilgoć i wycieki w instalacjach, 
+            nieszczelności izolacji oraz nieprawidłowości w systemach grzewczych lub wentylacyjnych. Badanie przegród (ściany, dach, stropy, okna) 
+            należy wykonywać w okresie zimowym, gdyż takie warunki są idealne do badania strat ciepła w budynku.`}
           />
 
           <FAQItem
             question="Kiedy warto wykonać badanie termowizyjne budynku?"
-            answer={`Badanie warto przeprowadzić np. przed odbiorem nowego domu, przy podejrzeniu strat ciepła, wilgoci lub usterkach instalacji — szczególnie gdy standardowa wizualna kontrola ich nie wykrywa.`}
+            answer={`Badanie warto przeprowadzić np. przed odbiorem nowego domu, 
+            przy podejrzeniu strat ciepła, wilgoci lub usterkach instalacji — szczególnie gdy standardowa wizualna kontrola ich nie wykrywa.`}
+          />
+            
+          <FAQItem
+            question="Czy badanie kamerą termowizyjną można wykonać latem?"
+            answer={`Badanie przegród budowlanych wykonuje się w okresie zimowym, gdy różnica temperatur pomiędzy wnętrzem a zewnętrzem budynku duża. 
+            Dzięki temu łatwiej wykryć mostki termiczne i miejsca strat ciepła. Izolację dachu można sprawdzić również w okresie letnim przy dużym nasłonecznieniu.
+            Instalacje takie jak ogrzewanie podłogowe można badać przez cały rok.`}
+          />
+          <FAQItem
+            question="Jakie obowiązki ma kierownik budowy?"
+            answer={`Kierownik odpowiada m.in. za kontrolę bezpieczeństwa na budowie, prowadzenie dziennika budowy, nadzór nad zgodnością prac z projektem, odbiór poszzególnych etapów prac. `}
           />
         </div>
       </section>
