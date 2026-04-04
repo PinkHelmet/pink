@@ -253,6 +253,34 @@ export default function Home() {
           />
         </div>
       </section>
+
+            {/* Gdzie działamy */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto max-w-4xl px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-8">
+      Gdzie działamy?
+    </h2>
+
+    <div className="text-lg text-gray-700 space-y-6">
+      <p>
+        Usługi budowlane realizujemy głównie na terenie Piaseczna, Warszawy
+        oraz okolicznych miejscowości.
+      </p>
+
+      <p>
+        Najczęściej pracujemy dla klientów z takich miejsc jak:
+        Piaseczno, Warszawa, Konstancin-Jeziorna, Góra Kalwaria,
+        Prażmów, Józefosław, Julianów, Mysiadło, Lesznowola oraz okoliczne miejscowości powiatu
+        piaseczyńskiego.
+      </p>
+
+      <p>
+        Jeśli Twoja inwestycja znajduje się w innej lokalizacji —
+        skontaktuj się z nami.
+      </p>
+    </div>
+  </div>
+</section>
     </>
   );
 }
@@ -292,31 +320,3 @@ function FAQItem({ question, answer }) {
     </div>
   );
 }
-
-{/* Gdzie działamy */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto max-w-4xl px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-8">
-      Gdzie działamy?
-    </h2>
-
-    <div className="text-lg text-gray-700 space-y-6">
-      <p>
-        Usługi budowlane realizujemy głównie na terenie Piaseczna, Warszawy
-        oraz okolicznych miejscowości.
-      </p>
-
-      <p>
-        Najczęściej pracujemy dla klientów z takich miejsc jak:
-        Piaseczno, Warszawa, Konstancin-Jeziorna, Góra Kalwaria,
-        Prażmów, Józefosław, Julianów, Mysiadło, Lesznowola oraz okoliczne miejscowości powiatu
-        piaseczyńskiego.
-      </p>
-
-      <p>
-        Jeśli Twoja inwestycja znajduje się w innej lokalizacji —
-        skontaktuj się z nami. 
-      </p>
-    </div>
-  </div>
-</section>
