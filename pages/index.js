@@ -117,28 +117,28 @@ export default function Home() {
         Pink Helmet oferuje kompleksowe usługi budowlane dla klientów z Warszawy,
         Piaseczna oraz okolicznych miejscowości. Budujesz swój wymarzony dom?
         Z chęcią obejmę funkcję <strong>kierownika budowy</strong> i pomogę Ci przejść przez ten proces
-        krok po kroku. A może odbierasz nieruchomość od dewelopera? Zrobię
-        <strong>odbiór techniczny</strong> twojego mieszkania lub domu, sprawdzę tynki, posadzki, montaż okien, 
-        konstrukcję dachu, elewację i wszystkie inne elementy pod względem ich poprawności wykonania i estetyki. 
+        krok po kroku. A może odbierasz nieruchomość od dewelopera? Zrobię <strong>odbiór techniczny</strong> Twojego mieszkania lub domu, 
+        sprawdzę tynki, posadzki, montaż okien, 
+        konstrukcję dachu, elewację i wszystkie inne elementy pod względem poprawności ich wykonania oraz estetyki. 
         Posiadam również <strong>kamerę termowizyjną</strong>, więc w okresie zimowym mogę sprawdzić
-        również mostki termiczne na ścianach, dachu, podłodze czy stolarce okiennej i drzwiowej. Niezależnie od pory roku
+        mostki termiczne na ścianach, dachu, podłodze czy stolarce okiennej i drzwiowej. Niezależnie od pory roku
         mogę wykonać badanie termowizyjne instalacji ogrzewania podłogowego: poprawność jej lokalizacji, odpowietrzenie, nieszczelności itp. 
-        Jeżeli w budynku wystąpią wady budowlane wykonam dla Ciebie <strong>opinię techniczną</strong>, która jest podstawą do
+        Jeżeli w budynku wystąpią wady budowlane, wykonam dla Ciebie <strong>opinię techniczną</strong>, która jest podstawą do
         dalszych roszczeń wobec dewelopera lub sprzedającego. Sprzedajesz swój dom lub mieszkanie? Wykonam dla Ciebie 
         w sposób rzetelny i dokładny <strong>świadectwo charakterystyki energetycznej</strong>. 
         
       </p>
 
       <p>
-        W naszej ofercie znajdują się również <strong>wykończenia wnętrz</strong> od wykonania projektu wnętrz aż po jego wykończenie
-        pod klucz na terenie Warszawy, Piaseczna i okolic. Oczywiście to ty ustalasz w jakim zakresie chcesz z nami 
-        współpracować. Nie boimy się również <strong>remontów</strong> stanów istniejących. Dzięki kompleksowym usługom z zakresu wykończenia
-        wnętrz i remontów, nie potrzebujesz kilku ekip do różnych prac. Wszystko znajdziesz w jednym miejscu. Zadbamy również o Twój
-        wypoczynek w ogrodzie oferując <strong>budowę tarasu</strong> z deski kompozytowej. 
+        W naszej ofercie znajdują się również <strong>wykończenia wnętrz</strong> - od wykonania projektu aż po jego wykończenie
+        pod klucz na terenie Warszawy, Piaseczna i okolic. Oczywiście to Ty ustalasz w jakim zakresie chcesz z nami 
+        współpracować. Nie boimy się również <strong>remontów</strong> obiektów istniejących. Dzięki kompleksowym usługom z zakresu wykończenia
+        wnętrz i remontów nie potrzebujesz kilku ekip do różnych prac. Wszystko znajdziesz w jednym miejscu. Zadbamy również o Twój
+        wypoczynek w ogrodzie, oferując <strong>budowę tarasu</strong> z deski kompozytowej. 
       </p>
 
       <p>
-       W naszym zespole pracują jedynie osoby z wieloletnim doświadczeniem, wiedzą i umiejętnościami aby zapewnić
+       W naszym zespole pracują jedynie osoby z wieloletnim doświadczeniem, wiedzą i umiejętnościami, aby zapewnić
        Ci usługi na najwyższym poziomie. 
       </p>
     </div>
