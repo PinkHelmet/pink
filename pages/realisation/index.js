@@ -11,7 +11,7 @@ import { useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
 const HOMEPAGE_QUERY = `
 query MyQuery {
-  allGalleries(first:100) {
+  allGalleries(first:200) {
     image {
       responsiveImage {
         width
