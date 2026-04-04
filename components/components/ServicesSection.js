@@ -15,7 +15,7 @@ export default function ServicesSection() {
     {
       title: "Odbiory techniczne lokali",
       icon: <Key />,
-      href: "/offer/odbiory-techniczne-lokali-piaseczno",
+      href: "https://pinkhelmet.pl/offer/odbiory-techniczne-lokali-piaseczno",
     },
     {
       title: "Projektowanie wnętrz",
