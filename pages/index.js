@@ -109,32 +109,32 @@ export default function Home() {
 <section className="bg-gray-50 py-20">
   <div className="container mx-auto max-w-4xl px-4 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-8">
-      Usługi budowlane Piaseczno – jakie usługi możemy Ci zaproponować?
+     Jakie usługi możemy Ci zaproponować?
     </h2>
 
     <div className="text-lg text-gray-700 space-y-6 text-left">
       <p>
         Pink Helmet oferuje kompleksowe usługi budowlane dla klientów z Warszawy,
         Piaseczna oraz okolicznych miejscowości. Budujesz swój wymarzony dom?
-        Z chęcią obejmę funkcję kierownika budowy i pomogę Ci przejść przez ten proces
+        Z chęcią obejmę funkcję <strong>kierownika budowy</strong> i pomogę Ci przejść przez ten proces
         krok po kroku. A może odbierasz nieruchomość od dewelopera? Zrobię
-        odbiór techniczny twojego mieszkania lub domu, sprawdzę tynki, posadzki, montaż okien, 
+        <strong>odbiór techniczny</strong> twojego mieszkania lub domu, sprawdzę tynki, posadzki, montaż okien, 
         konstrukcję dachu, elewację i wszystkie inne elementy pod względem ich poprawności wykonania i estetyki. 
-        Posiadam również kamerę termowizyjną, więc w okresie zimowym mogę sprawdzić
+        Posiadam również <strong>kamerę termowizyjną</strong>, więc w okresie zimowym mogę sprawdzić
         również mostki termiczne na ścianach, dachu, podłodze czy stolarce okiennej i drzwiowej. Niezależnie od pory roku
         mogę wykonać badanie termowizyjne instalacji ogrzewania podłogowego: poprawność jej lokalizacji, odpowietrzenie, nieszczelności itp. 
-        Jeżeli w budynku wystąpią wady budowlane wykonam dla Ciebie opinię techniczną, która jest podstawą do
+        Jeżeli w budynku wystąpią wady budowlane wykonam dla Ciebie <strong>opinię techniczną</strong>, która jest podstawą do
         dalszych roszczeń wobec dewelopera lub sprzedającego. Sprzedajesz swój dom lub mieszkanie? Wykonam dla Ciebie 
-        w sposób rzetelny i dokładny świadectwo charakterystyki energetycznej. 
+        w sposób rzetelny i dokładny <strong>świadectwo charakterystyki energetycznej</strong>. 
         
       </p>
 
       <p>
-        W naszej ofercie znajdują się również wykończenia wnętrz od wykonania projektu wnętrz aż po jego wykończenie
+        W naszej ofercie znajdują się również <strong>wykończenia wnętrz</strong> od wykonania projektu wnętrz aż po jego wykończenie
         pod klucz na terenie Warszawy, Piaseczna i okolic. Oczywiście to ty ustalasz w jakim zakresie chcesz z nami 
-        współpracować. Nie boimy się również remontów stanów istniejących. Dzięki kompleksowym usługom z zakresu wykończenia
+        współpracować. Nie boimy się również <strong>remontów</strong> stanów istniejących. Dzięki kompleksowym usługom z zakresu wykończenia
         wnętrz i remontów, nie potrzebujesz kilku ekip do różnych prac. Wszystko znajdziesz w jednym miejscu. Zadbamy również o Twój
-        wypoczynek w ogrodzie oferując budowę tarasu z deski kompozytowej. 
+        wypoczynek w ogrodzie oferując <strong>budowę tarasu</strong> z deski kompozytowej. 
       </p>
 
       <p>
