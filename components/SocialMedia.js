@@ -69,8 +69,6 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="hover:transition hover:ease-in-out delay-150 hover:text-google hover:cursor-pointer px-4"
         aria-label="Sprawdź jak dojechać do firmy Pink Helmet SP z o.o."
-      >
-        <Google fontSize="large" />
       </a>
     </div>
   );
