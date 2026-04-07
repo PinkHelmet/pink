@@ -1,95 +1,75 @@
 import React from "react";
 import siteMetadata from "../data/siteMetadata";
-import { FacebookOutlined, Instagram, YouTube, LinkedIn, Google } from "@mui/icons-material";
+import SocialMedia from "./SocialMedia";
+import Link from "next/link";
 
-const SocialMedia = () => {
-  const { facebook, instagram, youtube, linkedin, linkedin_SP, maps, maps_SP } =
-    siteMetadata;
+const Footer = () => {
+  const { phoneNumber, email } = siteMetadata;
 
   return (
-    <div className="w-full text-center my-6">
-      <p className="p-2 font-semibold text-white">Social media</p>
-      <div className="flex justify-center flex-wrap gap-6">
-        {facebook && (
+    <footer className="bg-footer_bg bg-cover bg-center bg-fixed shadow-lg text-white">
+      <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row justify-between gap-8">
+
+        {/* Lewa kolumna – Social Media */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-4">Znajdź nas w social media</h2>
+          <SocialMedia />
+        </div>
+
+        {/* Środkowa kolumna – Dane kontaktowe */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-4">Dane kontaktowe</h2>
+          <p className="mb-2">
+            tel:{" "}
+            <a href={`tel:${phoneNumber}`} className="font-bold text-pink-rose hover:underline">
+              {phoneNumber}
+            </a>
+          </p>
+          <p className="mb-2">
+            email:{" "}
+            <a href={`mailto:${email}`} className="font-bold text-pink-rose hover:underline">
+              {email}
+            </a>
+          </p>
+          <address className="not-italic mb-4">
+            Lokalizacja działania: <span className="font-bold">Piaseczno, Warszawa i okolice</span>
+          </address>
+        </div>
+
+        {/* Prawa kolumna – Przyciski i linki prawne */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-xl font-semibold mb-4">Szybki kontakt</h2>
           <a
-            href={facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-[#1877f2] transition duration-150 ease-in-out"
-            aria-label="Zobacz więcej o mojej firmie na Facebooku"
+            href={`tel:${phoneNumber}`}
+            className="inline-block bg-pink-rose text-white font-bold py-2 px-6 rounded-full hover:bg-pink-600 transition duration-200 mb-4"
           >
-            <FacebookOutlined fontSize="large" />
+            Zadzwoń teraz
           </a>
-        )}
-        {instagram && (
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-pink-500 transition duration-150 ease-in-out"
-            aria-label="Zobacz mój profil na Instagramie"
-          >
-            <Instagram fontSize="large" />
-          </a>
-        )}
-        {youtube && (
-          <a
-            href={youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-red-600 transition duration-150 ease-in-out"
-            aria-label="Odwiedź mojego YouTube i dowiedz się więcej o mnie"
-          >
-            <YouTube fontSize="large" />
-          </a>
-        )}
-        {linkedin && (
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-500 transition duration-150 ease-in-out"
-            aria-label="Sprawdź linkedin firmy Pink Helmet Karolina Szuba"
-          >
-            <LinkedIn fontSize="large" />
-          </a>
-        )}
-        {linkedin_SP && (
-          <a
-            href={linkedin_SP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-500 transition duration-150 ease-in-out"
-            aria-label="Sprawdź linkedin firmy Pink Helmet SP z o.o."
-          >
-            <LinkedIn fontSize="large" />
-          </a>
-        )}
-        {maps && (
-          <a
-            href={maps}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-red-500 transition duration-150 ease-in-out"
-            aria-label="Sprawdź jak dojechać do firmy Pink Helmet Karolina Szuba"
-          >
-            <Google fontSize="large" />
-          </a>
-        )}
-        {maps_SP && (
-          <a
-            href={maps_SP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-red-500 transition duration-150 ease-in-out"
-            aria-label="Sprawdź jak dojechać do firmy Pink Helmet SP z o.o."
-          >
-            <Google fontSize="large" />
-          </a>
-        )}
+          <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+            <Link href="/polityka-prywatnosci">
+              <a className="underline hover:text-pink-200">Polityka prywatności</a>
+            </Link>
+            <Link href="/polityka-cookies">
+              <a className="underline hover:text-pink-200">Polityka cookies</a>
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* Stopka dolna */}
+      <div className="container mx-auto text-center py-4 text-sm border-t border-gray-700 mt-6">
+        <span className="inline-block mr-2">Created by</span>
+        <a
+          href="https://headincode.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-pink-200"
+        >
+          HeadInCode
+        </a>
+      </div>
+    </footer>
   );
 };
 
-export default SocialMedia;
+export default Footer;
