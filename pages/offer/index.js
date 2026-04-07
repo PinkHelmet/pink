@@ -31,6 +31,9 @@ query MyQuery {
     contentThird {
       value
     }
+    contentFourth {
+      value
+    }
     coverImage {
       responsiveImage {
         alt
