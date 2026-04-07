@@ -8,14 +8,14 @@ const SocialMedia = () => {
 
   return (
     <div className="w-full text-center my-6">
-      <p className="p-2 font-semibold">Social media</p>
-      <div className="flex justify-center flex-wrap gap-4">
+      <p className="p-2 font-semibold text-white">Social media</p>
+      <div className="flex justify-center flex-wrap gap-6">
         {facebook && (
           <a
             href={facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-[#1877f2] transition duration-150 ease-in-out"
+            className="text-white hover:text-[#1877f2] transition duration-150 ease-in-out"
             aria-label="Zobacz więcej o mojej firmie na Facebooku"
           >
             <FacebookOutlined fontSize="large" />
@@ -26,7 +26,7 @@ const SocialMedia = () => {
             href={instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-pink-500 transition duration-150 ease-in-out"
+            className="text-white hover:text-pink-500 transition duration-150 ease-in-out"
             aria-label="Zobacz mój profil na Instagramie"
           >
             <Instagram fontSize="large" />
@@ -37,7 +37,7 @@ const SocialMedia = () => {
             href={youtube}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-red-600 transition duration-150 ease-in-out"
+            className="text-white hover:text-red-600 transition duration-150 ease-in-out"
             aria-label="Odwiedź mojego YouTube i dowiedz się więcej o mnie"
           >
             <YouTube fontSize="large" />
@@ -48,7 +48,7 @@ const SocialMedia = () => {
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-700 transition duration-150 ease-in-out"
+            className="text-white hover:text-blue-500 transition duration-150 ease-in-out"
             aria-label="Sprawdź linkedin firmy Pink Helmet Karolina Szuba"
           >
             <LinkedIn fontSize="large" />
@@ -59,7 +59,7 @@ const SocialMedia = () => {
             href={linkedin_SP}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-700 transition duration-150 ease-in-out"
+            className="text-white hover:text-blue-500 transition duration-150 ease-in-out"
             aria-label="Sprawdź linkedin firmy Pink Helmet SP z o.o."
           >
             <LinkedIn fontSize="large" />
@@ -70,7 +70,7 @@ const SocialMedia = () => {
             href={maps}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-red-500 transition duration-150 ease-in-out"
+            className="text-white hover:text-red-500 transition duration-150 ease-in-out"
             aria-label="Sprawdź jak dojechać do firmy Pink Helmet Karolina Szuba"
           >
             <Google fontSize="large" />
@@ -81,7 +81,7 @@ const SocialMedia = () => {
             href={maps_SP}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-red-500 transition duration-150 ease-in-out"
+            className="text-white hover:text-red-500 transition duration-150 ease-in-out"
             aria-label="Sprawdź jak dojechać do firmy Pink Helmet SP z o.o."
           >
             <Google fontSize="large" />
