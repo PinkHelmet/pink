@@ -89,14 +89,14 @@ export default function Home() {
           title="Projektowanie wnętrz"
         />
         <ServiceCard
-          href="offer/remonty-i-wykonczenia"
-          icon={<FormatPaintOutlined />}
-          title="Remonty i wykończenia"
-        />
-        <ServiceCard
           href="offer/swiadectwa-charakterystyki-energetycznej"
           icon={<PowerOutlined />}
           title="Świadectwa energetyczne"
+        />
+        <ServiceCard
+          href="offer/remonty-i-wykonczenia"
+          icon={<FormatPaintOutlined />}
+          title="Remonty i wykończenia"
         />
         <ServiceCard
           href="offer/badania-kamera-termowizyjna"
