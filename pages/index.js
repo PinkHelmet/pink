@@ -105,8 +105,17 @@ export default function Home() {
         />
       </section>
 
-<iframe frameborder="0" class="juxtapose" width="100%" height="500" 
-src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4dcc7d6e-7ac3-11f1-ba1b-0e6f42328d7d"></iframe>
+            <div class="suwak-remontu">
+  <iframe frameborder="0" class="juxtapose" width="100%" height="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4dcc7d6e-7ac3-11f1-ba1b-0e6f42328d7d"></iframe>
+</div>
+
+<style>
+.suwak-remontu {
+  max-width: 800px; /* Maksymalna szerokość na komputerze - możesz zmienić np. na 600px lub 700px */
+  margin: 0 auto;   /* Centruje suwak na ekranie komputera */
+  width: 100%;      /* Sprawia, że na telefonie zajmuje całą dostępną szerokość */
+}
+</style>
 
 {/* Usługi budowlane Piaseczno – opis SEO */}
 <section className="bg-gray-50 py-20">
