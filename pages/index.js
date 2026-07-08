@@ -105,6 +105,9 @@ export default function Home() {
         />
       </section>
 
+<iframe frameborder="0" class="juxtapose" width="100%" height="1184" 
+src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4dcc7d6e-7ac3-11f1-ba1b-0e6f42328d7d"></iframe>
+
 {/* Usługi budowlane Piaseczno – opis SEO */}
 <section className="bg-gray-50 py-20">
   <div className="container mx-auto max-w-4xl px-4 text-center">
