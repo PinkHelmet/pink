@@ -1,11 +1,11 @@
 import Header from "./Head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import siteMetadata from "../../data/siteMetadata"; // Dodany import danych (sprawdź czy ścieżka do folderu data się zgadza)
+import siteMetadata from "../data/siteMetadata"; // Poprawiona ścieżka: wychodzi z folderu components bezpośrednio do data
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen relative"> {/* Dodaliśmy klasę relative */}
+    <div className="min-h-screen relative">
       <Header />
       <Navbar />
       <main>{children}</main>
@@ -17,7 +17,6 @@ export default function Layout({ children }) {
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-pink-rose text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 ease-in-out md:bottom-8 md:right-8"
         aria-label="Zadzwoń teraz"
       >
-        {/* Jeśli masz ikonkę w SVG lub komponent, wklej go tutaj. Poniżej uniwersalna ikonka SVG słuchawki: */}
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 24 24" 
