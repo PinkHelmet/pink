@@ -2,70 +2,38 @@ import HeadSeo from "../../components/Head";
 import Modal from "../../components/Modal";
 import HeaderTitle from "../../components/HeaderTitle";
 import Image from "next/image";
-//meta
+
 import siteMetadata from "../../data/siteMetadata";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { useQuerySubscription } from "react-datocms";
-import { request } from "../../lib/datocms";
-const HOMEPAGE_QUERY = `
-query MyQuery {
-  allGalleries(first:200) {
-    image {
-      responsiveImage {
-        width
-        webpSrcSet
-        title
-        srcSet
-        bgColor
-        base64
-        aspectRatio
-        alt
-        height
-        sizes
-        src
-      }
-    }
-    id
-  }
-}
-  
-`;
+const dataGallery = Array.from({ length: 62 }, (_, index) => {
+  const number = String(index + 1).padStart(3, "0");
 
-export async function getStaticProps() {
-  const data = {
-    query: HOMEPAGE_QUERY,
-  };
   return {
-    props: {
-      subscription: {
-        ...data,
-        initialData: await request(data),
-        token: process.env.NEXT_DATOCMS_API_TOKEN,
+    id: `realizacja-${number}`,
+    image: {
+      responsiveImage: {
+        src: `/realizacja-${number}.webp`,
+        title: `Realizacja Pink Helmet ${index + 1}`,
       },
     },
-    revalidate: 10,
   };
-}
+});
 
-export default function Realisation({ subscription }) {
-  const { data, error, status } = useQuerySubscription(subscription);
+export default function Realisation() {
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState(null);
-
-  const dataGallery = data.allGalleries;
-
-  if (error) return <div>Error: {error.message}</div>;
-  if (!data) return <div>Loading...</div>;
 
   return (
     <>
       <HeadSeo
         title={siteMetadata.titleRealisation}
-        description={`Galeria zrealizowanych projektów`}
+        description="Galeria zrealizowanych projektów"
       />
+
       <HeaderTitle title="Realizacje" />
+
       <motion.section
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -73,26 +41,28 @@ export default function Realisation({ subscription }) {
         className="container mx-auto min-h-[70vh]"
       >
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 p-8">
-          {dataGallery?.map((el) => (
+          {dataGallery.map((el) => (
             <div
               onClick={() => {
                 setImage(el);
-                setOpen(!open);
+                setOpen(true);
               }}
               key={el.id}
-              className="h-min w-full"
+              className="h-min w-full cursor-pointer"
             >
-              {el.image && (
-                <Image
-                  src={el.image.responsiveImage}
-                  alt={el.image.responsiveImage.title}
-                  className="object-cover rounded-lg"
-                />
-              )}
+              <Image
+                src={el.image.responsiveImage.src}
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt={el.image.responsiveImage.title}
+                className="w-full h-auto object-cover rounded-lg"
+              />
             </div>
           ))}
         </div>
       </motion.section>
+
       {open && (
         <Modal
           open={open}
